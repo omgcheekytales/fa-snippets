@@ -1,0 +1,310 @@
+.tree {
+  width: 100%;
+
+  padding: var(--space-lg) var(--space-md);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: var(--space-xl);
+}
+
+/*GENERACIONES*/
+
+.generation {
+  width:100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-xl) var(--space-xxl); 
+}
+
+/*UNIDADES FAMILIARES*/
+
+.family-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+/*MATRIMONIOS*/
+
+.family {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.marriage {
+  width: 40px;
+  height: var(--line-size);
+
+  margin: 0 var(--space-sm);
+
+  flex-shrink: 0;
+}
+
+/*DESCENDENCIA NORMAL*/
+
+.children {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  gap: var(--space-lg) var(--space-xl);
+
+  margin-top: var(--space-xl);
+
+  position: relative;
+}
+
+/* línea vertical */
+
+.children::before{
+  content: '';
+
+  width: var(--line-size);
+  height: 30px;
+
+  background-color: var(--accent);
+
+  position: absolute;
+
+  top: -60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* línea horizontal */
+
+.children::after{
+  content: '';
+
+  width: 80%;
+  height: var(--line-size);
+
+  background-color: var(--accent);
+
+  position: absolute;
+
+  top: -30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/*CONVERGENCIA ENTRE RAMAS*/
+
+.descent-lines {
+  width: min(900px, 90vw);
+  height: 80px;
+
+  position: relative;
+}
+
+.line {
+  background:var(--accent);
+  
+  position: absolute;
+}
+
+/* verticales */
+
+.line.left,
+.line.right {
+  width: var(--line-size);
+  height: 60px;
+
+  top: 0;
+}
+
+/* vertical izquierda */
+
+.line.left {
+  left: 25%;
+}
+
+/* vertical derecha */
+
+.line.right {
+  right: 25%;
+}
+
+/* horizontal */
+
+.line.center {
+  width: 50%;
+  height: var(--line-size);
+
+  left: 25%;
+  bottom: 20px;
+}
+
+/*CONEXIÓN HACIA HIJOS*/
+
+.children-line {
+  width: var(--line-size);
+  height: 40px;
+
+  background-color: var(--accent);
+
+  position: relative;
+}
+
+.children-line::after{
+  content: '';
+
+  width: min(500px, 70vw);
+  height: var(--line-size);
+
+  background-color: var(--accent);
+
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/*PERSONAJES*/
+
+.partner,
+.single,
+.child,
+.descendant {
+  position: relative;
+}
+
+.card {
+  width: var(--card-width);
+
+  border: 1px solid rgb(255 255 255 / .08);
+
+  padding: 15px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  transition: var(--transition);
+
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--accent);
+}
+
+/*IMAGEN*/
+
+.card img {
+  width: var(--avatar-width);
+  height: var(--avatar-height);
+
+  object-fit: cover;
+
+  border-radius: var(--curva);
+
+  display: block;
+
+  margin: auto auto 15px;
+
+  border: 2px solid var(--accent);
+}
+
+/*TEXTO*/
+
+.name {
+  color: var(--text);
+
+  font-size: 16px;
+  font-weight: bold;
+
+  margin-bottom: 6px;
+}
+
+.title {
+  color: var(--sub);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+/*VARIANTES*/
+
+/* BASTARDO */
+
+.bastard .card {
+  border: 3px solid lightcoral;
+}
+
+/* ADOPTIVO */
+
+.adopted .card {
+  border: 3px solid lightblue;
+}
+
+/* BASTARDO RECONOCIDO */
+
+.recognized .card {
+  border-color: var(--accent);
+
+  box-shadow: 0 0 10px rgb(255 255 255 / .06);
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 700px) {
+
+  .tree {
+    gap: var(--space-lg);
+  }
+
+  .generation {
+    gap: var(--space-lg);
+  }
+
+  .family {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .marriage {
+    width: var(--line-size);
+    height: 30px;
+
+    margin: 0;
+  }
+
+  .children {
+    gap: 30px;
+  }
+
+  .card {
+    width: 160px;
+  }
+
+  .descent-lines {
+    height: 60px;
+  }
+
+  .line.left,
+  .line.right {
+    height: 45px;
+  }
+
+}

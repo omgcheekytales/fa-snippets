@@ -1,0 +1,28 @@
+:root {
+
+  /* CARDS */
+
+  --card-width: 180px;
+
+  /* AVATARS */
+
+  --avatar-width: 100px;
+  --avatar-height: 130px;
+
+  /* ESPACIADO */
+
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 60px;
+  --space-xxl: 80px;
+
+  /* LÍNEAS */
+
+  --line-size: 2px;
+
+  /* ANIMATION */
+
+  --transition: .3s ease;
+
+}
