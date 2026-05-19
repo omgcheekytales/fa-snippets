@@ -1,0 +1,73 @@
+body {
+    display: grid;
+    place-content: center;
+    background-color: #282828;
+
+    color: #777;
+}
+
+.arete__carta {
+    --letter-accent: var(--group);
+    --letter-accent-50: var(--group-50);
+
+    /* LOS QUE SE QUEDAN */
+    --letter-bg: #121212;
+    --letter-bg-darker: #141414;
+    --letter-bg-lighter: #121212cc;
+    --letter-border: 1px solid #222222;
+
+    width: clamp(45ch, 70%, 75ch);
+
+    backdrop-filter: var(--filter-blur); 
+
+    border: var(--letter-border);
+
+    outline: var(--letter-border);
+    outline-offset: 11px;
+    outline-color: var(--letter-accent-50);
+}
+
+.arete__carta contexto::before {
+    background-image: url(https://i.postimg.cc/x81dvsf5/asoiaf-letter-fondo.png);    
+    background-position: center 70%;
+    filter: contrast(40%) grayscale(1);
+}
+
+.arete__carta sello::after {
+    color: var(--letter-accent);
+}
+
+.arete__carta sello[data-reino='coronas']::after {
+    content: '\E550';
+}
+.arete__carta sello[data-reino='dominio']::after {
+    content: '\ECB4';
+}
+.arete__carta sello[data-reino='dorne']::after {
+    content: '\E23D';
+}
+.arete__carta sello[data-reino='islas']::after {
+    content: '\E3B7';
+}
+.arete__carta sello[data-reino='norte']::after {
+    content: '\E438';
+}
+.arete__carta sello[data-reino='occidente']::after {
+    content: '\E409';
+}
+.arete__carta sello[data-reino='rios']::after {
+    content: '\E3FA';
+}
+.arete__carta sello[data-reino='tormentas']::after {
+    content: '\E42A';
+}
+.arete__carta sello[data-reino='valle']::after {
+    content: '\E3B2';
+}
+
+/* SELLO - FORMA */
+
+.arete__carta .seal {
+    background-color: var(--letter-accent);
+    border-color: var(--letter-accent);
+}

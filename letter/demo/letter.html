@@ -4,17 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carta A</title>
+    <link rel="stylesheet" href="../dist/forum-a.bundle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Beth+Ellen&family=Calligraffitti&family=Jim+Nightshade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://dl.dropbox.com/s/thpzqkqhf1pzqnx/game-icons.css"/>
+
 </head>
 <body>
-    
-    <!--Puedes escoger la caligrafía de tu personaje en data-caligrafia. Hay cuatro (4) opciones: decidida, sutil, aspirante y caprichosa. Simplemente deja una. Se mostrará en Destinatario y Firma.
+<!--Puedes escoger la caligrafía de tu personaje en data-caligrafia. Hay cuatro (4) opciones: decidida, sutil, aspirante y caprichosa. Simplemente deja una. Se mostrará en Destinatario y Firma.
 
 En el sello, puedes poner el blasón del reino de procedencia de tu personaje en data-reino. Simplemente deja una de las opciones-->
 
-<div class="arete__carta" data-caligrafia="decidida"><correo>Esta carta salió de <envio>Invernalia</envio> el <salida>2 de Abril</salida> y llegó a <destino>Moat Cailin</destino> el <llegada>2 de Junio</llegada>.</correo>
+<h1 style="text-align: center;">Carta con datos de envío (decidida)</h1>
+
+<div class="arete__carta" data-caligrafia="decidida">
+<correo>Esta carta salió de <envio>Invernalia</envio> el <salida>2 de Abril</salida> y llegó a <destino>Moat Cailin</destino> el <llegada>2 de Junio</llegada>.</correo>
 <destinatario>A quien corresponda,</destinatario>
 <contenido>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aspernatur natus ipsa delectus, inventore rem necessitatibus illum sapiente consequuntur amet, quibusdam ex neque cumque tempora cupiditate dolorum possimus quo asperiores.</contenido>
-<firma>Un buen amigo</firma><!--Deja sólo el reino de tu personaje--><sello class="seal" data-reino="coronas/dominio/dorne/islas/norte/occidente/rios/tormentas/valle"><span class="embossed"></span></sello></div>
+<firma>Un buen amigo</firma>
+<!--Deja sólo el reino de tu personaje-->
+<sello class="seal" data-reino="norte"><span class="embossed"></span></sello></div>
 
+<h1 style="text-align: center;">Carta con datos de envío + contexto (sutil)</h1>
+
+<div class="arete__carta" data-caligrafia="sutil">
+<correo>Esta carta salió de <envio>Invernalia</envio> el <salida>2 de Abril</salida> y llegó a <destino>Moat Cailin</destino> el <llegada>2 de Junio</llegada>.</correo>
+<contexto>Aparece sobre el escritorio de lord Stark a medianoche. Nadie sabe cómo ha sido entregada.</contexto>
+<destinatario>A quien corresponda,</destinatario>
+<contenido>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aspernatur natus ipsa delectus, inventore rem necessitatibus illum sapiente consequuntur amet, quibusdam ex neque cumque tempora cupiditate dolorum possimus quo asperiores.</contenido>
+<firma>Un buen amigo</firma>
+<!--Deja sólo el reino de tu personaje-->
+<sello class="seal" data-reino="rios"><span class="embossed"></span></sello></div>
+
+<h1 style="text-align: center;">Carta sin datos de envío + contexto (aspirante)</h1>
+
+<div class="arete__carta" data-caligrafia="aspirante">
+<contexto>Aparece sobre el escritorio de lord Stark a medianoche. Nadie sabe cómo ha sido entregada.</contexto>
+<destinatario>A quien corresponda,</destinatario>
+<contenido>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aspernatur natus ipsa delectus, inventore rem necessitatibus illum sapiente consequuntur amet, quibusdam ex neque cumque tempora cupiditate dolorum possimus quo asperiores.</contenido>
+<firma>Un buen amigo</firma>
+<!--Deja sólo el reino de tu personaje-->
+<sello class="seal" data-reino="dorne"><span class="embossed"></span></sello></div>
+
+<h1 style="text-align: center;">Carta sin datos de envío ni contexto (caprichosa)</h1>
+
+<div class="arete__carta" data-caligrafia="caprichosa">
+<destinatario>A quien corresponda,</destinatario>
+<contenido>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aspernatur natus ipsa delectus, inventore rem necessitatibus illum sapiente consequuntur amet, quibusdam ex neque cumque tempora cupiditate dolorum possimus quo asperiores.</contenido>
+<firma>Un buen amigo</firma>
+<!--Deja sólo el reino de tu personaje-->
+<sello class="seal" data-reino="coronas"><span class="embossed"></span></sello></div>
+
+<style>:root { --group: #C79F00; --group-50: #C79F0080; }</style>
 </body>
 </html>

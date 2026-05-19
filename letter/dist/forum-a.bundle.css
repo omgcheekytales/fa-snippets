@@ -1,0 +1,229 @@
+:root {
+    --filter-blur: blur(5px);
+}
+.arete__carta {
+    background-color: var(--letter-bg);
+    border: var(--letter-border);
+
+    box-sizing: border-box;  
+    margin: 3em auto;
+}
+.arete__carta correo,
+.arete__carta contexto,
+.arete__carta destinatario,
+.arete__carta contenido,
+.arete__carta firma,
+.arete__carta sello {
+    display: block;
+}
+.arete__carta correo,
+.arete__carta contexto,
+.arete__carta contenido {
+    padding: 2em 3em;
+}
+.arete__carta :is(envio, salida, destino, llegada) {
+    color: var(--letter-accent);
+    font-weight: bold;
+}
+.arete__carta destinatario,
+.arete__carta firma {
+    font-family: 'Merienda', cursive;
+
+    padding: 2em 3em 0;
+}
+.arete__carta contenido {
+    font-size: 1rem;
+}
+.arete__carta correo,
+.arete__carta contexto {
+    border-bottom: var(--letter-border);
+}
+.arete__carta correo {
+    background-color: var(--letter-bg-darker);
+}
+.arete__carta contexto {
+    position: relative;
+    z-index: 0;
+    background-color: var(--letter-bg-lighter);
+    font-style: italic;
+}
+.arete__carta contexto::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: multiply;
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+}
+.arete__carta firma {
+    text-align: right;
+
+    padding: 0 3em 1em;
+
+    position: relative;
+}
+/* DIFERENTES CALIGRAFÍAS */
+.arete__carta[data-caligrafia='decidida'] :is(destinatario, firma) {
+    font-family: "Jim Nightshade", cursive;
+    font-size: 1.25rem;
+}
+.arete__carta[data-caligrafia='sutil'] :is(destinatario, firma) {
+    font-family: "Calligraffitti", cursive;
+    font-size: 1rem;
+}
+.arete__carta[data-caligrafia='aspirante'] :is(destinatario, firma) {
+    font-family: "Beth Ellen", cursive;
+    font-size: .85rem;
+}
+.arete__carta[data-caligrafia='caprichosa'] :is(destinatario, firma) {
+    font-family: "Allura", cursive;
+    font-size: 1.4rem;
+}
+/* SELLO - ICONO */
+.arete__carta sello::after {
+    font-family: 'game-icons';
+    font-size: 2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+/* SELLO - FORMA */
+.arete__carta .seal {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    position: relative;
+    left: 80%;
+    top: 30px;
+
+    margin: -2.2rem 0 0 -2.2rem;
+    border-radius: 2.2rem 1.9rem 2.3rem 2.0rem;
+
+    box-shadow:
+      0 -2px 4px rgba( 0, 0, 0, 0.2) inset,
+      0 3px 3px rgba(255, 255, 255, 0.6) inset,
+      0 1px 5px rgba( 0, 0, 0, 0.8);
+    
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
+    transform: rotate(-10deg);
+}
+.arete__carta .seal .embossed {
+    display: block;
+    width: 80%;
+    height: 80%;
+
+    position: absolute;
+    top: 10%;
+    left: 10%;
+
+    background-image: -webkit-linear-gradient(top, rgba( 51, 51, 51, 0.3) 0%, rgba( 51, 51, 51, 0.2) 100%);
+
+    border-radius: 999rem;
+
+    box-shadow:
+       0 -2px 2px rgba(205, 205, 205, 0.1) inset,
+       0 3px 3px rgba( 30, 30, 30, 0.1) inset,
+       0 1px 2px rgba( 30, 30, 30, 0.6) inset;
+}
+.arete__carta .seal::before {
+    content: ' ';
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+
+    font-size: 0;    
+    line-height: 0;
+
+    background: inherit;
+
+    overflow: hidden;
+    
+    position: absolute;
+    bottom: -15%;
+    left: 85%;
+
+    border-radius: 1rem 0.9rem 0.95rem 0.8rem;
+
+    box-shadow:
+       0 1px 3px rgba(0, 0, 0, 0.8),
+       0 3px 3px rgba(205, 205, 205, 0.4) inset;       
+}
+body {
+    display: grid;
+    place-content: center;
+    background-color: #282828;
+
+    color: #777;
+}
+.arete__carta {
+    --letter-accent: var(--group);
+    --letter-accent-50: var(--group-50);
+
+    /* LOS QUE SE QUEDAN */
+    --letter-bg: #121212;
+    --letter-bg-darker: #141414;
+    --letter-bg-lighter: #121212cc;
+    --letter-border: 1px solid #222222;
+
+    width: clamp(45ch, 70%, 75ch);
+
+    backdrop-filter: var(--filter-blur); 
+
+    border: var(--letter-border);
+
+    outline: var(--letter-border);
+    outline-offset: 11px;
+    outline-color: var(--letter-accent-50);
+}
+.arete__carta contexto::before {
+    background-image: url(https://i.postimg.cc/x81dvsf5/asoiaf-letter-fondo.png);    
+    background-position: center 70%;
+    filter: contrast(40%) grayscale(1);
+}
+.arete__carta sello::after {
+    color: var(--letter-accent);
+}
+.arete__carta sello[data-reino='coronas']::after {
+    content: '\E550';
+}
+.arete__carta sello[data-reino='dominio']::after {
+    content: '\ECB4';
+}
+.arete__carta sello[data-reino='dorne']::after {
+    content: '\E23D';
+}
+.arete__carta sello[data-reino='islas']::after {
+    content: '\E3B7';
+}
+.arete__carta sello[data-reino='norte']::after {
+    content: '\E438';
+}
+.arete__carta sello[data-reino='occidente']::after {
+    content: '\E409';
+}
+.arete__carta sello[data-reino='rios']::after {
+    content: '\E3FA';
+}
+.arete__carta sello[data-reino='tormentas']::after {
+    content: '\E42A';
+}
+.arete__carta sello[data-reino='valle']::after {
+    content: '\E3B2';
+}
+/* SELLO - FORMA */
+.arete__carta .seal {
+    background-color: var(--letter-accent);
+    border-color: var(--letter-accent);
+}
