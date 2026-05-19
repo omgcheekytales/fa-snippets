@@ -44,7 +44,6 @@
     position: relative;
     z-index: 0;
     background-color: var(--letter-bg-lighter);
-    font-style: italic;
 }.arete__carta contexto::before {
     content: '';
     width: 100%;
