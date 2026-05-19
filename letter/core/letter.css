@@ -6,6 +6,10 @@
     margin: 3em auto;
 }
 
+.arete__carta > br {
+    display: none;
+}
+
 .arete__carta correo,
 .arete__carta contexto,
 .arete__carta destinatario,
@@ -72,7 +76,7 @@
 .arete__carta firma {
     text-align: right;
 
-    padding: 0 3em 1em;
+    padding: 0 3em 1.5em;
 
     position: relative;
 }
@@ -116,8 +120,8 @@
 
 .arete__carta .seal {
     display: block;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
 
     position: relative;
     left: 80%;
