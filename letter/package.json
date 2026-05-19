@@ -1,0 +1,26 @@
+{
+  "name": "letter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+  "build:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css",
+
+  "watch:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css --watch",
+
+  "build:b": "postcss src/forum-b.css -o dist/forum-b.bundle.css",
+
+  "watch:b": "postcss src/forum-b.css -o dist/forum-b.bundle.css --watch"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "postcss": "^8.5.14",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  }
+}
