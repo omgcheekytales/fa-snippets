@@ -33,7 +33,7 @@
     --letter-dayne: url("https://i.postimg.cc/pT9SGLKX/emblema-dayne.png");
     --mask-size-dayne: 40px;
 
-    width: clamp(45ch, 70%, 75ch);
+    width: clamp(45ch, 63%, 75ch);
 
     backdrop-filter: var(--filter-blur); 
 
@@ -41,7 +41,7 @@
 
     outline: var(--letter-border);
     outline-offset: 11px;
-    outline-color: var(--letter-border);
+    outline-color: #1f1b1b;
 }
 
 .arete__carta contexto::before {
