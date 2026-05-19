@@ -1,6 +1,8 @@
 .arete__carta {
     --letter-accent: var(--group);
     --letter-accent-50: var(--group-50);
+    --letter-blazon: url("https://i.postimg.cc/pT9SGLKX/emblema-dayne.png");
+    --mask-size: 45px;
 
     width: clamp(45ch, 70%, 75ch);
 
@@ -23,11 +25,32 @@
     color: var(--letter-accent);
 }
 
-
-
 /* SELLO - FORMA */
 
 .arete__carta .seal {
     background-color: var(--letter-accent);
     border-color: var(--letter-accent);
+}
+
+.arete__carta .seal::after {
+        content: "";
+    position: absolute;
+    inset: 0;
+    left: 50%;
+    top: 50%;
+  
+    background-color: rgba(0,0,0,.22);
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: var(--mask-size);  
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: var(--mask-size);  
+}
+
+.arete__carta .seal[data-reino="dayne"]::after {
+   -webkit-mask-image: var(--letter-blazon);
+   mask-image: var(--letter-blazon);
 }

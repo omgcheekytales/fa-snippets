@@ -1,72 +1,52 @@
-:root {
+
+
+@import url('https://fonts.googleapis.com/css2?family=Felipa&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=My+Soul&display=swap');:root {
     --filter-blur: blur(5px);
     
     --letter-bg: #121212;
     --letter-bg-darker: #141414;
     --letter-bg-lighter: #121212cc;
     --letter-border: 1px solid #222222;
-}
-
-.arete__carta {
+}.arete__carta {
     background-color: var(--letter-bg);
     border: var(--letter-border);
 
     box-sizing: border-box;  
     margin: 3em auto;
-}
-
-.arete__carta > br {
+}.arete__carta > br {
     display: none;
-}
-
-.arete__carta correo,
+}.arete__carta correo,
 .arete__carta contexto,
 .arete__carta destinatario,
 .arete__carta contenido,
 .arete__carta firma,
 .arete__carta sello {
     display: block;
-}
-
-.arete__carta correo,
+}.arete__carta correo,
 .arete__carta contexto,
 .arete__carta contenido {
     padding: 2em 3em;
-}
-
-.arete__carta :is(envio, salida, destino, llegada) {
+}.arete__carta :is(envio, salida, destino, llegada) {
     color: var(--letter-accent);
     font-weight: bold;
-}
-
-.arete__carta destinatario,
+}.arete__carta destinatario,
 .arete__carta firma {
     font-family: 'Merienda', cursive;
 
     padding: 2em 3em 0;
-}
-
-.arete__carta contenido {
+}.arete__carta contenido {
     font-size: 1rem;
-}
-
-.arete__carta correo,
+}.arete__carta correo,
 .arete__carta contexto {
     border-bottom: var(--letter-border);
-}
-
-.arete__carta correo {
+}.arete__carta correo {
     background-color: var(--letter-bg-darker);
-}
-
-.arete__carta contexto {
+}.arete__carta contexto {
     position: relative;
     z-index: 0;
     background-color: var(--letter-bg-lighter);
     font-style: italic;
-}
-
-.arete__carta contexto::before {
+}.arete__carta contexto::before {
     content: '';
     width: 100%;
     height: 100%;
@@ -80,41 +60,25 @@
     inset: 0;
     z-index: -1;
 
-}
-
-.arete__carta firma {
+}.arete__carta firma {
     text-align: right;
 
     padding: 0 3em 1.5em;
 
     position: relative;
-}
-
-/* DIFERENTES CALIGRAFÍAS */
-
-.arete__carta[data-caligrafia='decidida'] :is(destinatario, firma) {
+}/* DIFERENTES CALIGRAFÍAS */.arete__carta[data-caligrafia='decidida'] :is(destinatario, firma) {
     font-family: "Jim Nightshade", cursive;
     font-size: 1.25rem;
-}
-
-.arete__carta[data-caligrafia='sutil'] :is(destinatario, firma) {
+}.arete__carta[data-caligrafia='sutil'] :is(destinatario, firma) {
     font-family: "Calligraffitti", cursive;
     font-size: 1rem;
-}
-
-.arete__carta[data-caligrafia='aspirante'] :is(destinatario, firma) {
+}.arete__carta[data-caligrafia='aspirante'] :is(destinatario, firma) {
     font-family: "Beth Ellen", cursive;
     font-size: .85rem;
-}
-
-.arete__carta[data-caligrafia='caprichosa'] :is(destinatario, firma) {
+}.arete__carta[data-caligrafia='caprichosa'] :is(destinatario, firma) {
     font-family: "Allura", cursive;
     font-size: 1.4rem;
-}
-
-/* SELLO - ICONO */
-
-.arete__carta sello::after {
+}/* SELLO - ICONO */.arete__carta sello::after {
     font-family: 'game-icons';
     font-size: 2rem;
 
@@ -123,11 +87,7 @@
     left: 50%;
 
     transform: translate(-50%, -50%);
-}
-
-/* SELLO - FORMA */
-
-.arete__carta .seal {
+}/* SELLO - FORMA */.arete__carta .seal {
     display: block;
     width: 4.5rem;
     height: 4.5rem;
@@ -147,9 +107,7 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 
     transform: rotate(-10deg);
-}
-
-.arete__carta .seal .embossed {
+}.arete__carta .seal .embossed {
     display: block;
     width: 80%;
     height: 80%;
@@ -166,9 +124,7 @@
        0 -2px 2px rgba(205, 205, 205, 0.1) inset,
        0 3px 3px rgba( 30, 30, 30, 0.1) inset,
        0 1px 2px rgba( 30, 30, 30, 0.6) inset;
-}
-
-.arete__carta .seal::before {
+}.arete__carta .seal::before {
     content: ' ';
     display: block;
     width: 0.3rem;
@@ -190,13 +146,31 @@
     box-shadow:
        0 1px 3px rgba(0, 0, 0, 0.8),
        0 3px 3px rgba(205, 205, 205, 0.4) inset;       
-}
-
-.arete__carta {
+}/* DIFERENTES CALIGRAFÍAS */.arete__carta[data-caligrafia='rhaelle'] :is(destinatario, firma) {
+    font-family: "Mea Culpa", cursive;
+    font-size: 1.7rem;
+}.arete__carta[data-caligrafia='nyvenne'] :is(destinatario, firma) {
+    font-family: "My Soul", cursive;
+    font-size: 1.4rem;
+}/* SELLO - EMBLEMAS DE CASAS */.arete__carta .seal[data-reino="targaryen"]::after {
+   -webkit-mask-image: var(--letter-targaryen);
+   mask-image: var(--letter-targaryen);   
+   mask-size: var(--mask-size-targaryen);
+   -webkit-mask-size: var(--mask-size-targaryen); 
+}.arete__carta .seal[data-reino="dayne"]::after {
+   -webkit-mask-image: var(--letter-dayne);
+   mask-image: var(--letter-dayne);   
+   mask-size: var(--mask-size-dayne);
+   -webkit-mask-size: var(--mask-size-dayne); 
+}.arete__carta {
     --letter-accent: var(--group);
     --letter-accent-50: var(--group-50);
-    --letter-blazon: url("https://i.postimg.cc/pT9SGLKX/emblema-dayne.png");
-    --mask-size: 45px;
+
+    --letter-targaryen: url("https://i.postimg.cc/RFRWYvmP/emblema-targ.png");
+    --mask-size-targaryen: 52px;
+    
+    --letter-dayne: url("https://i.postimg.cc/pT9SGLKX/emblema-dayne.png");
+    --mask-size-dayne: 40px;
 
     width: clamp(45ch, 70%, 75ch);
 
@@ -207,27 +181,20 @@
     outline: var(--letter-border);
     outline-offset: 11px;
     outline-color: var(--letter-accent-50);
-}
-
-.arete__carta contexto::before {
+}.arete__carta contexto::before {
     background-image: url(https://i.postimg.cc/x81dvsf5/asoiaf-letter-fondo.png);    
     background-position: center 70%;
     filter: contrast(40%) grayscale(1);
-}
-
-.arete__carta sello::after {
+}.arete__carta sello::after {
     color: var(--letter-accent);
-}
-
-/* SELLO - FORMA */
-
-.arete__carta .seal {
+}/* SELLO - FORMA */.arete__carta .seal {
     background-color: var(--letter-accent);
     border-color: var(--letter-accent);
-}
+}.arete__carta .seal::after {
+    content: "";
+    width: 100%;
+    height: 100%;
 
-.arete__carta .seal::after {
-        content: "";
     position: absolute;
     inset: 0;
     left: 50%;
@@ -236,15 +203,8 @@
     background-color: rgba(0,0,0,.22);
 
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: var(--mask-size);  
+    -webkit-mask-position: center;     
 
     mask-repeat: no-repeat;
     mask-position: center;
-    mask-size: var(--mask-size);  
-}
-
-.arete__carta .seal[data-reino="dayne"]::after {
-   -webkit-mask-image: var(--letter-blazon);
-   mask-image: var(--letter-blazon);
 }
