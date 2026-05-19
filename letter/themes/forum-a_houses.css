@@ -27,9 +27,6 @@
 }
 
 .arete__carta {
-    --letter-accent: var(--group);
-    --letter-accent-50: var(--group-50);
-
     --letter-targaryen: url("https://i.postimg.cc/RFRWYvmP/emblema-targ.png");
     --mask-size-targaryen: 52px;
     
@@ -44,7 +41,7 @@
 
     outline: var(--letter-border);
     outline-offset: 11px;
-    outline-color: var(--letter-accent-50);
+    outline-color: var(--letter-border);
 }
 
 .arete__carta contexto::before {
