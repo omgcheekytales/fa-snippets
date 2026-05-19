@@ -11,7 +11,11 @@
 
   "build:b": "postcss src/forum-b.css -o dist/forum-b.bundle.css",
 
-  "watch:b": "postcss src/forum-b.css -o dist/forum-b.bundle.css --watch"
+  "watch:b": "postcss src/forum-b.css -o dist/forum-b.bundle.css --watch",
+
+  "build:rhaelle": "postcss src/forum-a_rhaelle.css -o dist/forum-a_rhaelle.css",
+
+  "watch:rhaelle": "postcss src/forum-a_rhaelle.css -o dist/forum-a_rhaelle.css --watch"
 
   },
   "keywords": [],
