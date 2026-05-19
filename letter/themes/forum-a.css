@@ -1,20 +1,6 @@
-body {
-    display: grid;
-    place-content: center;
-    background-color: #282828;
-
-    color: #777;
-}
-
 .arete__carta {
     --letter-accent: var(--group);
     --letter-accent-50: var(--group-50);
-
-    /* LOS QUE SE QUEDAN */
-    --letter-bg: #121212;
-    --letter-bg-darker: #141414;
-    --letter-bg-lighter: #121212cc;
-    --letter-border: 1px solid #222222;
 
     width: clamp(45ch, 70%, 75ch);
 

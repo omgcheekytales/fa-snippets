@@ -1,5 +1,10 @@
 :root {
     --filter-blur: blur(5px);
+    
+    --letter-bg: #121212;
+    --letter-bg-darker: #141414;
+    --letter-bg-lighter: #121212cc;
+    --letter-border: 1px solid #222222;
 }
 .arete__carta {
     background-color: var(--letter-bg);
@@ -160,22 +165,9 @@
        0 1px 3px rgba(0, 0, 0, 0.8),
        0 3px 3px rgba(205, 205, 205, 0.4) inset;       
 }
-body {
-    display: grid;
-    place-content: center;
-    background-color: #282828;
-
-    color: #777;
-}
 .arete__carta {
     --letter-accent: var(--group);
     --letter-accent-50: var(--group-50);
-
-    /* LOS QUE SE QUEDAN */
-    --letter-bg: #121212;
-    --letter-bg-darker: #141414;
-    --letter-bg-lighter: #121212cc;
-    --letter-border: 1px solid #222222;
 
     width: clamp(45ch, 70%, 75ch);
 
