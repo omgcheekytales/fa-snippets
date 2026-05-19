@@ -42,12 +42,9 @@
 .arete__carta destinatario,
 .arete__carta firma {
     font-family: 'Merienda', cursive;
+    line-height: 1.2;
 
     padding: 2em 3em 0;
-}
-
-.arete__carta contenido {
-    font-size: 1rem;
 }
 
 .arete__carta correo,
