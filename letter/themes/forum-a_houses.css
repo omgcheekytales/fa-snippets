@@ -10,6 +10,21 @@
     font-size: 1.4rem;
 }
 
+.arete__carta[data-caligrafia='gawen'] :is(destinatario, firma) {
+    font-family: "Jim Nightshade", cursive;
+    font-size: 1.45rem;
+}
+
+.arete__carta[data-caligrafia='ormund'] :is(destinatario, firma) {
+    font-family: "Kings", cursive;
+    font-size: 1.2rem;
+}
+
+.arete__carta[data-caligrafia='steffon'] :is(destinatario, firma) {
+    font-family: "Alex Brush", cursive;
+    font-size: 1.4rem;
+}
+
 /* SELLO - EMBLEMAS DE CASAS */
 
 .arete__carta .seal[data-reino="targaryen"]::after {
@@ -26,12 +41,28 @@
    -webkit-mask-size: var(--mask-size-dayne); 
 }
 
+.arete__carta .seal[data-reino="baratheon"]::after {
+   -webkit-mask-image: var(--letter-baratheon);
+   mask-image: var(--letter-baratheon);   
+   mask-size: var(--mask-size-baratheon);
+   -webkit-mask-size: var(--mask-size-baratheon); 
+
+   left: 45%;
+}
+
+.arete__carta .seal[data-reino="baratheon"] {
+    transform: rotate(10deg);
+}
+
 .arete__carta {
     --letter-targaryen: url("https://i.postimg.cc/RFRWYvmP/emblema-targ.png");
     --mask-size-targaryen: 52px;
     
     --letter-dayne: url("https://i.postimg.cc/pT9SGLKX/emblema-dayne.png");
     --mask-size-dayne: 40px;
+
+    --letter-baratheon: url("https://i.postimg.cc/Fs9mWNfc/emblema-baratheon.png");
+    --mask-size-baratheon: 31px;
 
     width: clamp(45ch, 63%, 75ch);
 
