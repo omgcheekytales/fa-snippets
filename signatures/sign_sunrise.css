@@ -1,0 +1,159 @@
+@font-face {
+  font-family: sunrise-display;
+  src:
+      url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/lordish.woff2") format("woff2"),
+      url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/lordish.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.farete_sunrise {  
+  position: relative;
+}
+.farete_sunrise::before,
+.farete_sunrise_txt,
+.farete_sunrise_bg {  
+  position: absolute;
+}
+
+.farete_sunrise {
+  width: var(--sunrise-width);
+  height: var(--sunrise-height);
+  padding: 1em;
+  border: 15px solid #000000;
+  outline: 2px solid #221f1f;
+  outline-offset: -15px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  overflow: hidden;
+  margin: auto;
+  box-sizing: border-box;
+  
+  transition: outline-offset 1s ease-in-out, outline-color 1s ease;
+}
+
+.farete_sunrise::before {
+  content: '';  
+  width: 100%;
+  height: 100%;
+  background-image: var(--sunrise-img);
+  background-size: 120%;
+  background-position: center;
+  
+  top: 0;
+  left: 0;
+  
+  transition: background-position .8s ease-in-out .3s, filter 0.5s ease-in-out;
+}
+
+.farete_sunrise_txt {
+  width: calc(45% + 1em);
+  max-height: calc(80% + 1em);
+  padding: 1em;
+
+  color: white;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  right: -100%;
+  z-index: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  transition: right 2s ease .5s;
+}
+
+.farete_sunrise_bg {
+  width: 100%;
+  height: 100%;
+  background-color: var(--sunrise-accent);
+  opacity: .3;
+  z-index: -1;
+}
+/*Texto*/
+.farete_sunrise :is(h4, h5) {    
+  color: white;
+  z-index: 1;
+  margin: 0;
+  
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.farete_sunrise h4 {
+  font-family: sunrise-display;
+  font-size: 1.7rem;
+  text-transform: lowercase!important;
+  letter-spacing: 2px!important;
+}
+/*
+.farete_sunrise h4:first-letter {
+  color: var(--sunrise-accent)!important;
+}
+*/
+.farete_sunrise h5 {
+  font: .6rem var(--sunrise-font)!important;
+  text-transform: uppercase!important;
+}
+.farete_sunrise_txt p {
+  font: .6rem var(--sunrise-font)!important;
+  text-transform: uppercase;
+  text-align: center;
+  hyphens: auto;
+  margin: 0;
+}
+.farete_sunrise b, .farete_sunrise strong, .farete_sunrise u {
+  display: inline-block;
+  font-family: sunrise-display;
+  font-size: 1.3rem;
+  text-transform: lowercase!important;
+}
+.farete_sunrise b, .farete_sunrise strong {
+  color: white!important;
+  font-weight: 600!important;  
+  letter-spacing: 2px;
+}
+.farete_sunrise u {
+  text-decoration: none!important;
+  font-weight: 600!important;
+  
+  background-image: linear-gradient(45deg, #fbfbfb, var(--sunrise-accent), var(--sunrise-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  line-height: 1;  
+  border-bottom: 2px outset white!important;
+}
+/* Hovers */
+.farete_sunrise:hover {
+  outline-color: var(--sunrise-accent);
+  outline-offset: -8px;
+}
+.farete_sunrise:hover::before {
+  background-position: -50px center;
+  filter: grayscale(100%); 
+}
+.farete_sunrise:hover .farete_sunrise_txt {
+  right: .5em;
+}
+.farete_sunrise:not(:hover) .farete_sunrise_txt {
+  transition: right 2s ease 1s; 
+}
+.farete_sunrise:hover h4,
+.farete_sunrise:hover h5 {
+    opacity: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+.farete_sunrise:not(:hover) h4,
+.farete_sunrise:not(:hover) h5 {
+  transition-delay: 1.3s;
+}
