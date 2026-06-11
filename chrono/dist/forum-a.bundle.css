@@ -207,6 +207,10 @@
     box-sizing: border-box;
 }
 
+.arete_chrono h3:not(:first-of-type) {
+    margin-top: 1em;
+}
+
 /* REINO */
 
 .arete_chrono reino::before {
