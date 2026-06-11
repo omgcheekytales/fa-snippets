@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.farete_episteme > br {
+    display: none;
+}
+.farete_episteme {
+    width: 268px;
+    height: 155px;
+    background-size: cover;
+    border: 10px solid #000000;
+    outline: 2px solid var(--episteme-accent);
+    outline-offset: -10px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    overflow: hidden;
+    margin: auto;
+    transition: 1s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+.farete_episteme_txt {
+    margin: 0 0 1em 1.5em !important;
+    opacity: 1;
+    transition: all ease-in-out 1s;
+    transition-delay: 1s;
+}
+.farete_episteme h4 {
+    font-family: var(--episteme-display) !important;
+    font-size: 1.8rem !important;
+    font-weight: 400 !important;
+    color: white;
+    margin: 0!important;
+}
+.farete_episteme h4::after {
+    content: '.';
+    color: var(--episteme-accent);
+    animation: blink 1.5s infinite;
+}
+.farete_episteme p {
+    font-family: 'Bebas Neue'!important;
+    font-size: .7rem !important;
+    color: white;
+    margin: 0!important;
+}
+.farete_episteme_bg {
+    width: 100%;
+    height: 100%;
+    background-color: #0b0b0b85;
+    border-top: 10px solid var(--episteme-accent);
+    position: absolute;
+    top: 95%;
+    transition: 1s ease 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+.farete_episteme_bg h5 {
+    font-family: 'Bebas Neue'!important;
+    font-size: .8rem !important;
+    font-weight: 400!important;
+    color: white!important;
+    text-align: center!important;
+    line-height: 1.5!important;
+    margin: 0;
+}
+.farete_episteme_bg i {
+    font-size: 1.8rem;
+    color: var(--episteme-accent)!important;
+    margin-bottom: .5em;
+}
+.farete_episteme:hover .farete_episteme_bg {
+    top: 0%;
+}
+.farete_episteme:hover {
+    outline-offset: -2px;
+}
+.farete_episteme:hover .farete_episteme_txt {
+    opacity: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    transition: all ease-in-out 1s;
+}
+.farete_episteme u {
+    text-decoration: none;
+    border-bottom: 1px solid var(--episteme-accent)!important;
+}
+.farete_episteme b, .farete_episteme strong {
+    color: var(--episteme-accent)!important;
+}
+.farete_episteme b, .farete_episteme strong, .farete_episteme u {
+    font-weight: 500!important;
+}
+@keyframes blink {
+    0, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

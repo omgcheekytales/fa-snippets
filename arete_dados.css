@@ -1,0 +1,53 @@
+.arete_dados {
+    width: 500px;
+    background-color: var(--dados-bg1);
+    margin: auto;
+    border: var(--dados-borde);
+}
+.arete_dados h2 {
+    background: var(--dados-bg2);
+    text-transform: uppercase;
+    color: var(--dados-accent);
+    font-family: var(--dados-font);
+    margin: 0;
+    padding: 1em 2.5em;
+    text-align: left;
+    font-size: .9rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.arete_dados h2::before {
+    content: '\E178';
+    font-family: 'game-icons';
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.arete_dados p {
+    display: block!important;
+    font-size: 12px;
+    padding: 2em 3em;
+    margin: 0;
+}
+.arete_dados .dd-stats {
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    border-bottom: var(--dados-borde);
+}
+.arete_dados .dd-stats span {
+    flex-grow: 1;
+    padding: .5em .25em;
+}
+.arete_dados .dd-stats span:not(:last-of-type) {
+    border-right: var(--dados-borde);
+}
+.arete_dados .dd-stats strong {
+   color: var(--dados-accent);
+   margin-right: .5em;
+}
+.arete_dados .dd-stats.dos {
+  font-size: .8rem;
+}
