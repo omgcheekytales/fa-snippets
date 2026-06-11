@@ -16,6 +16,9 @@
     --chrono-group9: var(--dominio);
     --chrono-group10: var(--essos);
 }
+.tablilla:has(.arete_chrono) > br {
+    display: none;
+}
 
 .tablilla:has(.arete_chrono) {
     width: 500px;
@@ -23,6 +26,21 @@
     padding: 2em;
 
     box-sizing: border-box;
+}
+
+/* REINO */
+
+.arete_chrono reino::before {
+    content: '\fb14';
+    font-family: 'game-icons';
+
+    margin-right: 5px;
+}
+
+/* INFO */
+
+.arete_chrono tema .info {
+    font-style: normal !important;
 }
 
 /* QUIEN */
