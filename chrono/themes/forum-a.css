@@ -17,7 +17,7 @@
     --chrono-group10: var(--essos);
 }
 .tablilla:has(.arete_chrono) > br {
-    display: none;
+    display: none !important;
 }
 
 .tablilla:has(.arete_chrono) {

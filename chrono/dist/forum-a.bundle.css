@@ -3,7 +3,7 @@
 }
 
 .arete_chrono > br {
-    display: none;
+    display: none !important;
 }
 
 /* REINO */
@@ -196,7 +196,7 @@
 }
 
 .tablilla:has(.arete_chrono) > br {
-    display: none;
+    display: none !important;
 }
 
 .tablilla:has(.arete_chrono) {
