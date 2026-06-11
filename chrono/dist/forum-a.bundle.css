@@ -131,10 +131,6 @@
 .arete_chrono tema .info {
     font-size: .6rem;
     text-transform: uppercase;
-    
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
 }
 
 /* VARIANTES */
@@ -224,6 +220,12 @@
 
 .arete_chrono tema .info {
     font-style: normal !important;
+}
+
+.arete_chrono tema lugar::before,
+.arete_chrono tema hora::before {
+    content: ' · ';
+    color: var(--chrono-accent);
 }
 
 /* QUIEN */

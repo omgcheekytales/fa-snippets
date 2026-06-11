@@ -43,6 +43,12 @@
     font-style: normal !important;
 }
 
+.arete_chrono tema lugar::before,
+.arete_chrono tema hora::before {
+    content: ' · ';
+    color: var(--chrono-accent);
+}
+
 /* QUIEN */
 
 /* COLORES POR GRUPO */

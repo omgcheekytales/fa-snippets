@@ -127,10 +127,6 @@
 .arete_chrono tema .info {
     font-size: .6rem;
     text-transform: uppercase;
-    
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
 }
 
 /* VARIANTES */
