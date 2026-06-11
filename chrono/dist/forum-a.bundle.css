@@ -216,6 +216,13 @@
     margin-right: 5px;
 }
 
+/* TÍTULO */
+
+.arete_chrono a {
+    text-decoration: none;
+    color: var(--clr-text) !important;
+}
+
 /* INFO */
 
 .arete_chrono tema .info {
