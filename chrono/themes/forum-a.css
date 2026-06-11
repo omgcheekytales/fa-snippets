@@ -1,0 +1,90 @@
+.arete_chrono {
+    --chrono-bullet-width: 26px;
+    --chrono-bullet-height: 26px;
+
+    --clr-text: #fbfbfb;
+    --clr-secondary: var(--dbckg1);
+
+    --chrono-group1: var(--tormentas);
+    --chrono-group2: var(--dorne);
+    --chrono-group3: var(--tierrasdragon);
+    --chrono-group4: var(--norte);
+    --chrono-group5: var(--valle);
+    --chrono-group6: var(--rios);
+    --chrono-group7: var(--islashierro);
+    --chrono-group8: var(--occidente);
+    --chrono-group9: var(--dominio);
+    --chrono-group10: var(--essos);
+}
+
+.tablilla:has(.arete_chrono) {
+    width: 500px;
+
+    padding: 2em;
+
+    box-sizing: border-box;
+}
+
+/* QUIEN */
+
+/* COLORES POR GRUPO */
+
+.arete_chrono quien[data-group="tormentas"] span {
+    color: var(--chrono-group1);
+
+    background-color: color-mix(in srgb, var(--chrono-group1) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="dorne"] span {
+    color: var(--chrono-group2);
+
+    background-color: color-mix(in srgb, var(--chrono-group2) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="coronas"] span {
+    color: var(--chrono-group3);
+
+    background-color: color-mix(in srgb, var(--chrono-group3) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="norte"] span {
+    color: var(--chrono-group4);
+
+    background-color: color-mix(in srgb, var(--chrono-group4) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="valle"] span {
+    color: var(--chrono-group5);
+
+    background-color: color-mix(in srgb, var(--chrono-group5) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="rios"] span {
+    color: var(--chrono-group6);
+
+    background-color: color-mix(in srgb, var(--chrono-group6) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="islas"] span {
+    color: var(--chrono-group7);
+
+    background-color: color-mix(in srgb, var(--chrono-group7) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="occidente"] span {
+    color: var(--chrono-group8);
+
+    background-color: color-mix(in srgb, var(--chrono-group8) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="dominio"] span {
+    color: var(--chrono-group9);
+
+    background-color: color-mix(in srgb, var(--chrono-group9) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="essos"] span {
+    color: var(--chrono-group10);
+
+    background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
+}

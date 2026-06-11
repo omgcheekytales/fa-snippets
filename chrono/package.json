@@ -1,0 +1,13 @@
+{
+  "name": "chrono",
+  "version": "1.0.0",
+  "scripts": {
+    "build:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css",
+    "watch:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css --watch"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.14",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  }
+}
