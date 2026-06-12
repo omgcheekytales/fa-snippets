@@ -214,7 +214,7 @@
 /* REINO */
 
 .arete_chrono reino::before {
-    content: '\fb14';
+    content: '\E4C2';
     font-family: 'game-icons';
 
     margin-right: 5px;
@@ -225,6 +225,10 @@
 .arete_chrono a {
     text-decoration: none;
     color: var(--clr-text) !important;
+}
+
+.arete_chrono titulo[dia=""]::before {
+    content: "·";
 }
 
 /* INFO */
