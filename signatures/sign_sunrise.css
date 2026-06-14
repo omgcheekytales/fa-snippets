@@ -96,11 +96,11 @@
   text-transform: lowercase!important;
   letter-spacing: 2px!important;
 }
-/*
+
 .farete_sunrise h4:first-letter {
   color: var(--sunrise-accent)!important;
 }
-*/
+
 .farete_sunrise h5 {
   font: .6rem var(--sunrise-font)!important;
   text-transform: uppercase!important;
