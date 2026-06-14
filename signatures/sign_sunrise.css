@@ -8,8 +8,6 @@
   font-display: swap;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-
 .farete_sunrise > br {
   display: none;
 }
@@ -108,7 +106,7 @@
 }
 
 .farete_sunrise h4 {
-  font-family: var(--sunrise-display) !important;
+  font-family: sunrise-display !important;
   font-size: 1.7rem !important;
   text-transform: lowercase !important;
   letter-spacing: 2px !important;
@@ -134,7 +132,7 @@
 .farete_sunrise b,
 .farete_sunrise strong {
   display: inline-block;
-  font-family: var(--sunrise-display) !important;
+  font-family: sunrise-display !important;
   font-size: 1.3rem !important;
   text-transform: lowercase !important;
 
