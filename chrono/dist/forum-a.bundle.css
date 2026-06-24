@@ -2,7 +2,7 @@
     --clr-closed: #913030;
 }
 
-.arete_chrono > br {
+.arete_chrono br:not(.arete_chrono desc br) {
     display: none !important;
 }
 
@@ -195,16 +195,24 @@
     --chrono-group10: var(--essos);
 }
 
-.tablilla:has(.arete_chrono) > br {
-    display: none !important;
-}
-
-.tablilla:has(.arete_chrono) {
+.arete_chrono {
     width: 500px;
 
+    background: var(--dbckg1);
+
     padding: 2em;
+    margin: 21px auto;
+
+    border: var(--border2);
+    outline: var(--border2);
+    outline-offset: 11px;
+    outline-color: var(--group-50);
 
     box-sizing: border-box;
+}
+
+.arete_chrono h3 {
+    text-transform: uppercase;
 }
 
 .arete_chrono h3:not(:first-of-type) {

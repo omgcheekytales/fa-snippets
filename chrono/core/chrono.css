@@ -1,4 +1,4 @@
-.arete_chrono > br {
+.arete_chrono br:not(.arete_chrono desc br) {
     display: none !important;
 }
 
