@@ -71,22 +71,6 @@
     position: relative;
 }
 
-.arete_house-economy sello {
-    font-family: var(--heco-display);
-    color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-
-    border-radius: 50%;
-
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-
-    display: flex;    
-    align-items: center;
-    justify-content: center;    
-    flex: none;
-
-    position: relative;
-}
-
 .arete_house-economy casa {
     display: block;
 
@@ -102,13 +86,12 @@
     letter-spacing: .16em;
     text-transform: uppercase;
 
-    margin: 0 0 6px;
+    margin: 0 0 1rem;
 }
 
 .arete_house-economy casa h1 {
     font-family: var(--heco-display);     
     color: var(--clr-text);    
-    font-weight: 700;
 
     letter-spacing: .02em;
 
@@ -1005,23 +988,12 @@ section:last-of-type {
     border-bottom: var(--border2);
 }
 
-.arete_house-economy sello {        
-    width: 76px;
-    height: 76px;
-    
-    font-size: 35px;
-
-    background-image: radial-gradient(circle at 35% 30%, 
-        color-mix(in srgb, black 85%, var(--heco-accent)), 
-        color-mix(in srgb, black 93%, var(--heco-accent)) 70%);    
-}
-
 .arete_house-economy lema {
     font-size: 11px;   
 }
 
 .arete_house-economy casa h1 {   
-    font-size: 30px;   
+    font-size: 50px;   
 }
 
 .arete_house-economy datos {    
@@ -1050,7 +1022,7 @@ section {
 }
 
 .arete_house-economy h2 {
-    font-size: 17px;    
+    font-size: 33px;    
 }
 
 /* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */
@@ -1067,7 +1039,7 @@ section {
 
 .arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {   
-    font-size: 13px;
+    font-size: 25px;
 }
 
 .arete_house-economy movimiento[data-tipo="total"] cantidad {
@@ -1147,10 +1119,6 @@ section {
 
 .arete_house-economy celda[data-tipo="cabecera"] {
    font-size: 10.5px;    
-}
-
-.arete_house-economy celda {
-    font-size: 13.5px;
 }
 
 .arete_house-economy celda[data-tipo="nombre"] small {

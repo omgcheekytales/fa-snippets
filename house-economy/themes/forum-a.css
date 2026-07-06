@@ -32,23 +32,12 @@
     border-bottom: var(--border2);
 }
 
-.arete_house-economy sello {        
-    width: 76px;
-    height: 76px;
-    
-    font-size: 35px;
-
-    background-image: radial-gradient(circle at 35% 30%, 
-        color-mix(in srgb, black 85%, var(--heco-accent)), 
-        color-mix(in srgb, black 93%, var(--heco-accent)) 70%);    
-}
-
 .arete_house-economy lema {
     font-size: 11px;   
 }
 
 .arete_house-economy casa h1 {   
-    font-size: 30px;   
+    font-size: 50px;   
 }
 
 .arete_house-economy datos {    
@@ -77,7 +66,7 @@ section {
 }
 
 .arete_house-economy h2 {
-    font-size: 17px;    
+    font-size: 33px;    
 }
 
 /* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */
@@ -94,7 +83,7 @@ section {
 
 .arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {   
-    font-size: 13px;
+    font-size: 25px;
 }
 
 .arete_house-economy movimiento[data-tipo="total"] cantidad {
@@ -174,10 +163,6 @@ section {
 
 .arete_house-economy celda[data-tipo="cabecera"] {
    font-size: 10.5px;    
-}
-
-.arete_house-economy celda {
-    font-size: 13.5px;
 }
 
 .arete_house-economy celda[data-tipo="nombre"] small {
