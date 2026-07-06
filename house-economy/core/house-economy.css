@@ -237,7 +237,7 @@ section:last-of-type {
     border-bottom: 1px dashed var(--line);
 }
 
-.arete_house-economy movimiento:last-child {
+.arete_house-economy movimiento:last-of-type {
     border-bottom: none;
 }
 
