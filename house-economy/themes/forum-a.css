@@ -1,0 +1,209 @@
+.arete_house-economy {
+    --heco-bg:   var(--dbckg1);
+    --heco-bg-2: #0a0a0a;
+    --line:      #222222;
+    --line-soft: #232222;
+
+    --clr-text:         #fbfbfb;
+    --clr-text-light:   #9b9c9f;
+    --clr-text-lighter: #777;
+
+    --heco-display: 'TLLRegular';
+    --heco-font:    'Inter', system-ui, sans-serif;
+    --heco-font-data: 'IBM Plex Mono', monospace;
+}
+
+.arete_house-economy br {
+    display: none !important;
+}
+
+.arete_house-economy {
+    width: 800px;
+
+    border: var(--border2);
+    outline: var(--border2);
+    outline-offset: 11px;
+    outline-color: var(--group-50);
+}
+
+/* ---------- CABECERA DE LA CASA ---------- */
+
+.arete_house-economy cabecera {
+    border-bottom: var(--border2);
+}
+
+.arete_house-economy sello {        
+    width: 76px;
+    height: 76px;
+    
+    font-size: 35px;
+
+    background-image: radial-gradient(circle at 35% 30%, 
+        color-mix(in srgb, black 85%, var(--heco-accent)), 
+        color-mix(in srgb, black 93%, var(--heco-accent)) 70%);    
+}
+
+.arete_house-economy lema {
+    font-size: 11px;   
+}
+
+.arete_house-economy casa h1 {   
+    font-size: 30px;   
+}
+
+.arete_house-economy datos {    
+    
+    font-size: 13px;
+}
+
+.arete_house-economy dado etiqueta {
+    font-size: 10px;  
+}
+
+.arete_house-economy dado valor {
+    font-size: 28px;
+}
+
+/* ---------- SECCIONES ---------- */
+
+section {
+    border-bottom: var(--border2);
+}
+
+.arete_house-economy h2::before {
+    content: counter(section-counter, upper-roman);
+
+    font-size: 12px;
+}
+
+.arete_house-economy h2 {
+    font-size: 17px;    
+}
+
+/* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */
+
+.arete_house-economy movimiento {    
+    font-size: 14.5px;
+
+    border-bottom: 1px dashed var(--line);
+}
+
+.arete_house-economy movimiento concepto small {
+    font-size: 11.5px;
+}
+
+.arete_house-economy movimiento[data-tipo="total"] concepto,
+.arete_house-economy titulo {   
+    font-size: 13px;
+}
+
+.arete_house-economy movimiento[data-tipo="total"] cantidad {
+    font-size: 19px;
+}
+
+.arete_house-economy nota {    
+    font-size: 12px;
+}
+
+/* ---------- TARJETAS DE RECURSOS ---------- */
+
+.arete_house-economy recurso icono {
+    width: 42px;
+    height: 42px;
+    
+    font-size: 22px;
+
+    background-image: radial-gradient(circle at 35% 30%, 
+        color-mix(in srgb, black 85%, var(--heco-accent)), 
+        color-mix(in srgb, black 93%, var(--heco-accent)) 70%);  
+
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--heco-accent) 70%, white 30%);
+}
+
+.arete_house-economy recurso etiqueta {
+    font-size: 10.5px;  
+}
+
+.arete_house-economy recurso valor {
+    font-size: 20px;    
+}
+
+.arete_house-economy recurso valor small {
+    font-size: 11px;
+}
+
+.arete_house-economy recurso detalle {    
+    font-size: 11px;
+}
+
+/* ---------- BARRA (GRANERO / CAPACIDAD) ---------- */
+
+.arete_house-economy medida {
+    font-size: 12px;
+}
+
+.arete_house-economy pista {
+    height: 10px;
+
+    border-radius: 6px;
+}
+
+/* ---------- CUPOS (RUTAS / INTERCAMBIOS) ---------- */
+
+.arete_house-economy cupo etiqueta {
+    font-size: 13px;
+}
+
+.arete_house-economy cupo valor {
+    font-size: 18px;
+}
+
+.arete_house-economy cupo valor small {
+    font-size: 12px;    
+}
+
+/* ---------- TABLA ---------- */
+
+.arete_house-economy celda a {    
+    font-size: 12px;
+}
+
+.arete_house-economy fila {
+    column-gap: 14px;
+}
+
+.arete_house-economy celda[data-tipo="cabecera"] {
+   font-size: 10.5px;    
+}
+
+.arete_house-economy celda {
+    font-size: 13.5px;
+}
+
+.arete_house-economy celda[data-tipo="nombre"] small {
+    font-size: 11.5px;
+}
+
+.arete_house-economy resumen celda etiqueta { 
+    font-size: 10px;    
+}
+
+.arete_house-economy resumen celda valor {
+    font-size: 17px;    
+}
+
+/* ---------- HABILIDADES ---------- */
+
+.arete_house-economy habilidad nombre {
+    font-family: var(--heco-display);
+    font-size: 13.5px;
+}
+
+.arete_house-economy habilidad nombre {
+    width: 190px;
+}
+
+.arete_house-economy habilidad desc {
+    font-size: 13px;
+}
+

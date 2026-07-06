@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Economy</title>
+    <link rel="stylesheet" href="../core/variables.css">
+    <link rel="stylesheet" href="../core/house-economy.css">
+    <link rel="stylesheet" href="../themes/forum-a.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/game-icons/game-icons.css">   
+</head>
+<body>
+
+    <!--si en guerra: data-stattus="guerra"-->
+    <div class="arete_house-economy" data-status="" style="--heco-accent: var(--group);">
+
+  <!-- ================= CABECERA ================= -->
+  <cabecera>
+    <sello><i class="game-icon game-icon-riposte"></i></sello>
+    <casa>
+      <lema>Frasecita aesthetic</lema>
+      <h1>Casa Ejemplo</h1>
+      <datos>
+        <dato>Región: <b>El Norte</b></dato>
+        <dato>Asentamiento: <b>Fuerte Terror</b></dato>
+        <dato>Mes: <b>Agosto, 2026</b></dato>
+      </datos>
+    </casa>
+    <dado>
+      <etiqueta>Dado de Dragones</etiqueta>
+      <valor>500</valor>
+    </dado>
+  </cabecera>
+
+  <!-- ================= I. TESORO ================= -->
+  <section>
+    <titular>
+      <h2>Tesoro</h2>
+      <subtitulo>Dragones de oro</subtitulo>
+    </titular>
+
+    <libro>
+      <movimientos>
+        <movimiento>
+          <concepto>Arcas del mes anterior</concepto>
+          <cantidad data-tipo="neutro">300</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Tirada mensual (dado de producción)</concepto>
+          <cantidad data-tipo="ingreso">+500</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Ingresos fijos mensuales <small>bono de Casa gobernante y/o gran ciudad — acumulables si aplican ambos</small></concepto>
+          <cantidad data-tipo="ingreso">+200</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Mercado Nivel I <small>+400 dragones base · bono regional de Dorne +100 dragones</small></concepto>
+          <cantidad data-tipo="ingreso">+500</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Orden público — Contenta <small>+100 dragones fijos, tramo 61-85</small></concepto>
+          <cantidad data-tipo="ingreso">+100</cantidad>
+        </movimiento>
+      </movimientos>
+      <movimiento data-tipo="total">
+        <concepto>Subtotal disponible</concepto>
+        <cantidad>1.600</cantidad>
+      </movimiento>
+      <movimientos>
+        <movimiento>
+          <concepto>Cantera Nivel I</concepto>
+          <cantidad data-tipo="gasto">−400</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Gobierno Nivel I <small>+5 orden público, +100 dragones — entra en efecto el mes siguiente</small></concepto>
+          <cantidad data-tipo="gasto">−100</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Mercado Nivel II</concepto>
+          <cantidad data-tipo="gasto">−450</cantidad>
+        </movimiento>
+      </movimientos>
+      <movimiento data-tipo="total">
+        <concepto>Remanente en las arcas</concepto>
+        <cantidad>650</cantidad>
+      </movimiento>
+    </libro>
+  </section>
+
+  <!-- ================= II. ALIMENTO ================= -->
+  <section>
+    <titular>
+      <h2>Alimento</h2>
+      <subtitulo>Granero</subtitulo>
+    </titular>
+
+    <libro>
+      <movimientos>
+        <movimiento>
+          <concepto>Producción mensual <small>Molino y bonos regionales ya incluidos</small></concepto>
+          <cantidad data-tipo="ingreso">+40</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Orden público — Contenta <small>+10 alimento fijo, tramo 61-85</small></concepto>
+          <cantidad data-tipo="ingreso">+10</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Consumo del asentamiento <small>base + tamaño de ciudad: +10 ciudad / +30 gran ciudad</small></concepto>
+          <cantidad data-tipo="gasto">−30</cantidad>
+        </movimiento>
+      </movimientos>
+      <movimiento data-tipo="total">
+        <concepto>Remanente almacenado</concepto>
+        <cantidad>+20</cantidad>
+      </movimiento>
+    </libro>
+
+    <barra style="--valor:40; --max:50;">
+      <medida>
+        <span>Capacidad del granero</span>
+        <span><b>40</b> / 50</span>
+      </medida>
+      <pista>
+        <relleno></relleno>
+      </pista>
+    </barra>
+  </section>
+
+  <!-- ================= III. MATERIALES ================= -->
+  <section>
+    <titular>
+      <h2>Materiales</h2>
+      <subtitulo>Remanente + producción</subtitulo>
+    </titular>
+
+    <recursos>
+      <recurso>
+        <icono><i class="game-icon game-icon-log"></i></icono>
+        <etiqueta>Madera</etiqueta>
+        <valor>8</valor>
+        <detalle>4 remanente <mas>+4 producción</mas></detalle>
+      </recurso>
+      <recurso>
+        <icono><i class="game-icon game-icon-stone-block"></i></icono>
+        <etiqueta>Piedra</etiqueta>
+        <valor>0</valor>
+        <detalle>0 remanente <mas>+0 producción</mas></detalle>
+      </recurso>
+      <recurso>
+        <icono><i class="game-icon game-icon-metal-bar"></i></icono>
+        <etiqueta>Hierro</etiqueta>
+        <valor>0</valor>
+        <detalle>0 remanente <mas>+0 producción</mas></detalle>
+      </recurso>
+    </recursos>
+    <nota>Recuerda sumar aquí el bono regional que corresponda a tu reino (p. ej. <b>+2 Piedra</b> por nivel de Cantera en Tierras de la Tormenta, o <b>+2 Hierro</b> por nivel de Mina en Islas del Hierro) dentro de la cifra de producción de cada recurso.</nota>
+  </section>
+
+  <!-- ================= IV. ORDEN PÚBLICO ================= -->
+  <section>
+    <titular>
+      <h2>Orden Público</h2>
+      <fase data-fase="contenta">Contenta</fase>
+    </titular>
+
+    <libro>
+      <movimientos>
+        <movimiento>
+          <concepto>Valor base</concepto>
+          <cantidad data-tipo="neutro">35</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Septo Nivel I <small>edificio permanente</small></concepto>
+          <cantidad data-tipo="ingreso">+10</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Guardia urbana Nivel I <small>edificio permanente</small></concepto>
+          <cantidad data-tipo="ingreso">+5</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Nacimiento de un hijo/a en la familia</concepto>
+          <cantidad data-tipo="ingreso">+5</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Miembro de la Casa nombrado Consejero Privado</concepto>
+          <cantidad data-tipo="ingreso">+5</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Victoria militar <small>de magnitud menor</small></concepto>
+          <cantidad data-tipo="ingreso">+10</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Territorio saqueado</concepto>
+          <cantidad data-tipo="gasto">−5</cantidad>
+        </movimiento>
+      </movimientos>
+      <movimiento data-tipo="total">
+        <concepto>Orden público actual</concepto>
+        <cantidad>65</cantidad>
+      </movimiento>
+    </libro>
+    <nota>Tramo actual: <b>Contenta (61-85)</b> → +100 dragones fijos, +10 alimento, +2 Defensa. Los extremos también afectan a otros apartados: <b>Jubilosa</b> (86-100) suma +1 intercambio mensual y libra de consumo a las levas recién movilizadas; <b>Descontenta</b> (11-30) añade fricción narrativa a la primera leva del mes; <b>Furiosa</b> (1-10) resta 1 intercambio mensual y arriesga robo de recursos o inactividad de un edificio.</nota>
+  </section>
+
+  <!-- ================= V. DEFENSA ================= -->
+  <section>
+    <titular>
+      <h2>Defensa</h2>
+      <subtitulo>Valor base 30</subtitulo>
+    </titular>
+
+    <libro>
+      <movimientos>
+        <movimiento>
+          <concepto>Valor base</concepto>
+          <cantidad data-tipo="neutro">30</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Muralla Nivel II <small>edificio permanente</small></concepto>
+          <cantidad data-tipo="ingreso">+20</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Torres Nivel I <small>edificio permanente · +1 dificultad a espionajes enemigos</small></concepto>
+          <cantidad data-tipo="ingreso">+5</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Puerta fortificada Nivel I <small>edificio permanente · +2 VC al defensor durante un asalto</small></concepto>
+          <cantidad data-tipo="ingreso">+5</cantidad>
+        </movimiento>
+        <movimiento>
+          <concepto>Orden público — Contenta <small>tramo 61-85</small></concepto>
+          <cantidad data-tipo="ingreso">+2</cantidad>
+        </movimiento>
+      </movimientos>
+      <movimiento data-tipo="total">
+        <concepto>Defensa total</concepto>
+        <cantidad>62</cantidad>
+      </movimiento>
+    </libro>
+    <nota>Añade aquí también, si corresponde a tu asentamiento: <b>+50 Defensa</b> por fortaleza legendaria (Invernalia, El Nido, Roca Casterly, Aguasdulces, Rocadragón, Altojardín, Bastión de Tormentas, Pyke) o <b>+10 Defensa</b> por asentamiento destacado (Desembarco del Rey, Lanza del Sol).</nota>
+  </section>
+
+  <!-- ================= VI. PATRIMONIO ================= -->
+  <section>
+    <titular>
+      <h2>Patrimonio de la Casa</h2>
+      <subtitulo>Edificios, ejército y flota</subtitulo>
+    </titular>
+
+    <apartado>
+      <titulo>Edificaciones</titulo>
+      <subtitulo>— ya en efecto, de meses anteriores</subtitulo>
+    </apartado>
+    <tabla data-columnas="2">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Edificio</celda>
+        <celda data-tipo="cabecera">Efecto</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Muralla Nivel II</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+20 Defensa</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Torres Nivel I</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+5 Defensa · +1 dificultad a espionajes</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Puerta fortificada Nivel I</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+5 Defensa · +2 VC al defensor</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Septo Nivel I</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+10 Orden público</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Guardia urbana Nivel I</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+5 Orden público · +100 levas de guarnición</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Molino Nivel I</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+40 Alimento al mes</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Mercado Nivel I</celda>
+        <celda data-tipo="ganancia" data-label="Efecto">+400 dragones al mes · +100 bono regional de Dorne</celda>
+      </fila>
+ <!-- EDITAR: esta tabla es el inventario único de TODO lo permanente que ya tienes construido: defensivo, de orden público y también productivo (Cantera, Aserradero, Mina, Molino, Mercado, Granero, Muelle, Caravana). Un edificio aparece aquí el mes SIGUIENTE al que lo pagas en Inversiones (VIII) — el mes que lo compras vive solo ahí, con la nota "entra en efecto el mes siguiente". Su cifra sigue sumando además donde le corresponda: Cantera/Aserradero/Mina en la producción de Materiales,
+           Molino en Alimento, Mercado en Tesoro, Granero en el --max de la barra
+           del granero, y Muelle/Caravana en el cupo de "Rutas comerciales
+           activas" de Comercio (súmalos al segundo número, el del cupo máximo). -->
+    </tabla>
+
+    <apartado>
+      <titulo>Ejército</titulo>
+      <subtitulo>— efectivos actuales</subtitulo>
+    </apartado>
+    <tabla data-columnas="3">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Tropa</celda>
+        <celda data-tipo="cabecera">Efectivos</celda>
+        <celda data-tipo="cabecera">Mantenimiento</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Levas<small>600 base + 400 bono de Casa gobernante</small></celda>
+        <celda data-label="Efectivos">1.000</celda>
+        <celda data-tipo="neutro" data-label="Mantenimiento">50 alimento*</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Lanceros<small>bono de Casa gobernante</small></celda>
+        <celda data-label="Efectivos">200</celda>
+        <celda data-tipo="neutro" data-label="Mantenimiento">12 alimento*</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Guarnición<small>200 base + 100 Guardia urbana I + 400 bono de gran ciudad</small></celda>
+        <celda data-label="Efectivos">700</celda>
+        <celda data-tipo="neutro" data-label="Mantenimiento">—</celda>
+      </fila>
+      <!-- EDITAR: añade una <fila> por cada tipo de tropa (Arqueros, Hombres de armas, Caballeros...). Máximo 2 unidades del mismo tipo reclutadas por mes. -->
+    </tabla>
+    <nota>*El mantenimiento en alimento solo se paga mientras la tropa está en campaña fuera del asentamiento; la guarnición no lo genera. Recuerda mantener siempre un mínimo de 200 efectivos de guarnición dentro del asentamiento.</nota>
+
+    <apartado>
+      <titulo>Flota</titulo>
+      <subtitulo>— unidades actuales</subtitulo>
+    </apartado>
+    <tabla data-columnas="3">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Barco</celda>
+        <celda data-tipo="cabecera">Unidades</celda>
+        <celda data-tipo="cabecera">Capacidad</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Barcoluengo<small>bono de Casa gobernante</small></celda>
+        <celda data-label="Unidades">4</celda>
+        <celda data-tipo="neutro" data-label="Capacidad">4 unidades</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Dromón<small>bono de Casa gobernante</small></celda>
+        <celda data-label="Unidades">1</celda>
+        <celda data-tipo="neutro" data-label="Capacidad">3 unidades</celda>
+      </fila>
+      <!-- EDITAR: añade una <fila> por cada tipo de barco. Máx. de construcción mensual: 2 del mismo tipo (3 en barcoluengos, 5 en transportes). -->
+    </tabla>
+  </section>
+
+  <!-- ================= VII. COMERCIO ================= -->
+  <section>
+    <titular>
+      <h2>Comercio</h2>
+      <subtitulo>Rutas e intercambios</subtitulo>
+    </titular>
+
+    <cupos>
+      <cupo>
+        <etiqueta>Rutas comerciales activas</etiqueta>
+        <valor>2<small>&nbsp;/ 2</small></valor>
+      </cupo>
+      <cupo>
+        <etiqueta>Intercambios usados este mes</etiqueta>
+        <valor>1<small>&nbsp;/ 2</small></valor>
+      </cupo>
+    </cupos>
+    <nota>El cupo de intercambios lo modifica el tramo de Orden Público: <b>Jubilosa</b> (86-100) da +1 intercambio mensual; <b>Furiosa</b> (1-10) resta 1.</nota>
+
+    <!-- Rutas ya consolidadas de meses anteriores -->
+    <apartado>
+      <titulo>Rutas activas</titulo>
+      <subtitulo>— establecidas en meses anteriores</subtitulo>
+    </apartado>
+    <tabla data-columnas="5">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Casa vinculada</celda>
+        <celda data-tipo="cabecera">Reino</celda>
+        <celda data-tipo="cabecera">Estado</celda>
+        <celda data-tipo="cabecera">Tema</celda>
+        <celda data-tipo="cabecera">Aporte</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Casa Yronwood<small>ruta del mismo reino</small></celda>
+        <celda data-label="Reino">Dorne</celda>
+        <celda data-label="Estado"><estado data-status="activa"></estado></celda>
+        <celda data-tipo="enlace" data-label="Tema"><a href="#" target="_blank" rel="noopener">Ver tema</a></celda>
+        <celda data-tipo="ganancia" data-label="Aporte">+100</celda>
+      </fila>
+      <!-- EDITAR: añade una <fila> por cada ruta ya consolidada -->
+    </tabla>
+
+    <!-- Rutas firmadas durante el mes en curso -->
+    <apartado>
+      <titulo>Rutas nuevas este mes</titulo>
+      <subtitulo>— entran en efecto el mes siguiente</subtitulo>
+    </apartado>
+    <tabla data-columnas="5">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Casa vinculada</celda>
+        <celda data-tipo="cabecera">Reino</celda>
+        <celda data-tipo="cabecera">Estado</celda>
+        <celda data-tipo="cabecera">Tema</celda>
+        <celda data-tipo="cabecera">Aporte</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Casa Hightower<small>reino distinto</small></celda>
+        <celda data-label="Reino">Dominio</celda>
+        <celda data-label="Estado"><estado data-status="nueva"></estado></celda>
+        <celda data-tipo="enlace" data-label="Tema"><a href="#" target="_blank" rel="noopener">Ver tema</a></celda>
+        <celda data-tipo="ganancia" data-label="Aporte">+100</celda>
+      </fila>
+      <!-- EDITAR: añade una <fila> (con estado data-status="nueva") por cada ruta acordada este mes. Sustituye el href="#" por el enlace real al tema del acuerdo comercial. -->
+    </tabla>
+
+    <titulo style="margin-top:26px;">Intercambios del mes</titulo>
+    <tabla data-columnas="3">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Contraparte</celda>
+        <celda data-tipo="cabecera">Entregamos</celda>
+        <celda data-tipo="cabecera">Recibimos</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Casa Yronwood</celda>
+        <celda data-label="Entregamos">50 dragones</celda>
+        <celda data-tipo="ganancia" data-label="Recibimos">4 madera</celda>
+      </fila>
+      <!-- EDITAR: hasta 2 intercambios mensuales (o 3 con Jubilosa); no requieren ruta comercial abierta -->
+    </tabla>
+  </section>
+
+  <!-- ================= VIII. INVERSIONES ================= -->
+  <section>
+    <titular>
+      <h2>Inversiones del mes</h2>
+      <subtitulo>Compras registradas</subtitulo>
+    </titular>
+
+    <tabla data-columnas="2">
+      <fila data-tipo="cabecera">
+        <celda data-tipo="cabecera">Edificio / mejora</celda>
+        <celda data-tipo="cabecera">Coste</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Cantera Nivel I<small>+4 piedra al mes</small></celda>
+        <celda data-tipo="coste" data-label="Coste">400 dragones</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Gobierno Nivel I<small>+5 orden público, +100 dragones al mes</small></celda>
+        <celda data-tipo="coste" data-label="Coste">100 dragones · 3 madera</celda>
+      </fila>
+      <fila>
+        <celda data-tipo="nombre">Mercado Nivel II<small>+800 dragones al mes (sustituye a Nivel I)</small></celda>
+        <celda data-tipo="coste" data-label="Coste">450 dragones · 4 madera</celda>
+      </fila>
+      <!-- EDITAR: añade una <fila> por cada compra del mes -->
+    </tabla>
+  </section>
+
+  <!-- ================= IX. REMANENTE FINAL ================= -->
+  <section>
+    <titular>
+      <h2>Remanente para el próximo mes</h2>
+    </titular>
+
+    <resumen>
+      <celda>
+        <etiqueta>Dragones</etiqueta>
+        <valor>650</valor>
+      </celda>
+      <celda>
+        <etiqueta>Alimento</etiqueta>
+        <valor>40 / 50</valor>
+      </celda>
+      <celda>
+        <etiqueta>Madera</etiqueta>
+        <valor>1</valor>
+      </celda>
+      <celda>
+        <etiqueta>Piedra</etiqueta>
+        <valor>0</valor>
+      </celda>
+      <celda>
+        <etiqueta>Hierro</etiqueta>
+        <valor>0</valor>
+      </celda>
+    </resumen>
+  </section>
+
+  <!-- ================= X. HABILIDADES ================= -->
+  <section>
+    <titular>
+      <h2>Habilidades aplicadas</h2>
+      <subtitulo>Efectos sobre la economía</subtitulo>
+    </titular>
+
+    <habilidades>
+      <habilidad>
+        <nombre>Contable de la Casa</nombre>
+        <desc>En la tirada de economía mensual se lanzan dos dados de Dragones y se elige el resultado más alto.</desc>
+      </habilidad>
+      <!-- EDITAR: añade una <habilidad> por cada habilidad de personaje que aplique -->
+    </habilidades>
+  </section>
+
+</div>
+    
+    <style>body { font-family: "Open Sans", sans-serif; color: #777; background-color: var(--dbckg0); --border2: 1px solid #222222; --group: #c77100; --group-50: #c79f0080; --dbckg0: #101010; --dbckg1: #121212; }</style>
+</body>
+</html>
