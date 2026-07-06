@@ -1029,8 +1029,6 @@ section {
 
 .arete_house-economy movimiento {    
     font-size: 14.5px;
-
-    border-bottom: 1px dashed var(--line);
 }
 
 .arete_house-economy movimiento concepto small {
