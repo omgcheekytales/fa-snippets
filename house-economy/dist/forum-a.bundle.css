@@ -724,7 +724,7 @@ section:last-of-type {
     padding: 12px 0;
 }
 
-.arete_house-economy fila:last-child {
+.arete_house-economy fila:last-of-type {
     border-bottom: none;
 }
 
