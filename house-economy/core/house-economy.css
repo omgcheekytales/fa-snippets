@@ -85,7 +85,6 @@
     color: var(--clr-text);    
 
     letter-spacing: .02em;
-    text-transform: uppercase;
 
     margin: 0 0 8px;
 }
