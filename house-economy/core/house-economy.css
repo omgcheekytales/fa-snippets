@@ -242,7 +242,7 @@ section:last-of-type {
 }
 
 .arete_house-economy movimiento concepto {
-    color: var(--clr-text);
+    color: var(--clr-text-light);
 }
 
 .arete_house-economy movimiento concepto small {
@@ -285,8 +285,7 @@ section:last-of-type {
 .arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {
     display: block;
-
-    font-family: var(--heco-display);    
+   
     color: var(--clr-text);
 
     letter-spacing: .04em;
@@ -738,7 +737,6 @@ section:last-of-type {
 }
 
 .arete_house-economy celda[data-tipo="nombre"] {
-    color: var(--clr-text);
     font-weight: 500;
 }
 

@@ -9,7 +9,7 @@
     --clr-text-lighter: #777;
 
     --heco-display: 'TLLRegular';
-    --heco-font:    'Inter', system-ui, sans-serif;
+    --heco-font:    'Open Sans', sans-serif;
     --heco-font-data: 'IBM Plex Mono', monospace;
 }
 
@@ -81,7 +81,7 @@ section {
 
 .arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {   
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .arete_house-economy movimiento[data-tipo="total"] cantidad {
