@@ -417,7 +417,7 @@
 
     padding: .1rem .5rem;
 
-    border-radius: 3px;
+    border-radius: calc(var(--r-sm)/2);
   }.arete_house-economy estado[data-status="activa"] {
     color: var(--sage);
 
