@@ -183,6 +183,17 @@
 .arete_house-economy celda[data-label="coste"],
 .arete_house-economy celda[data-tipo="ganancia"] {
     font-weight: 400;
+}/*Ingresos y ganancias*/.arete_house-economy [data-tipo="ingreso"]:not(:empty)::before,
+.arete_house-economy [data-tipo="ganancia"]:not(:empty):not([data-label="recibimos"])::before {
+    content: '+';
+}.arete_house-economy [data-tipo="ingreso"]:empty::before,
+.arete_house-economy [data-tipo="ganancia"]:empty::before {
+  content: '—';
+}/*Gastos y costes*/.arete_house-economy [data-tipo="gasto"]:not(:empty)::before {
+    content: '-';
+}.arete_house-economy [data-tipo="gasto"]:empty::before,
+.arete_house-economy [data-tipo="coste"]:empty::before {
+  content: '—';
 }.arete_house-economy libro {
     display: flex;
     flex-direction: column;
@@ -373,7 +384,6 @@
     color: var(--clr-text-light);
 }.arete_house-economy cupo valor {
     font-family: var(--heco-font-data);
-    font-size: 18px;
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);    
 }.arete_house-economy cupo valor small {
     color: var(--clr-text-lighter);
@@ -405,7 +415,7 @@
     letter-spacing: .04em;
     text-transform: uppercase;
 
-    padding: .25rem .5rem;
+    padding: .1rem .5rem;
 
     border-radius: 3px;
   }.arete_house-economy estado[data-status="activa"] {
