@@ -923,10 +923,7 @@ section:last-of-type {
 
 .arete_house-economy habilidad nombre {
     display: block;
-    
-    font-family: var(--heco-display);
-    color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-    
+        
     flex: none;
 }
 

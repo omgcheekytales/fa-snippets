@@ -184,6 +184,7 @@ section {
 
     font-family: var(--heco-display);
     font-size: 26px;
+    color: var(--heco-accent);
 
     letter-spacing: .04em;
 }
