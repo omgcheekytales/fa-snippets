@@ -1,13 +1,13 @@
-:root {
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');:root {
   --crimson: #a24a5d;
   --sage:    #7f9e7c;
 
   --r-lg: 14px;
   --r-md: 10px;
   --r-sm: 6px;
-}
-
-.arete_house-economy {
+}.arete_house-economy {
     display: block;
 
     max-width: 880px;
@@ -19,15 +19,9 @@
     position: relative;
     
     overflow: hidden;
- }
-
-/* ---------- ESTADO DE GUERRA ----------*/
-
-.arete_house-economy[data-status="guerra"] cabecera {
+ }/* ---------- ESTADO DE GUERRA ----------*/.arete_house-economy[data-status="guerra"] cabecera {
     border-bottom-color: rgba(162,74,93,.45);
-}
-
-.arete_house-economy[data-status="guerra"] cabecera::after {
+}.arete_house-economy[data-status="guerra"] cabecera::after {
     content: "● En guerra";
     
     font-family: var(--heco-font-data);
@@ -47,19 +41,13 @@
     position: absolute;
     top: 18px;
     right: 40px;
-}
-
-@media (max-width: 560px) {    
+}@media (max-width: 560px) {    
 
     .arete_house-economy[data-status="guerra"] cabecera::after {
       right: 22px;
     }
 
-}
-
-/* ---------- CABECERA DE LA CASA ---------- */
-
-.arete_house-economy cabecera {
+}/* ---------- CABECERA DE LA CASA ---------- */.arete_house-economy cabecera {
     background-color: var(--heco-bg-2);
     
     padding: 40px 40px 32px;
@@ -69,15 +57,11 @@
     gap: 24px;
     
     position: relative;
-}
-
-.arete_house-economy casa {
+}.arete_house-economy casa {
     display: block;
 
     min-width: 0;
-}
-
-.arete_house-economy lema {
+}.arete_house-economy lema {
     display: block;
 
     font-family: var(--heco-font-data);   
@@ -87,31 +71,23 @@
     text-transform: uppercase;
 
     margin: 0 0 1rem;
-}
-
-.arete_house-economy casa h1 {
+}.arete_house-economy casa h1 {
     font-family: var(--heco-display);     
     color: var(--clr-text);    
 
     letter-spacing: .02em;
 
     margin: 0 0 8px;
-}
-
-.arete_house-economy datos {    
+}.arete_house-economy datos {    
     color: var(--clr-text-light);
 
     display: flex;
     flex-wrap: wrap;
     gap: 8px 18px;
-}
-
-.arete_house-economy datos dato b {
+}.arete_house-economy datos dato b {
     color: var(--clr-text);
     font-weight: 600;
-}
-
-.arete_house-economy dado {
+}.arete_house-economy dado {
     display: block;
 
     text-align: right;
@@ -121,9 +97,7 @@
     margin-left: auto;
     
     flex: none;
-}
-
-.arete_house-economy dado etiqueta {
+}.arete_house-economy dado etiqueta {
     display: block;
 
     font-family: var(--heco-font-data);
@@ -133,16 +107,12 @@
     text-transform: uppercase;
 
     margin-bottom: 4px;
-}
-
-.arete_house-economy dado valor {
+}.arete_house-economy dado valor {
     font-family: var(--heco-display);
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     line-height: 1;
-}
-
-@media (max-width: 560px) {
+}@media (max-width: 560px) {
 
     .arete_house-economy cabecera {
       flex-wrap: wrap;
@@ -158,38 +128,24 @@
       margin-left: 0;
     }
 
-}
-
-/* ---------- SECCIONES ---------- */
-
-section {
+}/* ---------- SECCIONES ---------- */section {
     padding: 32px 40px;
-}
-
-section:last-of-type {
+}section:last-of-type {
     border-bottom: none;
-}
-
-.arete_house-economy titular {
+}.arete_house-economy titular {
     display: flex;
     align-items: baseline;
     gap: 12px;
 
     margin-bottom: 22px;
-}
-
-.arete_house-economy {
+}.arete_house-economy {
     counter-reset: section-counter;
-}
-
-.arete_house-economy h2 {
+}.arete_house-economy h2 {
     counter-increment: section-counter;
 
     display: flex;
     align-items: center;
-}
-
-.arete_house-economy h2::before {
+}.arete_house-economy h2::before {
     font-family: var(--heco-font-data);
 
     color: color-mix(in srgb, var(--heco-accent) 68%, black 32%);
@@ -200,9 +156,7 @@ section:last-of-type {
     border-radius: 4px;
 
     margin-right: 12px;
-}
-
-.arete_house-economy h2 {
+}.arete_house-economy h2 {
     font-family: var(--heco-display);
     color: var(--clr-text);
 
@@ -210,30 +164,20 @@ section:last-of-type {
     text-transform: uppercase;
 
     margin: 0;
-}
-
-.arete_house-economy titular subtitulo {    
+}.arete_house-economy titular subtitulo {    
     font-family: var(--heco-font-data);
     font-size: 12.5px;
     color: var(--clr-text-lighter);
 
     margin-left: auto;
-}
-
-.arete_house-economy titular fase {
+}.arete_house-economy titular fase {
     align-self: center;
     
     margin-left: auto;
-}
-
-/* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */
-
-.arete_house-economy libro {
+}/* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */.arete_house-economy libro {
     display: flex;
     flex-direction: column;
-}
-
-.arete_house-economy movimiento {    
+}.arete_house-economy movimiento {    
     font-size: 14.5px;
 
     padding: 10px 0;
@@ -244,73 +188,47 @@ section:last-of-type {
     gap: 16px;
 
     border-bottom: 1px dashed var(--line);
-}
-
-.arete_house-economy movimiento:last-of-type {
+}.arete_house-economy movimiento:last-of-type {
     border-bottom: none;
-}
-
-.arete_house-economy movimiento concepto {
-    color: var(--clr-text);
-}
-
-.arete_house-economy movimiento concepto small {
+}.arete_house-economy movimiento concepto {
+    color: var(--clr-text-light);
+}.arete_house-economy movimiento concepto small {
     display: block;
 
     color: var(--clr-text-lighter);
    
     margin-top: 2px;
-}
-
-.arete_house-economy movimiento cantidad {
+}.arete_house-economy movimiento cantidad {
     font-family: var(--heco-font-data);
     font-variant-numeric: tabular-nums;
     font-weight: 500;
     
     white-space: nowrap;
-}
-
-.arete_house-economy cantidad[data-tipo="ingreso"] {
+}.arete_house-economy cantidad[data-tipo="ingreso"] {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-}
-
-.arete_house-economy cantidad[data-tipo="gasto"] {
+}.arete_house-economy cantidad[data-tipo="gasto"] {
     color: var(--crimson);
-}
-
-.arete_house-economy cantidad[data-tipo="neutro"] {
+}.arete_house-economy cantidad[data-tipo="neutro"] {
     color: var(--clr-text);
-}
-
-.arete_house-economy movimiento[data-tipo="total"] {
+}.arete_house-economy movimiento[data-tipo="total"] {
     padding-top: 16px;
 
     border-top: 1px solid var(--line);
     border-bottom: none;
     
     margin-top: 6px;
-}
-
-.arete_house-economy movimiento[data-tipo="total"] concepto,
+}.arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {
     display: block;
-
-    font-family: var(--heco-display);    
+   
     color: var(--clr-text);
 
-    letter-spacing: .04em;
     text-transform: uppercase;
-}
-
-.arete_house-economy movimiento[data-tipo="total"] concepto {
+}.arete_house-economy movimiento[data-tipo="total"] concepto {
     display: inline;
-}
-
-.arete_house-economy movimiento[data-tipo="total"] cantidad {
+}.arete_house-economy movimiento[data-tipo="total"] cantidad {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-}
-
-.arete_house-economy nota {
+}.arete_house-economy nota {
     display: block;
     
     color: var(--clr-text-lighter);
@@ -318,34 +236,22 @@ section:last-of-type {
     line-height: 1.5;
     
     margin: 12px 0 0;
-}
-
-.arete_house-economy nota b {
+}.arete_house-economy nota b {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
     font-weight: 600;
-}
-
-.arete_house-economy nota:empty {
+}.arete_house-economy nota:empty {
     margin: 0;
-}
-
-/* ---------- TARJETAS DE RECURSOS ---------- */
-
-.arete_house-economy recursos {
+}/* ---------- TARJETAS DE RECURSOS ---------- */.arete_house-economy recursos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-}
-
-@media (max-width: 620px) {
+}@media (max-width: 620px) {
 
     .arete_house-economy recursos {
       grid-template-columns: repeat(2, 1fr);
     }
 
-}
-
-.arete_house-economy recurso {
+}.arete_house-economy recurso {
     display: block;
 
     text-align: center;
@@ -356,13 +262,8 @@ section:last-of-type {
 
     border: 1px solid var(--line);
     border-radius: var(--r-md);
-}
-
-.arete_house-economy recurso icono {
+}.arete_house-economy recurso icono {
     display: flex;
-
-    font-family: var(--heco-display);
-    color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     border-radius: 50%;
 
@@ -370,9 +271,7 @@ section:last-of-type {
     justify-content: center;
 
     margin: 0 auto 12px;
-}
-
-.arete_house-economy recurso etiqueta {
+}.arete_house-economy recurso etiqueta {
     display: block;
 
     font-family: var(--heco-font-data);  
@@ -382,50 +281,34 @@ section:last-of-type {
     text-transform: uppercase;
 
     margin-bottom: 6px;
-}
-
-.arete_house-economy recurso valor {
+}.arete_house-economy recurso valor {
     display: block;
 
     font-family: var(--heco-font-data); 
     color: var(--clr-text);
     font-weight: 600;
-}
-
-.arete_house-economy recurso valor small {
+}.arete_house-economy recurso valor small {
     color: var(--clr-text-lighter);    
     font-weight: 400;
-}
-
-.arete_house-economy recurso detalle {
+}.arete_house-economy recurso detalle {
     display: block;
     
     color: var(--clr-text-lighter);
     
     margin-top: 6px;
-}
-
-.arete_house-economy recurso detalle mas {
+}.arete_house-economy recurso detalle mas {
     color: var(--sage);
 
     font-style: normal;
-}
-
-.arete_house-economy recurso detalle menos {
+}.arete_house-economy recurso detalle menos {
     color: var(--crimson);
 
     font-style: normal;
-}
-
-/* ---------- BARRA (GRANERO / CAPACIDAD) ---------- */
-
-.arete_house-economy barra {
+}/* ---------- BARRA (GRANERO / CAPACIDAD) ---------- */.arete_house-economy barra {
     display: block;
 
     margin-top: 4px;
-}
-
-.arete_house-economy medida {
+}.arete_house-economy medida {
     font-family: var(--heco-font-data);
     color: var(--clr-text-light);
     
@@ -433,14 +316,10 @@ section:last-of-type {
     justify-content: space-between;
 
     margin-bottom: 8px;
-}
-
-.arete_house-economy medida b {
+}.arete_house-economy medida b {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
     font-weight: 600;
-}
-
-.arete_house-economy pista {
+}.arete_house-economy pista {
     display: block;
 
     background-color: var(--heco-bg-2);
@@ -448,9 +327,7 @@ section:last-of-type {
     border: 1px solid var(--line);
 
     overflow: hidden;
-}
-
-.arete_house-economy relleno {
+}.arete_house-economy relleno {
     display: block;
 
     height: 100%;
@@ -463,27 +340,19 @@ section:last-of-type {
     );
 
     border-radius: 6px 0 0 6px;
-}
-
-/* ---------- CUPOS (RUTAS / INTERCAMBIOS) ---------- */
-
-.arete_house-economy cupos {
+}/* ---------- CUPOS (RUTAS / INTERCAMBIOS) ---------- */.arete_house-economy cupos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
 
     margin-bottom: 10px;
-}
-
-@media (max-width: 560px) {
+}@media (max-width: 560px) {
 
     .arete_house-economy cupos {
       grid-template-columns: 1fr;
     }
 
-  }
-
-.arete_house-economy cupo {
+  }.arete_house-economy cupo {
     background-color: var(--heco-bg-2);
 
     padding: 14px 18px;
@@ -494,57 +363,35 @@ section:last-of-type {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.arete_house-economy cupo etiqueta {
+}.arete_house-economy cupo etiqueta {
     color: var(--clr-text-light);
-}
-
-.arete_house-economy cupo valor {
+}.arete_house-economy cupo valor {
     font-family: var(--heco-font-data);
     font-size: 18px;
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);    
     font-weight: 600;
-}
-
-.arete_house-economy cupo valor small {
+}.arete_house-economy cupo valor small {
     color: var(--clr-text-lighter);
     font-weight: 400;
-}
-
-/* ---------- TÍTULOS Y APARTADOS INTERMEDIOS ---------- */
-
-.arete_house-economy titulo:not(:first-child) {
+}/* ---------- TÍTULOS Y APARTADOS INTERMEDIOS ---------- */.arete_house-economy titulo:not(:first-child) {
     margin-top: 26px;
-}
-
-.arete_house-economy apartado {
+}.arete_house-economy apartado {
     display: flex;
     align-items: center;
     gap: 10px;
 
     margin: 0 0 12px;
-}
-
-.arete_house-economy apartado:not(:first-child) {
+}.arete_house-economy apartado:not(:first-child) {
     margin-top: 26px;
-}
-
-.arete_house-economy apartado titulo {
+}.arete_house-economy apartado titulo {
     margin: 0;
-}
-
-.arete_house-economy apartado subtitulo {
+}.arete_house-economy apartado subtitulo {
     font-family: var(--heco-font-data);
     font-size: 11px;
     color: var(--clr-text-lighter);
 
     letter-spacing: .04em;
-}
-
-/* ---------- PÍLDORAS: ESTADO Y FASE ---------- */
-
-.arete_house-economy estado,
+}/* ---------- PÍLDORAS: ESTADO Y FASE ---------- */.arete_house-economy estado,
 .arete_house-economy fase {
     display: inline-block;
 
@@ -556,67 +403,41 @@ section:last-of-type {
     padding: .25rem .5rem;
 
     border-radius: 3px;
-  }
-
-.arete_house-economy estado[data-status="activa"] {
+  }.arete_house-economy estado[data-status="activa"] {
     color: var(--sage);
 
     background-color: color-mix(in srgb, var(--sage) 10%, transparent);
-}
-
-.arete_house-economy estado[data-status="activa"]::after {
+}.arete_house-economy estado[data-status="activa"]::after {
     content: 'Activa';
-}
-
-.arete_house-economy estado[data-status="cerrada"] {
-    color: var(--crimson);
-
-    border-color: rgba(162,74,93,.4);
-}
-
-.arete_house-economy estado[data-status="nueva"] {
+}.arete_house-economy estado[data-status="nueva"] {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
     
     background-color: color-mix(in srgb, var(--heco-accent) 10%, transparent);
-}
-
-.arete_house-economy estado[data-status="nueva"]::after {
+}.arete_house-economy estado[data-status="nueva"]::after {
     content: 'Nueva';
-}
-
-.arete_house-economy fase[data-fase="jubilosa"] {
+}.arete_house-economy fase[data-fase="jubilosa"] {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
     
     background-color: rgba(199,164,94,.10);
 
     border-color: rgba(199,164,94,.5);
-}
-
-.arete_house-economy fase[data-fase="contenta"] {
+}.arete_house-economy fase[data-fase="contenta"] {
     color: var(--sage);
 
     background-color: rgba(127,158,124,.08);
     
     border-color: rgba(127,158,124,.4);
-}
-
-.arete_house-economy fase[data-fase="descontenta"] {
+}.arete_house-economy fase[data-fase="descontenta"] {
     color: var(--clr-text-light);
 
     border-color: var(--line);
-}
-
-.arete_house-economy fase[data-fase="furiosa"] {
+}.arete_house-economy fase[data-fase="furiosa"] {
     color: var(--crimson);
 
     background-color: rgba(162,74,93,.08);
 
     border-color: rgba(162,74,93,.45);
-}
-
-/* ---------- CONTENIDO CON SCROLL ---------- */
-
-.arete_house-economy movimientos,
+}/* ---------- CONTENIDO CON SCROLL ---------- */.arete_house-economy movimientos,
 .arete_house-economy tabla,
 .arete_house-economy habilidades {
     max-height: 300px;
@@ -627,62 +448,38 @@ section:last-of-type {
 
     scrollbar-width: thin;
     scrollbar-color: var(--line-soft) transparent;
-}
-
-.arete_house-economy movimientos::-webkit-scrollbar,
+}.arete_house-economy movimientos::-webkit-scrollbar,
 .arete_house-economy tabla::-webkit-scrollbar,
 .arete_house-economy habilidades::-webkit-scrollbar {
     width: 6px;
-}
-
-.arete_house-economy movimientos::-webkit-scrollbar-track,
+}.arete_house-economy movimientos::-webkit-scrollbar-track,
 .arete_house-economy tabla::-webkit-scrollbar-track,
 .arete_house-economy habilidades::-webkit-scrollbar-track {
     background: transparent;
-}
-
-.arete_house-economy movimientos::-webkit-scrollbar-thumb,
+}.arete_house-economy movimientos::-webkit-scrollbar-thumb,
 .arete_house-economy tabla::-webkit-scrollbar-thumb,
 .arete_house-economy habilidades::-webkit-scrollbar-thumb {
     background-color: var(--line-soft);
 
     border-radius: 3px;
-  }
-
-.arete_house-economy movimientos::-webkit-scrollbar-thumb:hover,
+  }.arete_house-economy movimientos::-webkit-scrollbar-thumb:hover,
 .arete_house-economy tabla::-webkit-scrollbar-thumb:hover,
 .arete_house-economy habilidades::-webkit-scrollbar-thumb:hover {
     background-color: color-mix(in srgb, var(--heco-accent) 68%, black 32%);
-}
-
-.arete_house-economy movimientos {
+}.arete_house-economy movimientos {
     display: block;
-}
-
-/* ---------- TABLA ---------- */
-
-.arete_house-economy tabla {
+}/* ---------- TABLA ---------- */.arete_house-economy tabla {
     display: flex;
     flex-direction: column;
-}
-
-.arete_house-economy tabla[data-columnas="2"] fila {
+}.arete_house-economy tabla[data-columnas="2"] fila {
     grid-template-columns: 2fr 1fr;
-}
-
-.arete_house-economy tabla[data-columnas="3"] fila {
+}.arete_house-economy tabla[data-columnas="3"] fila {
     grid-template-columns: 1.6fr 1fr 1fr;
-}
-
-.arete_house-economy tabla[data-columnas="4"] fila {
+}.arete_house-economy tabla[data-columnas="4"] fila {
     grid-template-columns: 1.6fr .9fr .9fr .8fr;
-}
-
-.arete_house-economy tabla[data-columnas="5"] fila {
+}.arete_house-economy tabla[data-columnas="5"] fila {
     grid-template-columns: 1.4fr .8fr .8fr .9fr .7fr;
-}
-
-.arete_house-economy celda a {    
+}.arete_house-economy celda a {    
     font-family: var(--heco-font-data);
     color: var(--heco-accent);
 
@@ -691,44 +488,28 @@ section:last-of-type {
     white-space: nowrap;
 
     border-bottom: 1px solid color-mix(in srgb, var(--heco-accent) 68%, black 32%);   
-}
-
-.arete_house-economy celda a::after {
+}.arete_house-economy celda a::after {
     content: ' ↗';
-}
-
-.arete_house-economy celda a:hover {
+}.arete_house-economy celda a:hover {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     border-color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-}
-
-.arete_house-economy celda[data-tipo="enlace"]:not(:last-child) {
+}.arete_house-economy celda[data-tipo="enlace"]:not(:last-child) {
     text-align: left;
-}
-
-.arete_house-economy fila {
+}.arete_house-economy fila {
     display: grid;
     align-items: center;
-}
-
-.arete_house-economy fila[data-tipo="cabecera"] {
+}.arete_house-economy fila[data-tipo="cabecera"] {
     border-bottom: 1px solid var(--line);
 
     padding-bottom: 10px;
-}
-
-.arete_house-economy fila:not([data-tipo="cabecera"]) {
+}.arete_house-economy fila:not([data-tipo="cabecera"]) {
     border-bottom: 1px dashed var(--line);
 
     padding: 12px 0;
-}
-
-.arete_house-economy fila:last-of-type {
+}.arete_house-economy fila:last-of-type {
     border-bottom: none;
-}
-
-.arete_house-economy celda[data-tipo="cabecera"] {
+}.arete_house-economy celda[data-tipo="cabecera"] {
     font-family: var(--heco-font-data);
     color: var(--clr-text-lighter);    
     font-weight: 500;
@@ -736,58 +517,41 @@ section:last-of-type {
     letter-spacing: .1em;
 
     text-transform: uppercase;
-}
-
-.arete_house-economy celda:last-child {
+}.arete_house-economy celda:last-child {
     text-align: right;
-}
-
-.arete_house-economy celda {
+}.arete_house-economy celda {
     color: var(--clr-text-light);
-}
-
-.arete_house-economy celda[data-tipo="nombre"] {
-    color: var(--clr-text);
+}.arete_house-economy celda[data-tipo="nombre"] {
     font-weight: 500;
-}
-
-.arete_house-economy celda[data-tipo="nombre"] small {
+}.arete_house-economy celda[data-tipo="nombre"] small {
     display: block;
 
     color: var(--clr-text-lighter);
     font-weight: 400;
 
     margin-top: 2px;
-}
-
-.arete_house-economy celda[data-tipo="coste"] {
+}.arete_house-economy celda[data-tipo="coste"] {
     font-family: var(--heco-font-data);
     color: var(--crimson);
 
     text-align: right;
 
     white-space: nowrap;
-}
-
-.arete_house-economy celda[data-tipo="ganancia"] {
+}.arete_house-economy celda[data-tipo="ganancia"] {
     font-family: var(--heco-font-data);
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     text-align: right;
 
     white-space: nowrap;
-}
-
-.arete_house-economy celda[data-tipo="neutro"] {
+}.arete_house-economy celda[data-tipo="neutro"] {
     font-family: var(--heco-font-data);
     color: var(--clr-text);
 
     text-align: right;
 
     white-space: nowrap;
-}
-
-@media (max-width: 620px) {
+}@media (max-width: 620px) {
 
     .arete_house-economy fila[data-tipo="cabecera"] {
       display: none;
@@ -836,11 +600,7 @@ section:last-of-type {
       text-align: right;
     }
 
-}
-
-/* ---------- RESUMEN FINAL ---------- */
-
-.arete_house-economy resumen {
+}/* ---------- RESUMEN FINAL ---------- */.arete_house-economy resumen {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1px;
@@ -851,17 +611,13 @@ section:last-of-type {
     border-radius: var(--r-md);
 
     overflow: hidden;
-}
-
-@media (max-width: 620px) {
+}@media (max-width: 620px) {
 
     .arete_house-economy resumen {
       grid-template-columns: repeat(2, 1fr);
     }
 
-}
-
-.arete_house-economy resumen celda {
+}.arete_house-economy resumen celda {
     display: block;
     
     text-align: center !important;
@@ -869,9 +625,7 @@ section:last-of-type {
     background-color: var(--heco-bg-2);
 
     padding: 16px 12px;
-}
-
-.arete_house-economy resumen celda etiqueta {
+}.arete_house-economy resumen celda etiqueta {
     display: block;
 
     font-family: var(--heco-font-data);
@@ -881,25 +635,17 @@ section:last-of-type {
     text-transform: uppercase;
 
     margin-bottom: 6px;
-}
-
-.arete_house-economy resumen celda valor {
+}.arete_house-economy resumen celda valor {
     display: block;
 
     font-family: var(--heco-font-data);
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
     font-weight: 600;
-}
-
-/* ---------- HABILIDADES ---------- */
-
-.arete_house-economy habilidades {
+}/* ---------- HABILIDADES ---------- */.arete_house-economy habilidades {
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
-
-.arete_house-economy habilidad {
+  }.arete_house-economy habilidad {
     background: var(--heco-bg-2);
     
     padding: 14px 16px;
@@ -910,26 +656,20 @@ section:last-of-type {
         
     display: flex;
     gap: 14px;
-}
-
-.arete_house-economy habilidad nombre {
+}.arete_house-economy habilidad nombre {
     display: block;
     
     font-family: var(--heco-display);
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
     
     flex: none;
-}
-
-.arete_house-economy habilidad desc {
+}.arete_house-economy habilidad desc {
     display: block;
 
     color: var(--clr-text-light);
 
     line-height: 1.5;
-}
-
-@media (max-width: 620px) {
+}@media (max-width: 620px) {
 
     .arete_house-economy habilidad {
       flex-direction: column;
@@ -940,9 +680,7 @@ section:last-of-type {
       width: auto;
     }
 
-}
-
-@media (max-width: 560px) {
+}@media (max-width: 560px) {
 
     section {
       padding: 26px 22px;
@@ -952,9 +690,7 @@ section:last-of-type {
       padding: 30px 22px 26px;
     }
 
-}
-
-.arete_house-economy {
+}.arete_house-economy {
     --heco-bg:   var(--dbckg1);
     --heco-bg-2: #0a0a0a;
     --line:      #222222;
@@ -965,183 +701,99 @@ section:last-of-type {
     --clr-text-lighter: #777;
 
     --heco-display: 'TLLRegular';
-    --heco-font:    'Inter', system-ui, sans-serif;
+    --heco-font:    'Open Sans', sans-serif;
     --heco-font-data: 'IBM Plex Mono', monospace;
-}
-
-.arete_house-economy br {
+}.arete_house-economy br {
     display: none !important;
-}
-
-.arete_house-economy {
+}.arete_house-economy {
     width: 700px;
 
     border: var(--border2);
     outline: var(--border2);
     outline-offset: 11px;
     outline-color: var(--group-50);
-}
-
-/* ---------- CABECERA DE LA CASA ---------- */
-
-.arete_house-economy cabecera {
+}/* ---------- CABECERA DE LA CASA ---------- */.arete_house-economy cabecera {
     border-bottom: var(--border2);
-}
-
-.arete_house-economy lema {
+}.arete_house-economy lema {
     font-size: 11px;   
-}
-
-.arete_house-economy casa h1 {   
+}.arete_house-economy casa h1 {   
     font-size: 50px;   
-}
-
-.arete_house-economy datos {    
+}.arete_house-economy datos {    
     
     font-size: 13px;
-}
-
-.arete_house-economy dado etiqueta {
+}.arete_house-economy dado etiqueta {
     font-size: 10px;  
-}
-
-.arete_house-economy dado valor {
+}.arete_house-economy dado valor {
     font-size: 35px;
-}
-
-/* ---------- SECCIONES ---------- */
-
-section {
+}/* ---------- SECCIONES ---------- */section {
     border-bottom: var(--border2);
-}
-
-.arete_house-economy h2::before {
+}.arete_house-economy h2::before {
     content: counter(section-counter, upper-roman);
 
     font-size: 12px;
-}
-
-.arete_house-economy h2 {
+}.arete_house-economy h2 {
     font-size: 33px;    
-}
-
-/* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */
-
-.arete_house-economy movimiento {    
+}/* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */.arete_house-economy movimiento {    
     font-size: 14.5px;
-}
-
-.arete_house-economy movimiento concepto small {
+}.arete_house-economy movimiento concepto small {
     font-size: 11.5px;
-}
-
-.arete_house-economy movimiento[data-tipo="total"] concepto,
+}.arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {   
-    font-size: 25px;
-}
-
-.arete_house-economy movimiento[data-tipo="total"] cantidad {
+    font-size: 14px;
+}.arete_house-economy movimiento[data-tipo="total"] cantidad {
     font-size: 19px;
-}
-
-.arete_house-economy nota {    
+}.arete_house-economy nota {    
     font-size: 12px;
-}
-
-/* ---------- TARJETAS DE RECURSOS ---------- */
-
-.arete_house-economy recurso icono {
+}/* ---------- TARJETAS DE RECURSOS ---------- */.arete_house-economy recurso icono {
     width: 42px;
     height: 42px;
     
     font-size: 22px;
+    color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     background-image: radial-gradient(circle at 35% 30%, 
         color-mix(in srgb, black 85%, var(--heco-accent)), 
         color-mix(in srgb, black 93%, var(--heco-accent)) 70%);  
 
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-}
-
-.arete_house-economy recurso etiqueta {
+    border: 1px solid;
+    border-color: color-mix(in srgb, var(--chrono-accent) 50%, transparent);
+}.arete_house-economy recurso etiqueta {
     font-size: 10.5px;  
-}
-
-.arete_house-economy recurso valor {
+}.arete_house-economy recurso valor {
     font-size: 20px;    
-}
-
-.arete_house-economy recurso valor small {
+}.arete_house-economy recurso valor small {
     font-size: 11px;
-}
-
-.arete_house-economy recurso detalle {    
+}.arete_house-economy recurso detalle {    
     font-size: 11px;
-}
-
-/* ---------- BARRA (GRANERO / CAPACIDAD) ---------- */
-
-.arete_house-economy medida {
+}/* ---------- BARRA (GRANERO / CAPACIDAD) ---------- */.arete_house-economy medida {
     font-size: 12px;
-}
-
-.arete_house-economy pista {
+}.arete_house-economy pista {
     height: 10px;
 
     border-radius: 6px;
-}
-
-/* ---------- CUPOS (RUTAS / INTERCAMBIOS) ---------- */
-
-.arete_house-economy cupo etiqueta {
+}/* ---------- CUPOS (RUTAS / INTERCAMBIOS) ---------- */.arete_house-economy cupo etiqueta {
     font-size: 13px;
-}
-
-.arete_house-economy cupo valor {
+}.arete_house-economy cupo valor {
     font-size: 18px;
-}
-
-.arete_house-economy cupo valor small {
+}.arete_house-economy cupo valor small {
     font-size: 12px;    
-}
-
-/* ---------- TABLA ---------- */
-
-.arete_house-economy celda a {    
+}/* ---------- TABLA ---------- */.arete_house-economy celda a {    
     font-size: 12px;
-}
-
-.arete_house-economy fila {
+}.arete_house-economy fila {
     column-gap: 14px;
-}
-
-.arete_house-economy celda[data-tipo="cabecera"] {
+}.arete_house-economy celda[data-tipo="cabecera"] {
    font-size: 10.5px;    
-}
-
-.arete_house-economy celda[data-tipo="nombre"] small {
+}.arete_house-economy celda[data-tipo="nombre"] small {
     font-size: 11.5px;
-}
-
-.arete_house-economy resumen celda etiqueta { 
+}.arete_house-economy resumen celda etiqueta { 
     font-size: 10px;    
-}
-
-.arete_house-economy resumen celda valor {
+}.arete_house-economy resumen celda valor {
     font-size: 17px;    
-}
-
-/* ---------- HABILIDADES ---------- */
-
-.arete_house-economy habilidad nombre {
+}/* ---------- HABILIDADES ---------- */.arete_house-economy habilidad nombre {
     font-family: var(--heco-display);
     font-size: 25px;
-}
-
-.arete_house-economy habilidad nombre {
+}.arete_house-economy habilidad nombre {
     width: 190px;
-}
-
-.arete_house-economy habilidad desc {
+}.arete_house-economy habilidad desc {
     font-size: 13px;
 }
