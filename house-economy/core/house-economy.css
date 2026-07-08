@@ -219,6 +219,19 @@ section:last-of-type {
 
 /* ---------- LIBRO (CUENTAS CON LÍNEAS) ---------- */
 
+/*Numerales*/
+
+.arete_house-economy movimiento cantidad,
+.arete_house-economy medida b,
+.arete_house-economy recurso valor,
+.arete_house-economy cupo valor,
+.arete_house-economy resumen celda valor,
+.arete_house-economy celda[data-label="aporte"],
+.arete_house-economy celda[data-label="coste"],
+.arete_house-economy celda[data-tipo="ganancia"] {
+    font-weight: 400;
+}
+
 .arete_house-economy libro {
     display: flex;
     flex-direction: column;
@@ -256,7 +269,6 @@ section:last-of-type {
 .arete_house-economy movimiento cantidad {
     font-family: var(--heco-font-data);
     font-variant-numeric: tabular-nums;
-    font-weight: 500;
     
     white-space: nowrap;
 }
@@ -375,7 +387,6 @@ section:last-of-type {
 
     font-family: var(--heco-font-data); 
     color: var(--clr-text);
-    font-weight: 600;
 }
 
 .arete_house-economy recurso valor small {
@@ -423,7 +434,6 @@ section:last-of-type {
 
 .arete_house-economy medida b {
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-    font-weight: 600;
 }
 
 .arete_house-economy pista {
@@ -490,7 +500,6 @@ section:last-of-type {
     font-family: var(--heco-font-data);
     font-size: 18px;
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);    
-    font-weight: 600;
 }
   
 .arete_house-economy cupo valor small {
@@ -867,7 +876,6 @@ section:last-of-type {
 
     font-family: var(--heco-font-data);
     color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
-    font-weight: 600;
 }
 
 /* ---------- HABILIDADES ---------- */
