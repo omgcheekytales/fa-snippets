@@ -37,7 +37,7 @@
 }
 
 .arete_house-economy casa h1 {   
-    font-size: 50px;   
+    font-size: 70px;   
 }
 
 .arete_house-economy datos {    
@@ -180,12 +180,12 @@ section {
 /* ---------- HABILIDADES ---------- */
 
 .arete_house-economy habilidad nombre {
-    font-family: var(--heco-display);
-    font-size: 25px;
-}
-
-.arete_house-economy habilidad nombre {
     width: 190px;
+
+    font-family: var(--heco-display);
+    font-size: 26px;
+
+    letter-spacing: .04em;
 }
 
 .arete_house-economy habilidad desc {

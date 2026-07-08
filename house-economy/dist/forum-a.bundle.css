@@ -70,7 +70,7 @@
     letter-spacing: .16em;
     text-transform: uppercase;
 
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
 }.arete_house-economy casa h1 {
     font-family: var(--heco-display);     
     color: var(--clr-text);    
@@ -717,7 +717,7 @@
 }.arete_house-economy lema {
     font-size: 11px;   
 }.arete_house-economy casa h1 {   
-    font-size: 50px;   
+    font-size: 70px;   
 }.arete_house-economy datos {    
     
     font-size: 13px;
@@ -790,10 +790,12 @@
 }.arete_house-economy resumen celda valor {
     font-size: 17px;    
 }/* ---------- HABILIDADES ---------- */.arete_house-economy habilidad nombre {
-    font-family: var(--heco-display);
-    font-size: 25px;
-}.arete_house-economy habilidad nombre {
     width: 190px;
+
+    font-family: var(--heco-display);
+    font-size: 26px;
+
+    letter-spacing: .04em;
 }.arete_house-economy habilidad desc {
     font-size: 13px;
 }
