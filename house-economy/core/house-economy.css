@@ -288,7 +288,6 @@ section:last-of-type {
    
     color: var(--clr-text);
 
-    letter-spacing: .04em;
     text-transform: uppercase;
 }
 
@@ -350,9 +349,6 @@ section:last-of-type {
 
 .arete_house-economy recurso icono {
     display: flex;
-
-    font-family: var(--heco-display);
-    color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     border-radius: 50%;
 
@@ -556,12 +552,6 @@ section:last-of-type {
 
 .arete_house-economy estado[data-status="activa"]::after {
     content: 'Activa';
-}
-
-.arete_house-economy estado[data-status="cerrada"] {
-    color: var(--crimson);
-
-    border-color: rgba(162,74,93,.4);
 }
 
 .arete_house-economy estado[data-status="nueva"] {

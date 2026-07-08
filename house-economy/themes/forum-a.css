@@ -81,7 +81,7 @@ section {
 
 .arete_house-economy movimiento[data-tipo="total"] concepto,
 .arete_house-economy titulo {   
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .arete_house-economy movimiento[data-tipo="total"] cantidad {
@@ -99,12 +99,14 @@ section {
     height: 42px;
     
     font-size: 22px;
+    color: color-mix(in srgb, var(--heco-accent) 70%, white 30%);
 
     background-image: radial-gradient(circle at 35% 30%, 
         color-mix(in srgb, black 85%, var(--heco-accent)), 
         color-mix(in srgb, black 93%, var(--heco-accent)) 70%);  
 
-    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--heco-accent) 70%, white 30%);
+    border: 1px solid;
+    border-color: color-mix(in srgb, var(--chrono-accent) 50%, transparent);
 }
 
 .arete_house-economy recurso etiqueta {
