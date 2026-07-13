@@ -296,7 +296,6 @@ h2.tree-subtitle {
   opacity: .3;
 
   position: absolute;
-  z-index: -1;
   inset: 0;
 }
 
