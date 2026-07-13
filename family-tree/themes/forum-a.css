@@ -11,6 +11,17 @@
 
   --tree-display: 'TLLRegular';
   --tree-font: 'Open Sans', sans-serif;
+
+  --tree-bg: var(--dbckg1);
+
+  width: 980px;
+
+  background-color: var(--tree-bg);
+
+  border: var(--border2);
+  outline: var(--border2);
+  outline-offset: 11px;
+  outline-color: var(--group-50);
 }
 
 .tree-header {
@@ -19,6 +30,10 @@
   background-color: color-mix(in srgb, var(--tree-accent) 30%, transparent 70%);
 
   padding: var(--space-lg) var(--space-md);  
+}
+
+h1.tree-title {
+  font-size: 70px;
 }
 
 h2.tree-subtitle {
@@ -49,7 +64,7 @@ h2.tree-subtitle {
 /* TEXTO */
 
 .name {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 600;
   
   text-transform: uppercase;
