@@ -25,7 +25,7 @@
 }
 
 .tree-header {
-  min-height: 200px;
+  min-height: 250px;
 
   background-color: color-mix(in srgb, var(--tree-accent) 30%, transparent 70%);
 

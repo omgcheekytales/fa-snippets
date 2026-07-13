@@ -39,7 +39,7 @@
   flex-direction: column;
   align-items: center;
   
-  margin: 0 auto;
+  margin: 2em auto;
 }
 .tree-header {
   width: 100%;
@@ -51,6 +51,7 @@
   
   overflow: hidden;
   position: relative;
+  box-sizing: border-box;
 }
 .tree-header :is(h1, h2) {
   margin: 0;
@@ -567,7 +568,7 @@ h2.tree-subtitle {
   outline-color: var(--group-50);
 }
 .tree-header {
-  min-height: 200px;
+  min-height: 250px;
 
   background-color: color-mix(in srgb, var(--tree-accent) 30%, transparent 70%);
 
