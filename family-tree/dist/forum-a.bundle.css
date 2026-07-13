@@ -28,19 +28,51 @@
   --transition: .3s ease;
 
 }
-.tree > br {
+.tree-wrapper br,
+.tree br {
   display: none;
 }
-.tree {
-  width: 100%;
-
-  padding: var(--space-lg) var(--space-md);
+.tree-wrapper {
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.tree-header {
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: hidden;
+  position: relative;
+}
+.tree-header :is(h1, h2) {
+  margin: 0;
+
+  z-index: 1;
+}
+h1.tree-title {
+  font-family: var(--tree-display);
+  color: var(--tree-accent);
+}
+h2.tree-subtitle {
+  font-family: var(--tree-font);
+  color: var(--clr-text);
+
+  text-transform: uppercase;
+}
+.tree {
+  width: 100%;
+
+  padding: var(--space-lg) var(--space-md);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: var(--space-xl);
 }
 /*GENERACIONES*/
@@ -51,7 +83,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: var(--space-xl) var(--space-xxl); 
+  gap: var(--space-xl) var(--space-lg); 
 }
 /*UNIDADES FAMILIARES*/
 .family-unit {
@@ -99,7 +131,7 @@
   width: var(--line-size);
   height: 30px;
 
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
 
   position: absolute;
 
@@ -115,7 +147,7 @@
   width: 80%;
   height: var(--line-size);
 
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
 
   position: absolute;
 
@@ -192,9 +224,9 @@
   position: relative;
 }
 .card {
-  --tree-shadow: drop-shadow(5px 5px 0px var(--accent));
-  --tree-shadow_hover: drop-shadow(10px 10px 0px var(--accent));
-  --accent-shadow: color-mix(in srgb, var(--accent) 5%, transparent);
+  --tree-shadow: drop-shadow(5px 5px 0px var(--tree-accent));
+  --tree-shadow_hover: drop-shadow(10px 10px 0px var(--tree-accent));
+  --accent-shadow: color-mix(in srgb, var(--tree-accent) 5%, transparent);
 
   width: var(--card-width);
   min-height: var(--card-height);
@@ -214,7 +246,7 @@
 .card:hover {
   transform: translateY(-4px);
 
-  border-color: var(--accent);
+  border-color: var(--tree-accent);
 }
 .card .image {
   filter: var(--tree-shadow);
@@ -240,7 +272,7 @@
 .frame::before {
   content: '';
 
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
   background-size: cover;
    
   background-blend-mode: multiply;
@@ -272,8 +304,9 @@
   transition: var(--transition);
 }
 /*TEXTO*/
-.name {
-  color: var(--accent);
+.name {  
+  font-family: var(--tree-display);
+  color: var(--tree-accent);
 
   margin-bottom: 6px;
 }
@@ -297,7 +330,6 @@
   margin-left: 5px;
 }
 .dates {
-  font-size: .8rem;
   color: var(--clr-secondary);
 }
 .dates born::after {
@@ -305,8 +337,6 @@
 }
 .title {
   color: var(--clr-text);
-
-  font-size: .9rem;
 
   line-height: 1.5;
 }
@@ -317,7 +347,7 @@
 }
 /* MUERTO */
 .card[data-status='dead'] {
-  --accent: hsl(0 0% 45%);
+  --tree-accent: hsl(0 0% 45%);
 }
 .card[data-status='dead'] img {
   filter: grayscale(1);
@@ -339,7 +369,7 @@
   color: var(--clr-text);
   font-weight: 600;
     
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
 
   position: absolute;
   top: 0;
@@ -349,14 +379,14 @@
 }
 /* BASTARDO */
 .card[data-rol='bastard'] {  
-  --accent: color-mix(in srgb, var(--house-color) 40%, black);
+  --tree-accent: color-mix(in srgb, var(--house-color) 40%, black);
 }
 .card[data-rol='bastard']::after {  
   content: '\f043';
 }
 /* BASTARDO RECONOCIDO */
 .card[data-rol='recognized'] {  
-  --accent: color-mix(in srgb, var(--house-color) 60%, black);
+  --tree-accent: color-mix(in srgb, var(--house-color) 60%, black);
 }
 .card[data-rol='recognized']::after {  
   content: '\f4c1';
@@ -367,7 +397,7 @@
 }
 /* ADOPTIVO */
 .card[data-rol='adopted'] {
-  --accent: var(--adopted-color);
+  --tree-accent: var(--adopted-color);
 }
 .card[data-rol='adopted']::after {  
   content: '\f00c';
@@ -509,33 +539,8 @@
   }
 
 }
-@font-face {
-    font-family: tree-display;
-    src:
-        url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/abuse.woff2") format("woff2"),
-        url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/abuse.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wdhyzbi.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face {
-  font-family: 'Bebas Neue';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-.tree {  
-  --accent: var(--house-color);
+.tree-wrapper {  
+  --tree-accent: var(--house-color);
   --adopted-color: var(--house-adopted);
 
   --clr-text: hsl(0, 0%, 98.4%);
@@ -544,6 +549,33 @@
   --card-height: 275px;
   
   --curva: 99rem 99rem 0 0;
+
+  --tree-display: 'TLLRegular';
+  --tree-font: 'Open Sans', sans-serif;
+}
+.tree-header {
+  min-height: 200px;
+
+  background-color: color-mix(in srgb, var(--tree-accent) 30%, transparent 70%);
+
+  padding: var(--space-lg) var(--space-md);  
+}
+h2.tree-subtitle {
+  font-size: 1rem;
+}
+.tree-emblem {
+  display: block;
+  width: 50%;
+
+  background-color: color-mix(in srgb, var(--tree-accent) 20%, transparent 80%);
+
+  aspect-ratio: 1;
+  mask-image: var(--house-emblem);
+  mask-position: center;
+  mask-size: 50%;
+  mask-repeat: no-repeat;
+  
+  position: absolute;  
 }
 /* PERSONAJES */
 .frame::before {
@@ -551,20 +583,36 @@
 }
 /* TEXTO */
 .name {
-  font-family: tree-display;
-  font-size: 1.4rem;
-  font-weight: 400;
-
-  text-transform: lowercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .name a {
   cursor: crosshair;
 }
 .card[data-status='dead'] a::after {
-  content: '\f54c';
+  content: '𓉸';
 }
-.dates, .title {
-    font-family: Bebas Neue;
+.dates,
+.title {
+  font-family: var(--tree-font);
+  
+  text-transform: uppercase;
+}
+.dates {
+  font-size: .65rem;
+}
+.title {
+  font-size: .7rem;
+
+  font-weight: 600;
+}
+.name a::after {
+  content: ' ↗';
+
+  font-family: none;
 }
 /*VARIANTES*/
 /*LÍDER */
@@ -581,5 +629,5 @@
 }
 /* IN LAWS - FAMILIA POLÍTICA */
 .in-laws {
-  --accent: var(--house-in-laws);
+  --tree-accent: var(--house-in-laws);
 }

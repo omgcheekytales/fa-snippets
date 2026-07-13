@@ -1,17 +1,54 @@
-.tree > br {
+.tree-wrapper br,
+.tree br {
   display: none;
+}
+
+.tree-wrapper {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: hidden;
+  position: relative;
+}
+
+.tree-header :is(h1, h2) {
+  margin: 0;
+
+  z-index: 1;
+}
+
+h1.tree-title {
+  font-family: var(--tree-display);
+  color: var(--tree-accent);
+}
+
+h2.tree-subtitle {
+  font-family: var(--tree-font);
+  color: var(--clr-text);
+
+  text-transform: uppercase;
 }
 
 .tree {
   width: 100%;
 
   padding: var(--space-lg) var(--space-md);
-  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: var(--space-xl);
 }
 
@@ -24,7 +61,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: var(--space-xl) var(--space-xxl); 
+  gap: var(--space-xl) var(--space-lg); 
 }
 
 /*UNIDADES FAMILIARES*/
@@ -81,7 +118,7 @@
   width: var(--line-size);
   height: 30px;
 
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
 
   position: absolute;
 
@@ -99,7 +136,7 @@
   width: 80%;
   height: var(--line-size);
 
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
 
   position: absolute;
 
@@ -193,9 +230,9 @@
 }
 
 .card {
-  --tree-shadow: drop-shadow(5px 5px 0px var(--accent));
-  --tree-shadow_hover: drop-shadow(10px 10px 0px var(--accent));
-  --accent-shadow: color-mix(in srgb, var(--accent) 5%, transparent);
+  --tree-shadow: drop-shadow(5px 5px 0px var(--tree-accent));
+  --tree-shadow_hover: drop-shadow(10px 10px 0px var(--tree-accent));
+  --accent-shadow: color-mix(in srgb, var(--tree-accent) 5%, transparent);
 
   width: var(--card-width);
   min-height: var(--card-height);
@@ -216,7 +253,7 @@
 .card:hover {
   transform: translateY(-4px);
 
-  border-color: var(--accent);
+  border-color: var(--tree-accent);
 }
 
 .card .image {
@@ -246,7 +283,7 @@
 .frame::before {
   content: '';
 
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
   background-size: cover;
    
   background-blend-mode: multiply;
@@ -283,8 +320,9 @@
 
 /*TEXTO*/
 
-.name {
-  color: var(--accent);
+.name {  
+  font-family: var(--tree-display);
+  color: var(--tree-accent);
 
   margin-bottom: 6px;
 }
@@ -311,7 +349,6 @@
 }
 
 .dates {
-  font-size: .8rem;
   color: var(--clr-secondary);
 }
 
@@ -321,8 +358,6 @@
 
 .title {
   color: var(--clr-text);
-
-  font-size: .9rem;
 
   line-height: 1.5;
 }
@@ -338,7 +373,7 @@
 /* MUERTO */
 
 .card[data-status='dead'] {
-  --accent: hsl(0 0% 45%);
+  --tree-accent: hsl(0 0% 45%);
 }
 
 .card[data-status='dead'] img {
@@ -364,7 +399,7 @@
   color: var(--clr-text);
   font-weight: 600;
     
-  background-color: var(--accent);
+  background-color: var(--tree-accent);
 
   position: absolute;
   top: 0;
@@ -376,7 +411,7 @@
 /* BASTARDO */
 
 .card[data-rol='bastard'] {  
-  --accent: color-mix(in srgb, var(--house-color) 40%, black);
+  --tree-accent: color-mix(in srgb, var(--house-color) 40%, black);
 }
 
 .card[data-rol='bastard']::after {  
@@ -386,7 +421,7 @@
 /* BASTARDO RECONOCIDO */
 
 .card[data-rol='recognized'] {  
-  --accent: color-mix(in srgb, var(--house-color) 60%, black);
+  --tree-accent: color-mix(in srgb, var(--house-color) 60%, black);
 }
 
 .card[data-rol='recognized']::after {  
@@ -402,7 +437,7 @@
 /* ADOPTIVO */
 
 .card[data-rol='adopted'] {
-  --accent: var(--adopted-color);
+  --tree-accent: var(--adopted-color);
 }
 .card[data-rol='adopted']::after {  
   content: '\f00c';
