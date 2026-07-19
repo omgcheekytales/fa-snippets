@@ -3,7 +3,7 @@
     --chrono-display: 'TLLRegular';
 }
 
-/*ÍNDICE*/
+/* ÍNDICE */
 
 .arete_chrono .indice {
     display: flex;
@@ -33,7 +33,7 @@
     background-color: color-mix(in srgb, var(--chrono-accent, #888) 25%, transparent);
 }
 
-/*MES*/
+/* MES */
 
 .arete_chrono details.mes-grupo:not(:last-of-type) {
     margin-bottom: 1.5em;
@@ -51,7 +51,6 @@
     text-transform: uppercase;
         
     padding: .4rem;
-    margin-bottom: 1em;
 
     border-bottom: 1px solid var(--group-50);
 
@@ -75,4 +74,18 @@
 
 .arete_chrono details.mes-grupo[open] summary::after {
     content: '\2212';
+}
+
+/* SCROLL */
+
+.arete_chrono .reino-scroll {
+    max-height: 380px;
+
+    padding-right: .5rem;
+    
+    overflow-y: auto;
+}
+
+.arete_chrono .reino-scroll:not(:last-child) {
+    margin-bottom: 2rem;
 }
