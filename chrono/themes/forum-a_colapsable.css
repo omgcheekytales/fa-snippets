@@ -5,7 +5,7 @@
 
 /*ÍNDICE*/
 
-.arete_chrono nav.indice {
+.arete_chrono .indice {
     display: flex;
     flex-wrap: wrap;
     gap: .4rem;
@@ -14,7 +14,7 @@
     padding-bottom: 1em; 
 }
  
-.arete_chrono nav.indice a {
+.arete_chrono .indice a {
     font-size: .6rem;
     text-transform: uppercase;
     text-decoration: none !important;
@@ -27,7 +27,7 @@
     transition: background-color .15s ease;
 }
  
-.arete_chrono nav.indice a:hover {
+.arete_chrono .indice a:hover {
     background-color: color-mix(in srgb, var(--chrono-accent, #888) 25%, transparent);
 }
 

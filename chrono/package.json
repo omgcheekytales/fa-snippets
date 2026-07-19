@@ -5,8 +5,8 @@
     "build:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css",
     "watch:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css --watch",
 
-    "build:colapsable": "postcss src/forum-a.css -o dist/forum-a_colapsable.bundle.css",
-    "watch:colapsable": "postcss src/forum-a.css -o dist/forum-a_colapsable.bundle.css --watch"
+    "build:colapsable": "postcss src/forum-a_colapsable.css -o dist/forum-a_colapsable.bundle.css",
+    "watch:colapsable": "postcss src/forum-a_colapsable.css -o dist/forum-a_colapsable.bundle.css --watch"
   },
   "devDependencies": {
     "postcss": "^8.5.14",

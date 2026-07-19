@@ -314,3 +314,78 @@
 
     background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
 }
+
+.arete_chrono {
+    --chrono-display: 'TLLRegular';
+}
+
+/*ÍNDICE*/
+
+.arete_chrono .indice {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+ 
+    margin-bottom: 1.5em;
+    padding-bottom: 1em; 
+}
+
+.arete_chrono .indice a {
+    font-size: .6rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    color: var(--clr-text) !important;
+ 
+    background-color: color-mix(in srgb, var(--chrono-accent, #888) 12%, transparent);
+    padding: .3rem .6rem;
+    border-radius: 3px;
+ 
+    transition: background-color .15s ease;
+}
+
+.arete_chrono .indice a:hover {
+    background-color: color-mix(in srgb, var(--chrono-accent, #888) 25%, transparent);
+}
+
+/*MES*/
+
+.arete_chrono details.mes-grupo:not(:last-of-type) {
+    margin-bottom: 1.5em;
+}
+
+.arete_chrono details.mes-grupo summary {
+    list-style: none;
+    cursor: pointer;
+
+    font-size: 1rem;    
+    color: var(--clr-text);
+
+    font-weight: 600;
+    text-transform: uppercase;
+        
+    padding: .4rem;
+    margin-bottom: 1em;
+
+    border-bottom: 1px solid var(--group-50);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arete_chrono details.mes-grupo summary::-webkit-details-marker {
+    display: none;
+}
+
+.arete_chrono details.mes-grupo summary::after {
+    content: '+';
+
+    color: var(--chrono-accent);
+    font-weight: bold;
+
+    margin-left: 8px;
+}
+
+.arete_chrono details.mes-grupo[open] summary::after {
+    content: '\2212';
+}
