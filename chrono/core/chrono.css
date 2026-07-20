@@ -144,6 +144,8 @@
     border-radius: 3px;
 
     margin-left: 5px;
+
+    flex-shrink: 0;
 }
 
 /* TEMA CERRADO */
