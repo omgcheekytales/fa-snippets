@@ -6,7 +6,10 @@
     "watch:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css --watch",
 
     "build:colapsable": "postcss src/forum-a_colapsable.css -o dist/forum-a_colapsable.bundle.css",
-    "watch:colapsable": "postcss src/forum-a_colapsable.css -o dist/forum-a_colapsable.bundle.css --watch"
+    "watch:colapsable": "postcss src/forum-a_colapsable.css -o dist/forum-a_colapsable.bundle.css --watch",
+
+    "build:tabs": "postcss src/forum-a_tabs.css -o dist/forum-a_tabs.bundle.css",
+    "watch:tabs": "postcss src/forum-a_tabs.css -o dist/forum-a_tabs.bundle.css --watch"
   },
   "devDependencies": {
     "postcss": "^8.5.14",

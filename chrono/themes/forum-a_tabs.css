@@ -1,0 +1,78 @@
+.arete_chrono {
+    width: 550px;
+}
+
+.arete_chrono .tab-input {
+    display: none;
+}
+
+.arete_chrono .panel {
+    display: none;
+}
+
+.arete_chrono .tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+
+    background-color: var(--dbckg1);
+
+    padding: 1em 0;
+    margin-bottom: 1.5em;
+
+    border-bottom: 1px solid color-mix(in srgb, var(--chrono-accent) 50%, transparent);
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.arete_chrono .tabs-nav label {
+    cursor: pointer;
+
+    font-size: .65rem;    
+    color: var(--clr-text);
+    
+    font-weight: 600;
+    text-transform: uppercase;
+
+    background-color: color-mix(in srgb, var(--chrono-accent) 10%, transparent);
+
+    padding: .4rem .8rem;
+
+    border-radius: 3px;
+}
+
+.arete_chrono .tabs-nav label:hover {
+    background-color: color-mix(in srgb, var(--chrono-accent) 20%, transparent);
+}
+
+/* TABS */
+
+#tab-mes1:checked ~ .tabs-panels #panel-mes1,
+#tab-mes2:checked ~ .tabs-panels #panel-mes2,
+#tab-mes3:checked ~ .tabs-panels #panel-mes3,
+#tab-mes4:checked ~ .tabs-panels #panel-mes4,
+#tab-mes5:checked ~ .tabs-panels #panel-mes5,
+#tab-mes6:checked ~ .tabs-panels #panel-mes6,
+#tab-mes7:checked ~ .tabs-panels #panel-mes7,
+#tab-mes8:checked ~ .tabs-panels #panel-mes8,
+#tab-mes9:checked ~ .tabs-panels #panel-mes9,
+#tab-mes10:checked ~ .tabs-panels #panel-mes10 {
+    display: block;
+}
+
+#tab-mes1:checked ~ .tabs-nav label[for="tab-mes1"],
+#tab-mes2:checked ~ .tabs-nav label[for="tab-mes2"],
+#tab-mes3:checked ~ .tabs-nav label[for="tab-mes3"],
+#tab-mes4:checked ~ .tabs-nav label[for="tab-mes4"],
+#tab-mes5:checked ~ .tabs-nav label[for="tab-mes5"],
+#tab-mes6:checked ~ .tabs-nav label[for="tab-mes6"],
+#tab-mes7:checked ~ .tabs-nav label[for="tab-mes7"],
+#tab-mes8:checked ~ .tabs-nav label[for="tab-mes8"],
+#tab-mes9:checked ~ .tabs-nav label[for="tab-mes9"],
+#tab-mes10:checked ~ .tabs-nav label[for="tab-mes10"] {    
+    color: var(--clr-secondary);
+
+    background-color: var(--chrono-accent);
+}
