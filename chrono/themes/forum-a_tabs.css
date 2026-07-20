@@ -9,12 +9,16 @@
 .arete_chrono .panel {
     display: none;
 
+    height: 480px;
+
     background: none !important;
     
     padding: 0 !important;
     margin: 0 !important;
     
     border: none !important;
+    
+    overflow: auto;
 }
 
 .arete_chrono .tabs-nav {
