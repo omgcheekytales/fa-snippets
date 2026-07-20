@@ -195,6 +195,7 @@
     --chrono-group8: var(--occidente);
     --chrono-group9: var(--dominio);
     --chrono-group10: var(--essos);
+    --chrono-group11: var(--staff);
 }
 
 .arete_chrono {
@@ -315,4 +316,10 @@
     color: var(--chrono-group10);
 
     background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="trama"] span {
+    color: var(--chrono-group11);
+
+    background-color: color-mix(in srgb, var(--chrono-group11) 10%, transparent);
 }
