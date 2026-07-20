@@ -8,6 +8,13 @@
 
 .arete_chrono .panel {
     display: none;
+
+    background: none !important;
+    
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    border: none !important;
 }
 
 .arete_chrono .tabs-nav {
@@ -18,9 +25,6 @@
     background-color: var(--dbckg1);
 
     padding: 1em 0;
-    margin-bottom: 1.5em;
-
-    border-bottom: 1px solid color-mix(in srgb, var(--chrono-accent) 50%, transparent);
 
     position: sticky;
     top: 0;
