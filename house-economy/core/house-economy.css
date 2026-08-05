@@ -529,6 +529,39 @@ section:last-of-type {
     font-weight: 400;
 }
 
+/* ---------- PRÉSTAMOS ---------- */
+
+.arete_house-economy tabla.tabla-prestamos fila {
+    grid-template-columns: 1.4fr 1fr .9fr 1fr;
+}
+
+.arete_house-economy .tabla-prestamos celda[data-tipo="coste"] small,
+.arete_house-economy .tabla-prestamos celda[data-tipo="ganancia"] small,
+.arete_house-economy .tabla-prestamos celda[data-tipo="neutro"] small{
+  display: block;
+  font-family: var(--heco-font);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--clr-text-lighter);
+  margin-top: 2px;
+  white-space: normal;
+}
+
+.arete_house-economy .tabla-prestamos celda[data-tipo="texto"],
+.arete_house-economy .tabla-prestamos celda[data-tipo="coste"]:has(small),
+.arete_house-economy .tabla-prestamos celda[data-tipo="ganancia"]:has(small),
+.arete_house-economy .tabla-prestamos celda[data-tipo="neutro"]:has(small){
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.arete_house-economy .tabla-prestamos celda[data-tipo="coste"]:has(small),
+.arete_house-economy .tabla-prestamos celda[data-tipo="ganancia"]:has(small),
+.arete_house-economy .tabla-prestamos celda[data-tipo="neutro"]:has(small){
+    text-align: left;
+}
+
 /* ---------- TÍTULOS Y APARTADOS INTERMEDIOS ---------- */
 
 .arete_house-economy titulo:not(:first-child) {
