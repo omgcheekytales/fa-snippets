@@ -532,7 +532,7 @@ section:last-of-type {
 /* ---------- PRÉSTAMOS ---------- */
 
 .arete_house-economy tabla.tabla-prestamos fila {
-    grid-template-columns: 1.4fr 1fr .9fr 1fr;
+    grid-template-columns: 1.1fr .9fr .9fr 1.1fr;
 }
 
 .arete_house-economy .tabla-prestamos celda[data-tipo="coste"] small,
@@ -554,12 +554,6 @@ section:last-of-type {
   flex-direction: column;
   align-items: flex-start;
   gap: 4px;
-}
-
-.arete_house-economy .tabla-prestamos celda[data-tipo="coste"]:has(small),
-.arete_house-economy .tabla-prestamos celda[data-tipo="ganancia"]:has(small),
-.arete_house-economy .tabla-prestamos celda[data-tipo="neutro"]:has(small){
-    text-align: left;
 }
 
 /* ---------- TÍTULOS Y APARTADOS INTERMEDIOS ---------- */
