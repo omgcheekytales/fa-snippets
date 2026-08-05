@@ -532,7 +532,7 @@ section:last-of-type {
 /* ---------- PRÉSTAMOS ---------- */
 
 .arete_house-economy tabla.tabla-prestamos fila {
-    grid-template-columns: 1.1fr .9fr .9fr 1.1fr;
+    grid-template-columns: 1.1fr .9fr .9fr 1.1fr!important;
 }
 
 .arete_house-economy .tabla-prestamos celda[data-tipo="coste"] small,
