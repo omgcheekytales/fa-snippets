@@ -657,11 +657,7 @@ section:last-of-type {
 .arete_house-economy movimientos,
 .arete_house-economy tabla,
 .arete_house-economy habilidades {
-    max-height: 300px;
-
     padding-right: 6px;
-
-    overflow-y: auto;
 
     scrollbar-width: thin;
     scrollbar-color: var(--line-soft) transparent;
