@@ -1,0 +1,156 @@
+@font-face {
+    font-family: rubrica-display;
+    src:
+        url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/prince-valiant.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/prince-valiant.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.arete_rubrica {
+    --rubrica-accent: #df3f8b;
+    --rubrica-sec-accent: #00caeb;
+    --rubrica-light: #b4b4b4;
+    --rubrica-dark: #070707;
+    --rubrica-clr-text: #030202;
+}
+
+.arete_rubrica {
+    border: var(--rubrica-border);
+}
+
+/*HEADER*/
+
+.arete_rubrica .rubrica--header {
+    background-color: var(--rubrica-dark);  
+}
+
+.arete_rubrica .rubrica--doodle {
+    width: 350px;
+  
+    background-color: var(--rubrica-light);
+    
+    mask-image: url(https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/img/doodles/doodle_rapunzel.png);
+    mask-size: 50%;  
+}
+
+.arete_rubrica .linea-vert::after {
+    height: 200px;
+}
+
+/*BODY*/
+
+.arete_rubrica .rubrica--body-content {  
+    height: 300px;
+}
+
+.arete_rubrica .rubrica--body-img {
+    height: 300px;
+}
+
+.arete_rubrica .rubrica--about {  
+    height: 280px;
+}
+
+.arete_rubrica .rubrica--header {
+    position: relative;
+    z-index: 1;
+}
+
+.arete_rubrica .rubrica--header::before,
+.arete_rubrica .rubrica--tropes::before {
+    content: '';
+
+    width: 100%;
+    height: 100%;
+    
+    background-image: linear-gradient(130deg, var(--rubrica-accent), transparent 50%);
+    
+    opacity: .3;
+
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+
+    overflow: hidden;    
+}
+
+/*TROPES*/
+
+.arete_rubrica .rubrica--secondary-doodle {
+    width: 350px;
+    
+    mask-image: url(https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/img/doodles/doodle_flor.png);
+    mask-size: 77%;
+    
+    bottom: -90px;
+    left: 90px;
+}
+
+p.rubrica--disclaimer {
+    font-size: .8rem !important;
+}
+
+/*PLOT SECTION*/
+
+.arete_rubrica .rubrica--plot p {
+    height: 200px;
+}
+
+/*FOOTER*/
+
+.arete_rubrica .rubrica--footer {
+    border-top: var(--rubrica-border);
+}
+
+/*FONTS*/
+
+.arete_rubrica .rubrica--about,
+.arete_rubrica .rubrica--plot p {  
+    font-size: .9rem;
+}
+
+.arete_rubrica h1.rubrica--h1 {
+    font-size: 3rem !important;
+}
+
+.arete_rubrica h2.rubrica--h2 {
+    font-size: 2.5rem !important;
+}
+
+.arete_rubrica h3.rubrica--h3 {
+    font: 1.8rem rubrica-display !important;
+}
+
+.arete_rubrica h4 {
+    font-size: 1.5rem !important;
+}
+
+.arete_rubrica h5 {
+    font-size: 1rem !important;
+}
+
+.arete_rubrica .rubrica--quote {
+    font-size: .8rem !important;
+}
+
+.arete_rubrica .rubrica--yes p,
+.arete_rubrica .rubrica--no p {
+    font-size: .85rem !important;
+}
+
+.arete_rubrica .rubrica--plot-info span {
+    font-size: 1.1rem !important;
+}
+
+.arete_rubrica b,
+.arete_rubrica strong {
+    font-size: 1rem !important;
+}
+
+.arete_rubrica u {
+    font-size: .8rem !important;
+}
+
+
