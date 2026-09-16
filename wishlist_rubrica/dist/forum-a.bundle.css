@@ -120,7 +120,7 @@
     padding: 3em;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     align-items: center;
     gap: 2em;
 
@@ -480,6 +480,8 @@ p.rubrica--disclaimer {
 
 .arete_rubrica h3.rubrica--h3 {
     font: 1.8rem rubrica-display !important;
+
+    border-bottom: none !important;
 }
 
 .arete_rubrica h4 {
