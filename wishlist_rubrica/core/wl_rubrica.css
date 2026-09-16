@@ -268,10 +268,10 @@ p.rubrica--disclaimer {
 .arete_rubrica h4 {
     font-family: 'Bebas Neue' !important;
     color: #fbfbfb !important;
-
+    
     background-color: var(--rubrica-accent);
 
-    padding: .2em .4em !important;
+    padding: .4em !important;
 }
 
 .arete_rubrica .rubrica--plot:nth-of-type(even) h4 {

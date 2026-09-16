@@ -127,6 +127,8 @@ p.rubrica--disclaimer {
 
 .arete_rubrica h4 {
     font-size: 1.5rem !important;
+
+    font-weight: 500 !important;
 }
 
 .arete_rubrica h5 {
