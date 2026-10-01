@@ -37,7 +37,8 @@
 #skinwalker-button {
   position:fixed;
   left:var(--skinwalker-button-margin);
-  top:var(--skinwalker-button-margin);
+  top: 64px;
+  z-index: 999;
   background:var(--skinwalker-button-bckg);
   color:var(--skinwalker-button-text);
   width:var(--skinwalker-button-w);
@@ -64,6 +65,7 @@
 #skinwalker {
   position:fixed;
   inset:0;
+  top: 64px;
   right:unset;
   left:calc(var(--skinwalker-w) * -1);
   z-index:999;
