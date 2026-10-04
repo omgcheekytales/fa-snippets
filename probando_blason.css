@@ -60,17 +60,17 @@ arete_blason_datos{
 }
 
 .arete_blason_intro p {
-     display: block!important;
-     width: 25ch;
-   
-     font-family: var(--blason-font);
-     font-size: .8rem;
+    display: block !important;
+    max-width: 25ch;
+    
+    font-family: var(--blason-font);
+    font-size: .9rem;
 }
 
 .arete_blason_intro b,  .arete_blason_intro strong,
 .arete_blason_intro u, .arete_blason_text u, .arete_blason_text b, .arete_blason_text strong,
 .arete_blason_datos u, .arete_blason_datos b, .arete_blason_datos strong {
-     font-size: 1.1rem!important;
+     font-size: 1.5rem!important;
      font-weight: 500!important;
 }
 
@@ -108,7 +108,7 @@ arete_blason_datos{
 }
 
 .arete_blason_dt_title h2 {
-     font-size: 3rem;
+     font-size: 2.5rem;
      font-weight: 500 !important;
      color: #f1f1f1!important;
      box-shadow: inset 0 -0.4em 0 var(--blason-accent);
