@@ -1,0 +1,46 @@
+/* Scroll suave al pulsar los links */
+html { scroll-behavior: smooth; }
+
+/* Contenedor a todo el ancho, contenido en vertical */
+#perfilsencillo {
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  counter-reset: seccion; /* contador para numerar los títulos */
+}
+
+#perfilsencillo > section {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-margin-top: 60px; /* evita que la nav tape el título al saltar */
+}
+
+/* Títulos numerados automáticamente: 01, 02, 03... */
+#perfilsencillo .ps-titulo {
+  counter-increment: seccion;
+  margin: 0 0 15px;
+}
+#perfilsencillo .ps-titulo::before {
+  content: counter(seccion, decimal-leading-zero) ". ";
+}
+
+/* Navegación sticky */
+#perfilsencillo > .ps-nav {
+  position: sticky;
+  top: 0;              /* si tu foro tiene una barra fija arriba, pon aquí su altura */
+  z-index: 100;
+  background: #fff;    /* cámbialo por el color de tu skin */
+  padding: 10px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+#perfilsencillo .ps-nav nav {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;    /* en móvil se desliza si no cabe */
+  white-space: nowrap;
+}
+#perfilsencillo .ps-nav a {
+  text-decoration: none;
+}

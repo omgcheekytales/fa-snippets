@@ -23,11 +23,8 @@
     font-size: 2rem;
     margin-right: 10px;
 }
-.arete_dados p {
-    display: block!important;
-    font-size: 12px;
+.arete_dados .dd-text {
     padding: 2em 3em;
-    margin: 0;
 }
 .arete_dados .dd-stats {
     display: flex;

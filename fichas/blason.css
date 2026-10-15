@@ -1,0 +1,140 @@
+@font-face {
+    font-family: blason-display;
+    src:
+        url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/lordish.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/omgcheekytales/assets@main/fonts/lordish.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wdhyzbi.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Bebas Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.arete_blason_intro br,
+.arete_blason_text br {
+    display: none;
+}
+
+.arete_blason_intro,
+.arete_blason_text,
+arete_blason_datos {
+    --blason-font: 'Bebas Neue';
+}
+
+.arete_blason_intro {   
+     height: 400px;
+  
+     text-align: center;
+  
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  
+     margin: auto;
+}
+
+.arete_blason_intro i {
+    font-size: 5rem;
+    color: var(--blason-accent);
+  
+    margin-bottom: .5em;
+}
+
+.arete_blason_intro p {
+    display: block !important;
+    max-width: 25ch;
+    
+    font-family: var(--blason-font);
+    font-size: .9rem;
+}
+
+.arete_blason_intro b, .arete_blason_intro strong, .arete_blason_intro u,
+.arete_blason_text u, .arete_blason_text b, .arete_blason_text strong,
+.arete_blason_datos u, .arete_blason_datos b, .arete_blason_datos strong {
+     font-size: 1.5rem!important;
+     font-weight: 500!important;
+}
+
+.arete_blason_intro u,
+.arete_blason_text u,
+.arete_blason_datos u {
+     text-decoration: none;
+     font-family: blason-display;
+     color: #f1f1f1!important;
+   
+     box-shadow: inset 0 -.4em 0 var(--blason-accent);
+   
+     transition: all .5s;
+}
+
+.arete_blason_text u:hover,
+.arete_blason_datos u:hover {
+     box-shadow: inset 0 -1.25em 0 var(--blason-accent);
+}
+
+.arete_blason_intro b,  .arete_blason_intro strong,
+.arete_blason_text b, .arete_blason_text strong,
+.arete_blason_datos b, .arete_blason_datos strong {
+     font-family: blason-display!important;
+     color: var(--blason-accent)!important;
+}
+
+.arete_blason_dt_title {
+     font-family: blason-display;
+  
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  
+     margin: 2em auto;
+}
+
+.arete_blason_dt_title h2 {
+     font-size: 2.5rem;
+     font-weight: 500 !important;
+     color: #f1f1f1!important;
+  
+     box-shadow: inset 0 -0.4em 0 var(--blason-accent);
+}
+
+.arete_blason_datos {
+     counter-reset: section-counter;
+     column-count:2;
+}
+
+.arete_blason_datos span {
+     counter-increment: section-counter;
+     display: inline;
+  
+     font-family: blason-display;
+     color: white;
+  
+     padding: .2em .4em;
+     margin-right: 5px;  
+}
+
+.arete_blason_datos span::before {
+     content: '0' counter(section-counter)'.';
+     font-size: 1.5rem;
+     color: var(--blason-accent);
+}
