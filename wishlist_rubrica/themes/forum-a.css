@@ -94,8 +94,12 @@ p.rubrica--disclaimer {
 
 /*PLOT SECTION*/
 
-.arete_rubrica .rubrica--plot p {
+.arete_rubrica .rubrica--plot-text {
     height: 200px;
+}
+
+.arete_rubrica .rubrica--plot-quote {
+    border-left: 2px solid var(--rubrica-accent);
 }
 
 /*FOOTER*/
@@ -107,7 +111,7 @@ p.rubrica--disclaimer {
 /*FONTS*/
 
 .arete_rubrica .rubrica--about,
-.arete_rubrica .rubrica--plot p {  
+.arete_rubrica .rubrica--plot-text {  
     font-size: .9rem;
 }
 

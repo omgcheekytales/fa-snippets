@@ -226,12 +226,28 @@ p.rubrica--disclaimer {
     margin-left: 5px;
 }
 
-.arete_rubrica .rubrica--plot p {
+.arete_rubrica .rubrica--plot-text {
     min-height: 0;
+
+    white-space: pre-wrap;
         
     overflow: auto;
     border: 1em solid transparent;
     margin: 0;
+}
+
+.arete_rubrica .rubrica--plot-quote {
+    display: block;
+    max-width: 80%;
+    
+    padding: 1em;
+    margin: 1em;    
+    margin-left: auto;
+}
+
+.arete_rubrica .rubrica--plot-quote quien {
+    display: block;
+    text-align: right;
 }
 
 .arete_rubrica img {
@@ -453,8 +469,12 @@ p.rubrica--disclaimer {
 
 /*PLOT SECTION*/
 
-.arete_rubrica .rubrica--plot p {
+.arete_rubrica .rubrica--plot-text {
     height: 200px;
+}
+
+.arete_rubrica .rubrica--plot-quote {
+    border-left: 2px solid var(--rubrica-accent);
 }
 
 /*FOOTER*/
@@ -466,7 +486,7 @@ p.rubrica--disclaimer {
 /*FONTS*/
 
 .arete_rubrica .rubrica--about,
-.arete_rubrica .rubrica--plot p {  
+.arete_rubrica .rubrica--plot-text {  
     font-size: .9rem;
 }
 
