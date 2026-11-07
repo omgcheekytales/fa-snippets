@@ -198,6 +198,8 @@
     --chrono-group8: #d95e5e;
     --chrono-group9: #5EA676;
     --chrono-group10: #725B78;
+    --chrono-group11: #b39b73;
+    --chrono-group12: #58614e;
 }
 
 .arete_chrono {    
@@ -295,64 +297,88 @@
 
 /* COLORES POR GRUPO */
 
+.arete_chrono reino[data-reino="tormentas"],
 .arete_chrono quien[data-group="tormentas"] span {
     color: var(--chrono-group1);
 
     background-color: color-mix(in srgb, var(--chrono-group1) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="dorne"],
 .arete_chrono quien[data-group="dorne"] span {
     color: var(--chrono-group2);
 
     background-color: color-mix(in srgb, var(--chrono-group2) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="coronas"],
 .arete_chrono quien[data-group="coronas"] span {
     color: var(--chrono-group3);
 
     background-color: color-mix(in srgb, var(--chrono-group3) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="norte"],
 .arete_chrono quien[data-group="norte"] span {
     color: var(--chrono-group4);
 
     background-color: color-mix(in srgb, var(--chrono-group4) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="valle"],
 .arete_chrono quien[data-group="valle"] span {
     color: var(--chrono-group5);
 
     background-color: color-mix(in srgb, var(--chrono-group5) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="rios"],
 .arete_chrono quien[data-group="rios"] span {
     color: var(--chrono-group6);
 
     background-color: color-mix(in srgb, var(--chrono-group6) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="islas"],
 .arete_chrono quien[data-group="islas"] span {
     color: var(--chrono-group7);
 
     background-color: color-mix(in srgb, var(--chrono-group7) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="occidente"],
 .arete_chrono quien[data-group="occidente"] span {
     color: var(--chrono-group8);
 
     background-color: color-mix(in srgb, var(--chrono-group8) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="dominio"],
 .arete_chrono quien[data-group="dominio"] span {
     color: var(--chrono-group9);
 
     background-color: color-mix(in srgb, var(--chrono-group9) 10%, transparent);
 }
 
+.arete_chrono reino[data-reino="trama"],
 .arete_chrono quien[data-group="trama"] span {
     color: var(--chrono-group10);
 
+    background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="minitrama"],
+.arete_chrono quien[data-group="minitrama"] span {
+    color: var(--chrono-group11);
+
     background-color: color-mix(in srgb, var(--chrono-group11) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="mision"],
+.arete_chrono quien[data-group="mision"] span {
+    color: var(--chrono-group12);
+
+    background-color: color-mix(in srgb, var(--chrono-group12) 10%, transparent);
 }
 
 /* TABS */
