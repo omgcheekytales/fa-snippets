@@ -259,7 +259,7 @@
 
 .arete_chrono tema[data-status="cerrado"] titulo::after, .arete_chrono tema[data-status="abandonado"] titulo::after {
     font-size: .7rem;
-    padding: .05rem .8rem;
+    padding: .05rem .6rem;
 }
 
 /* CONTENIDO */
@@ -271,7 +271,7 @@
 /* INFO */
 
 .arete_chrono tema .info {
-    font-size: 1rem;
+    font-size: .9rem;
     font-style: normal !important;
 }
 
@@ -288,7 +288,9 @@
 }
 
 .arete_chrono quien span {
-    font-size: 1.2rem;
+    font-size: .9rem;
+
+    padding: .3rem .5rem;
 }
 
 /* COLORES POR GRUPO */
