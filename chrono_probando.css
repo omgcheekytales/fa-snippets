@@ -235,6 +235,8 @@
 
 .arete_chrono reino {
     font-size: .9rem;
+
+    margin: 1em .5em 2.5em 0;
 }
 
 .arete_chrono reino::before {
@@ -256,7 +258,7 @@
 }
 
 .arete_chrono titulo::before {
-    font-size: unset;
+    font-size: 1rem;
 }
 
 .arete_chrono tema[data-status="cerrado"] titulo::after, .arete_chrono tema[data-status="abandonado"] titulo::after {
@@ -291,8 +293,13 @@
 
 .arete_chrono quien span {
     font-size: .9rem;
+    
+    line-height: 1.2;
 
     padding: .3rem .5rem;
+
+    display: inline-flex;
+    align-items: center;
 }
 
 /* COLORES POR GRUPO */
@@ -360,25 +367,40 @@
     background-color: color-mix(in srgb, var(--chrono-group9) 10%, transparent);
 }
 
-.arete_chrono reino[data-reino="trama"],
 .arete_chrono quien[data-group="trama"] span {
     color: var(--chrono-group10);
 
     background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
 }
 
-.arete_chrono reino[data-reino="minitrama"],
 .arete_chrono quien[data-group="minitrama"] span {
     color: var(--chrono-group11);
 
     background-color: color-mix(in srgb, var(--chrono-group11) 10%, transparent);
 }
 
-.arete_chrono reino[data-reino="mision"],
 .arete_chrono quien[data-group="mision"] span {
     color: var(--chrono-group12);
 
     background-color: color-mix(in srgb, var(--chrono-group12) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="trama"] span::before {
+    content: "\E1DD";
+    font-family: 'game-icons';
+    margin-right: 5px;
+}
+
+.arete_chrono quien[data-group="minitrama"] span::before {
+    content: "\E32A";
+    font-family: 'game-icons';
+    margin-right: 5px;
+}
+
+.arete_chrono quien[data-group="mision"] span::before {
+    content: "\EC27";
+    font-family: 'game-icons';
+    margin-right: 5px;
 }
 
 /* TABS */
