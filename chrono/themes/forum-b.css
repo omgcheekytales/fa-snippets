@@ -1,0 +1,307 @@
+.arete_chrono {
+    --chrono-bullet-width: 26px;
+    --chrono-bullet-height: 26px;
+
+    --clr-text: #fbfbfb;
+    --clr-secondary: var(--bg2);
+
+    --chrono-display: "Playfair Display", serif;
+    --chrono-font: "Montserrat", sans-serif;
+
+    --chrono-group1: #EDBE32;
+    --chrono-group2: #F79B3B;
+    --chrono-group3: #b782a3;
+    --chrono-group4: #DEDEDE;
+    --chrono-group5: #3070C7;
+    --chrono-group6: #59ACC2;
+    --chrono-group7: #777D6F;
+    --chrono-group8: #d95e5e;
+    --chrono-group9: #5EA676;
+    --chrono-group10: #725B78;
+    --chrono-group11: #b39b73;
+    --chrono-group12: #58614e;
+}
+
+.arete_chrono {    
+    border: var(--border1);
+
+    outline: var(--border1);
+    outline-offset: 14px;
+
+    margin: 0 auto;
+}
+
+.arete_chrono ::-webkit-scrollbar {
+    display: none;
+}
+
+.arete_chrono h2 {
+    font-family: var(--chrono-display);
+    font-size: 2.5rem;
+    color: var(--groups);
+    font-weight: 400;
+    font-style: italic;
+
+    border: none;
+
+    margin: 0;
+}
+
+.arete_chrono h2:not(:first-of-type) {
+    margin-top: 1em;
+}
+
+/* REINO */
+
+.arete_chrono reino {
+    font-size: .9rem;
+
+    margin: 1em .5em 2.5em 0;
+}
+
+.arete_chrono reino::before {
+    content: '\E4C2';
+    font-family: 'game-icons';
+
+    margin-right: 5px;
+}
+
+/* TÍTULO */
+
+.arete_chrono titulo {
+    font-family: var(--chrono-font);
+}
+
+.arete_chrono a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.arete_chrono titulo::before {
+    font-size: 1rem;
+}
+
+.arete_chrono tema[data-status="cerrado"] titulo::after, .arete_chrono tema[data-status="abandonado"] titulo::after {
+    font-size: .7rem;
+    padding: .05rem .6rem;
+}
+
+/* CONTENIDO */
+
+.arete_chrono contenido {
+    padding: 0 2.5rem 1rem;
+}
+
+/* INFO */
+
+.arete_chrono tema .info {
+    font-size: .9rem;
+    font-style: normal !important;
+}
+
+.arete_chrono tema lugar::before,
+.arete_chrono tema hora::before {
+    content: ' · ';
+    color: var(--chrono-accent);
+}
+
+/* QUIEN */
+
+.arete_chrono quien {
+    font-size: .9rem;
+}
+
+.arete_chrono quien span {
+    font-size: .9rem;
+    
+    line-height: 1.2;
+
+    padding: .3rem .5rem;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+/* COLORES POR GRUPO */
+.arete_chrono reino[data-reino="tormentas"],
+.arete_chrono quien[data-group="tormentas"] span {
+    color: var(--chrono-group1);
+
+    background-color: color-mix(in srgb, var(--chrono-group1) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="dorne"],
+.arete_chrono quien[data-group="dorne"] span {
+    color: var(--chrono-group2);
+
+    background-color: color-mix(in srgb, var(--chrono-group2) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="coronas"],
+.arete_chrono quien[data-group="coronas"] span {
+    color: var(--chrono-group3);
+
+    background-color: color-mix(in srgb, var(--chrono-group3) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="norte"],
+.arete_chrono quien[data-group="norte"] span {
+    color: var(--chrono-group4);
+
+    background-color: color-mix(in srgb, var(--chrono-group4) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="valle"],
+.arete_chrono quien[data-group="valle"] span {
+    color: var(--chrono-group5);
+
+    background-color: color-mix(in srgb, var(--chrono-group5) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="rios"],
+.arete_chrono quien[data-group="rios"] span {
+    color: var(--chrono-group6);
+
+    background-color: color-mix(in srgb, var(--chrono-group6) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="islas"],
+.arete_chrono quien[data-group="islas"] span {
+    color: var(--chrono-group7);
+
+    background-color: color-mix(in srgb, var(--chrono-group7) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="occidente"],
+.arete_chrono quien[data-group="occidente"] span {
+    color: var(--chrono-group8);
+
+    background-color: color-mix(in srgb, var(--chrono-group8) 10%, transparent);
+}
+
+.arete_chrono reino[data-reino="dominio"],
+.arete_chrono quien[data-group="dominio"] span {
+    color: var(--chrono-group9);
+
+    background-color: color-mix(in srgb, var(--chrono-group9) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="trama"] span {
+    color: var(--chrono-group10);
+
+    background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="minitrama"] span {
+    color: var(--chrono-group11);
+
+    background-color: color-mix(in srgb, var(--chrono-group11) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="mision"] span {
+    color: var(--chrono-group12);
+
+    background-color: color-mix(in srgb, var(--chrono-group12) 10%, transparent);
+}
+
+.arete_chrono quien[data-group="trama"] span::before {
+    content: "\E1DD";
+    font-family: 'game-icons';
+    margin-right: 5px;
+}
+
+.arete_chrono quien[data-group="minitrama"] span::before {
+    content: "\E32A";
+    font-family: 'game-icons';
+    margin-right: 5px;
+}
+
+.arete_chrono quien[data-group="mision"] span::before {
+    content: "\EC27";
+    font-family: 'game-icons';
+    margin-right: 5px;
+}
+
+/* TABS */
+
+.arete_chrono .tab-input {
+    display: none;
+}
+
+.arete_chrono .tabs-panels {
+    background-color: var(--clr-secondary);
+
+    padding: 2em;
+}
+
+.arete_chrono .panel {
+    display: none;
+
+    height: 480px;
+
+    background: none !important;
+    
+    padding: 0.25em !important;
+    margin: 0 !important;
+    
+    border: none !important;
+    
+    overflow: auto;
+}
+
+.arete_chrono .tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    padding: 2em;
+
+    border-bottom: var(--border1);
+}
+
+.arete_chrono .tabs-nav label {
+    cursor: pointer;
+
+    font-family: var(--chrono-font);  
+    font-size: .9rem;    
+    color: var(--clr-text);
+    
+    font-weight: 600;
+    text-transform: uppercase;
+
+    padding: .4rem .8rem;
+
+    border-radius: 3px;
+}
+
+.arete_chrono .tabs-nav label:hover {
+    background-color: color-mix(in srgb, var(--chrono-accent) 20%, transparent);
+}
+
+#tab-mes1:checked ~ .tabs-panels #panel-mes1,
+#tab-mes2:checked ~ .tabs-panels #panel-mes2,
+#tab-mes3:checked ~ .tabs-panels #panel-mes3,
+#tab-mes4:checked ~ .tabs-panels #panel-mes4,
+#tab-mes5:checked ~ .tabs-panels #panel-mes5,
+#tab-mes6:checked ~ .tabs-panels #panel-mes6,
+#tab-mes7:checked ~ .tabs-panels #panel-mes7,
+#tab-mes8:checked ~ .tabs-panels #panel-mes8,
+#tab-mes9:checked ~ .tabs-panels #panel-mes9,
+#tab-mes10:checked ~ .tabs-panels #panel-mes10 {
+    display: block;
+}
+
+#tab-mes1:checked ~ .tabs-nav label[for="tab-mes1"],
+#tab-mes2:checked ~ .tabs-nav label[for="tab-mes2"],
+#tab-mes3:checked ~ .tabs-nav label[for="tab-mes3"],
+#tab-mes4:checked ~ .tabs-nav label[for="tab-mes4"],
+#tab-mes5:checked ~ .tabs-nav label[for="tab-mes5"],
+#tab-mes6:checked ~ .tabs-nav label[for="tab-mes6"],
+#tab-mes7:checked ~ .tabs-nav label[for="tab-mes7"],
+#tab-mes8:checked ~ .tabs-nav label[for="tab-mes8"],
+#tab-mes9:checked ~ .tabs-nav label[for="tab-mes9"],
+#tab-mes10:checked ~ .tabs-nav label[for="tab-mes10"] {  
+    color: var(--clr-secondary);
+
+    background-color: var(--chrono-accent);
+}
