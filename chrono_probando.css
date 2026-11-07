@@ -212,10 +212,12 @@
 
 .arete_chrono h2 {
     font-family: var(--chrono-display);
-    font-size: 2.45rem;
+    font-size: 2.5rem;
     color: var(--groups);
     font-weight: 400;
     font-style: italic;
+
+    border: none;
 
     margin: 0;
 }
@@ -225,6 +227,10 @@
 }
 
 /* REINO */
+
+.arete_chrono reino {
+    font-size: .9rem;
+}
 
 .arete_chrono reino::before {
     content: '\E4C2';
@@ -241,11 +247,24 @@
 
 .arete_chrono a {
     text-decoration: none;
+    color: inherit;
+}
+
+.arete_chrono tema[data-status="cerrado"] titulo::after, .arete_chrono tema[data-status="abandonado"] titulo::after {
+    font-size: .7rem;
+    padding: .05rem .8rem;
+}
+
+/* CONTENIDO */
+
+.arete_chrono contenido {
+    padding: 0 2.5rem 1rem;
 }
 
 /* INFO */
 
 .arete_chrono tema .info {
+    font-size: 1rem;
     font-style: normal !important;
 }
 
@@ -256,6 +275,14 @@
 }
 
 /* QUIEN */
+
+.arete_chrono quien {
+    font-size: .9rem;
+}
+
+.arete_chrono quien span {
+    font-size: 1.2rem;
+}
 
 /* COLORES POR GRUPO */
 
@@ -370,13 +397,11 @@
     cursor: pointer;
 
     font-family: var(--chrono-font);  
-    font-size: .65rem;    
+    font-size: .9rem;    
     color: var(--clr-text);
     
     font-weight: 600;
     text-transform: uppercase;
-
-    background-color: var(--clr-secondary);
 
     padding: .4rem .8rem;
 
