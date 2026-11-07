@@ -188,17 +188,16 @@
     --chrono-display: "Playfair Display", serif;
     --chrono-font: "Montserrat", sans-serif;
 
-    --chrono-group1: var(--tormentas);
-    --chrono-group2: var(--dorne);
-    --chrono-group3: var(--tierrasdragon);
-    --chrono-group4: var(--norte);
-    --chrono-group5: var(--valle);
-    --chrono-group6: var(--rios);
-    --chrono-group7: var(--islashierro);
-    --chrono-group8: var(--occidente);
-    --chrono-group9: var(--dominio);
-    --chrono-group10: var(--essos);
-    --chrono-group11: var(--staff);
+    --chrono-group1: #EDBE32;
+    --chrono-group2: #F79B3B;
+    --chrono-group3: #b782a3;
+    --chrono-group4: #DEDEDE;
+    --chrono-group5: #3070C7;
+    --chrono-group6: #59ACC2;
+    --chrono-group7: #777D6F;
+    --chrono-group8: #d95e5e;
+    --chrono-group9: #5EA676;
+    --chrono-group10: #725B78;
 }
 
 .arete_chrono {    
@@ -208,6 +207,10 @@
     outline-offset: 14px;
 
     margin: 0 auto;
+}
+
+.arete_chrono ::-webkit-scrollbar {
+    display: none;
 }
 
 .arete_chrono h2 {
@@ -248,6 +251,10 @@
 .arete_chrono a {
     text-decoration: none;
     color: inherit;
+}
+
+.arete_chrono titulo::before {
+    font-size: unset;
 }
 
 .arete_chrono tema[data-status="cerrado"] titulo::after, .arete_chrono tema[data-status="abandonado"] titulo::after {
@@ -340,14 +347,8 @@
     background-color: color-mix(in srgb, var(--chrono-group9) 10%, transparent);
 }
 
-.arete_chrono quien[data-group="essos"] span {
-    color: var(--chrono-group10);
-
-    background-color: color-mix(in srgb, var(--chrono-group10) 10%, transparent);
-}
-
 .arete_chrono quien[data-group="trama"] span {
-    color: var(--chrono-group11);
+    color: var(--chrono-group10);
 
     background-color: color-mix(in srgb, var(--chrono-group11) 10%, transparent);
 }
@@ -387,10 +388,6 @@
     padding: 2em;
 
     border-bottom: var(--border1);
-
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 .arete_chrono .tabs-nav label {
