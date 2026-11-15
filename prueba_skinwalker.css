@@ -36,7 +36,7 @@
 
 #skinwalker-button {
     position: fixed;
-    left: var(--skinwalker-button-margin);
+    left: 0;
     top: 64px;
     z-index: 999;
     background: var(--groupbody);
