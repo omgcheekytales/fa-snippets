@@ -97,7 +97,7 @@
             cursor: pointer;
             font: 400 .7rem var(--font-type-subtitle);
             text-transform: uppercase;
-            padding: 1em;
+            padding: var(--pad-s);
             transition: ease .3s;
       &:hover {
         background-color: var(--groupbody);
