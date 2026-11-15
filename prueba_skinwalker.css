@@ -146,20 +146,20 @@
         flex-shrink:0;
         position:relative;
         isolation:isolate;
-        outline:1px solid color-mix(in srgb, var(--group, var(--skinwalker-base-accent)), var(--skinwalker-bckg));
+        outline: 1px solid color-mix(in srgb, var(--group, var(--skinwalker-base-accent)) 25%, transparent);
         outline-offset:-1px;
         &::before, &::after {
           content:'';
           position:absolute;
           inset:0;
           z-index:-1;
-          background:var(--skinwalker-skin-avatar-color1);
-          mix-blend-mode:var(--skinwalker-skin-avatar-effect1);
+          background-color: var(--bg-principal);
+          mix-blend-mode: var(--filter-blend-mode);
         }
         &::after {
           z-index:-2;
-          background:var(--skinwalker-skin-avatar-color2);
-          mix-blend-mode:var(--skinwalker-skin-avatar-effect2);
+          background-color: var(--ft-tint);
+          mix-blend-mode: var(--filter-blend-mode);
         }
         & > img {
           width:100%;
@@ -168,7 +168,7 @@
           z-index:-3;
           object-fit: cover;
           object-position:var(--skinwalker-skin-avatar-position);
-          filter:var(--skinwalker-skin-avatar-filter);
+          filter: grayscale(1);
         }
       }
       & .skinWalker-info {
