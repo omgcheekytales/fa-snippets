@@ -35,57 +35,52 @@
 }
 
 #skinwalker-button {
-  position:fixed;
-  left:var(--skinwalker-button-margin);
-  top: 64px;
-  z-index: 999;
-  background:var(--skinwalker-button-bckg);
-  color:var(--skinwalker-button-text);
-  width:var(--skinwalker-button-w);
-  height:var(--skinwalker-button-h);
-  transition:all ease .3s, left ease 1s;
-  place-content:center;
-  text-align:center;
-  font-size:calc(var(--skinwalker-button-w) * .4);
-  line-height:1;
-  padding-right:.05em;
-  box-sizing:border-box;
-  cursor:pointer;
-  border-radius:var(--skinwalker-button-radius);
-  border:var(--skinwalker-border2);
+    position: fixed;
+    left: var(--skinwalker-button-margin);
+    top: 64px;
+    z-index: 999;
+    background: var(--groupbody);
+    color: var(--bg-principal);
+    width: var(--skinwalker-button-w);
+    height: var(--skinwalker-button-h);
+    transition: all ease .3s, left ease 1s;
+    place-content: center;
+    text-align: center;
+    font-size: calc(var(--fs-sm) * 1.5);
+    line-height: 1;
+    padding-right: .05em;
+    box-sizing: border-box;
+    cursor: pointer;
   &.active, &:hover {
-    background:var(--skinwalker-button-bckg-active);
-    color:var(--skinwalker-button-text-active);
+        background: var(--bg-principal);
+        color: var(--groupbody);
   }
   &.active {
-    left:calc(var(--skinwalker-button-margin) + var(--skinwalker-w));    
+    left: var(--skinwalker-w);
   }
 }
 
 #skinwalker {
-  position:fixed;
-  inset:0;
-  top: 64px;
-  right:unset;
-  left:calc(var(--skinwalker-w) * -1);
-  z-index:999;
-  background:var(--skinwalker-bckg);
-  width:var(--skinwalker-w);
-  transition:ease 1s;
-  display:flex;
-  justify-content:center;
-  align-items:stretch;
-  flex-direction:column;
-  overflow:hidden;
-  gap:1px;
-  color:var(--skinwalker-text);
-  border-right:var(--skinwalker-border2);
-  box-sizing:border-box;
+    position: fixed;
+    inset: 0;
+    top: 64px;
+    right: unset;
+    left: calc(var(--skinwalker-w) * -1);
+    z-index: 999;
+    width: var(--skinwalker-w);
+    transition: ease 1s;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 1px;
+    color: var(--skinwalker-text);
+    box-sizing: border-box;
+    background-color: var(--bg-principal);
+    backdrop-filter: var(--filter-blur);
   &.active {
     left:0;
-  }
-  & > * {
-    outline:var(--skinwalker-border1);
   }
   & .skinWalker-actions {
     display:flex;
@@ -94,24 +89,23 @@
     overflow:hidden;
     gap:1px;
     & > button {
-      outline:var(--skinwalker-border1);
-      flex:1;
-      border:0;
-      background:var(--skinwalker-bckg2);
-      color:var(--skinwalker-subtitle);
-      cursor:pointer;
-      font:700 .7rem monospace;
-      text-transform:uppercase;
-      padding:1em;
-      transition:ease .3s;
+            outline: var(--border);
+            flex: 1;
+            border: 0;
+            background-color: var(--bg-darker);
+            color: var(--clr-text);
+            cursor: pointer;
+            font: 400 .7rem var(--font-type-subtitle);
+            text-transform: uppercase;
+            padding: 1em;
+            transition: ease .3s;
       &:hover {
-        color:var(--skinwalker-title);
-        background:var(--skinwalker-bckg3);
+        background-color: var(--groupbody);
       }
     }
   }
   & #skinWalker-filter {
-    background:var(--skinwalker-bckg2);
+    background-color: transparent;
     border:0;
     padding:1em;
     font-size:.8rem;
@@ -144,7 +138,6 @@
       justify-content:center;
       align-items:stretch;
       height:var(--skinwalker-skin-h);
-      outline:var(--skinwalker-border1);
       & .skinWalker-avatar {
         height:-webkit-fill-available;
         overflow:hidden;
@@ -173,6 +166,7 @@
           height:100%;
           position:relative;
           z-index:-3;
+          object-fit: cover;
           object-position:var(--skinwalker-skin-avatar-position);
           filter:var(--skinwalker-skin-avatar-filter);
         }
@@ -189,12 +183,12 @@
         flex:1;
         & > a {
           color:var(--group, var(--skinwalker-base-accent));
-          font:700 1.1rem sans-serif;
-          text-transform:capitalize;
+          font: 600 var(--fs-md) var(--font-type-text);
+          text-transform: uppercase;
         }
         & > span {
-          color:var(--skinwalker-text);
-          font:700 .7rem monospace;
+          color: var(--clr-text);
+          font: 400 var(--fs-xs) var(--font-type-subtitle);
           text-transform:uppercase;
           & b, & strong {
             font:inherit;
@@ -216,12 +210,10 @@
         justify-content:center;
         align-items:stretch;
         flex-direction:column;
-        border-left:var(--skinwalker-border1);
         width:clamp(1.5rem, 10%, 3rem);
         & > button {
-          outline:var(--skinwalker-border1);
           border:0;
-          background:var(--skinwalker-bckg2);
+          background-color: transparent;
           color:var(--group, var(--skinwalker-base-accent));
           transition:ease .3s;
           font-size:.9rem;
@@ -233,7 +225,8 @@
             transition:inherit;
           }
           &:hover {
-            background:var(--skinwalker-bckg3);
+            background-color: var(--group);
+            color: var(--clr-text);
             & em {
               opacity:1;
             }
