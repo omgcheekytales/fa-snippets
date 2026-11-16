@@ -1,0 +1,213 @@
+:root {
+    --r-lg: 14px;
+    --r-md: 10px;
+    --r-sm: 6px;
+}
+.arete_mastereo {
+    & .rutas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+
+        margin: 1em auto 1.5em;
+
+        & ruta {
+            display: block;
+            
+            padding: 16px 12px;
+
+            & titulo {
+                display: block;
+            }
+
+            & desc {
+                display: block;
+            }
+        }
+    }
+
+    & .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1em;
+
+        margin: 1em auto 1.5em;
+
+        & card {
+            display: block;
+
+            text-align: center;
+
+            padding: 18px 16px;
+
+            & icono {
+                display: block;
+
+                width: 42px;
+                height: 42px;
+
+                margin: 0 auto .5em;
+            }
+
+            & valor {
+                display: block;
+            }
+
+            & etiqueta {
+                display: block;
+
+                margin-bottom: 6px;
+            }
+
+            & detalle {
+                display: block;
+            }
+        }
+    }
+
+    & table {
+        width: 100%;
+
+        margin: 1em auto 1.5em;
+
+        & th, td {
+            padding: .7em 1em;
+        }
+
+        & td {
+            max-width: 50ch;
+        }
+    }
+}
+.arete_mastereo {
+    --clr-text: #fbfbfb;        
+
+    --mastereo-bg: var(--bg2);
+    --mastereo-bg-2: #222522cf;
+
+    --mastereo-accent: var(--groups);
+    --mastereo-accent-2: #725B78;
+    --mastereo-accent-3: #b39b73;
+    --mastereo-accent-4: #58614e; 
+
+    --mastereo-display: "Playfair Display", serif;
+    --mastereo-font: "Montserrat", sans-serif; 
+}
+
+.arete_mastereo {    
+    background-color: var(--mastereo-bg);
+
+    padding: 2em;
+
+    border: var(--border1);
+
+    outline: var(--border1);
+    outline-offset: 14px;
+
+    margin: 0 auto;
+
+    & h2 {
+        font-family: var(--mastereo-display);
+        color: var(--mastereo-accent);
+    }
+
+    & h3 {
+        font-family: var(--mastereo-font);
+        font-size: .8rem;
+
+        text-transform: uppercase;
+
+        margin-top: 2em;
+    }
+
+    & .rutas {
+
+        & ruta {
+            border: var(--border1);
+
+            border-radius: var(--r-md);
+
+            & titulo {
+                font-family: var(--mastereo-display);
+                font-size: 1rem;
+            }
+
+            &:nth-child(1) {
+                background-color: color-mix(in srgb, var(--mastereo-accent-2) 10%, transparent);
+                border: color-mix(in srgb, var(--mastereo-accent-2) 25%, transparent);
+                
+                & titulo {
+                    color: var(--mastereo-accent-2);
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: color-mix(in srgb, var(--mastereo-accent-3) 10%, transparent);
+                border: color-mix(in srgb, var(--mastereo-accent-3) 25%, transparent);
+                
+                & titulo {
+                    color: var(--mastereo-accent-3);
+                }
+            }
+
+            &:nth-child(3) {
+                background-color: color-mix(in srgb, var(--mastereo-accent-4) 10%, transparent);
+                border: color-mix(in srgb, var(--mastereo-accent-4) 25%, transparent);
+                
+                & titulo {
+                    color: var(--mastereo-accent-4);
+                }
+            }
+        }
+    }
+
+    & .cards {
+        & card {
+            border: var(--border2);
+            border-radius: var(--r-md);
+
+            background-color: var(--mastereo-bg-2);
+
+            & icono {
+                font-size: 3rem;
+                color: var(--mastereo-accent);
+            }
+
+            & valor {
+                font-size: 1.5rem;
+            }
+
+            & etiqueta {
+                font-family: var(--mastereo-display);
+                font-size: 1.2rem;
+                color: var(--mastereo-accent);
+            }
+
+            & detalle {
+                & b, strong {
+                    color: var(--mastereo-accent);
+                }
+            }
+        }
+    }
+
+    & table {
+        & th {
+            font-family: var(--mastereo-font);
+            font-size: .7rem;
+            color: var(--clr-text);
+
+            text-transform: uppercase;
+
+            background-color: color-mix(in srgb, var(--mastereo-accent) 50%, transparent);
+        }
+
+        & td {
+            background-color: var(--mastereo-bg-2);
+        }
+    }
+
+    & ::marker {
+        color: var(--mastereo-accent);
+    }
+}
