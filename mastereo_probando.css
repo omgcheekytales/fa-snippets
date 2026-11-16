@@ -6,7 +6,7 @@
 
 .arete_mastereo {
 
-    & br:not(texto br) {
+    & br:not(texto br, ol br, ul br) {
         display: none;
     }
 
@@ -228,7 +228,13 @@
         }
     }
 
-    & ::marker {
+    & ol, ul {
+        max-width: 80%;
+
+        margin: auto;
+
+        & ::marker {
         color: var(--mastereo-accent);
+        }
     }
 }
