@@ -3,7 +3,13 @@
     --r-md: 10px;
     --r-sm: 6px;
 }
+
 .arete_mastereo {
+
+    & br {
+        display: none;
+    }
+    
     & .rutas {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -79,6 +85,7 @@
         }
     }
 }
+
 .arete_mastereo {
     --clr-text: #fbfbfb;        
 
@@ -109,15 +116,20 @@
     & h2 {
         font-family: var(--mastereo-display);
         color: var(--mastereo-accent);
+
+        margin: .8em auto .9em;
     }
 
     & h3 {
         font-family: var(--mastereo-font);
-        font-size: .8rem;
+        font-size: 1rem;
+        font-weight: 600;
 
         text-transform: uppercase;
 
         margin-top: 2em;
+
+        border: none;
     }
 
     & .rutas {
