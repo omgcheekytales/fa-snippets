@@ -6,10 +6,10 @@
 
 .arete_mastereo {
 
-    & br {
+    & br:not(texto br) {
         display: none;
     }
-    
+
     & .rutas {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -67,6 +67,8 @@
 
             & detalle {
                 display: block;
+
+                margin-top: .5em;
             }
         }
     }
@@ -83,6 +85,10 @@
         & td {
             max-width: 50ch;
         }
+    }
+
+    & texto {
+        white-space: pre-wrap;
     }
 }
 
@@ -116,13 +122,15 @@
     & h2 {
         font-family: var(--mastereo-display);
         color: var(--mastereo-accent);
+        
+        font-style: italic;
 
         margin: .8em auto .9em;
     }
 
     & h3 {
         font-family: var(--mastereo-font);
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
 
         text-transform: uppercase;
@@ -141,30 +149,29 @@
 
             & titulo {
                 font-family: var(--mastereo-display);
-                font-size: 1rem;
             }
 
-            &:nth-child(1) {
+            &:nth-of-type(1) {
                 background-color: color-mix(in srgb, var(--mastereo-accent-2) 10%, transparent);
-                border: color-mix(in srgb, var(--mastereo-accent-2) 25%, transparent);
+                border-color: color-mix(in srgb, var(--mastereo-accent-2) 25%, transparent);
                 
                 & titulo {
                     color: var(--mastereo-accent-2);
                 }
             }
 
-            &:nth-child(2) {
+           &:nth-of-type(2) {
                 background-color: color-mix(in srgb, var(--mastereo-accent-3) 10%, transparent);
-                border: color-mix(in srgb, var(--mastereo-accent-3) 25%, transparent);
+                border-color: color-mix(in srgb, var(--mastereo-accent-3) 25%, transparent);
                 
                 & titulo {
                     color: var(--mastereo-accent-3);
                 }
             }
 
-            &:nth-child(3) {
+            &:nth-of-type(3) {
                 background-color: color-mix(in srgb, var(--mastereo-accent-4) 10%, transparent);
-                border: color-mix(in srgb, var(--mastereo-accent-4) 25%, transparent);
+                border-color: color-mix(in srgb, var(--mastereo-accent-4) 25%, transparent);
                 
                 & titulo {
                     color: var(--mastereo-accent-4);
@@ -181,17 +188,19 @@
             background-color: var(--mastereo-bg-2);
 
             & icono {
-                font-size: 3rem;
+                font-size: 5rem;
                 color: var(--mastereo-accent);
             }
 
             & valor {
-                font-size: 1.5rem;
+                font-family: var(--mastereo-font);
+                font-size: 1.8rem;
+                font-weight: 600;
             }
 
             & etiqueta {
                 font-family: var(--mastereo-display);
-                font-size: 1.2rem;
+                font-size: 1.8rem;
                 color: var(--mastereo-accent);
             }
 
@@ -206,7 +215,7 @@
     & table {
         & th {
             font-family: var(--mastereo-font);
-            font-size: .7rem;
+            font-size: .9rem;
             color: var(--clr-text);
 
             text-transform: uppercase;
