@@ -49,9 +49,6 @@
             & icono {
                 display: block;
 
-                width: 42px;
-                height: 42px;
-
                 margin: 0 auto .5em;
             }
 
@@ -68,7 +65,7 @@
             & detalle {
                 display: block;
 
-                margin-top: .5em;
+                margin-top: 1em;
             }
         }
     }
@@ -88,7 +85,11 @@
     }
 
     & texto {
+        display: block;
+
         white-space: pre-wrap;
+
+        margin-top: 1em;
     }
 }
 
@@ -187,7 +188,9 @@
 
             background-color: var(--mastereo-bg-2);
 
-            & icono {
+            & icono {                
+                height: 42px;
+
                 font-size: 5rem;
                 color: var(--mastereo-accent);
             }
@@ -224,6 +227,11 @@
         }
 
         & td {
+            font-size: 1.2rem;
+
+            line-height: 1.2;
+            text-align: left;
+            
             background-color: var(--mastereo-bg-2);
         }
     }
