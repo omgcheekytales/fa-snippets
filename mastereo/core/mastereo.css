@@ -1,0 +1,88 @@
+.arete_mastereo {
+
+    & br:not(texto br, ol br, ul br) {
+        display: none;
+    }
+
+    & .rutas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+
+        margin: 1em auto 1.5em;
+
+        & ruta {
+            display: block;
+            
+            padding: 16px 12px;
+
+            & titulo {
+                display: block;
+            }
+
+            & desc {
+                display: block;
+            }
+        }
+    }
+
+    & .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1em;
+
+        margin: 1em auto 1.5em;
+
+        & card {
+            display: block;
+
+            text-align: center;
+
+            padding: 18px 16px;
+
+            & icono {
+                display: block;
+
+                margin: 0 auto .5em;
+            }
+
+            & valor {
+                display: block;
+            }
+
+            & etiqueta {
+                display: block;
+
+                margin-bottom: 6px;
+            }
+
+            & detalle {
+                display: block;
+
+                margin-top: 1em;
+            }
+        }
+    }
+
+    & table {
+        width: 100%;
+
+        margin: 1em auto 1.5em;
+
+        & th, td {
+            padding: .7em 1em;
+        }
+
+        & td {
+            max-width: 70%;
+        }
+    }
+
+    & texto {
+        display: block;
+
+        white-space: pre-wrap;
+
+        margin-top: 1em;
+    }
+}

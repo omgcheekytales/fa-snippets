@@ -1,0 +1,19 @@
+{
+  "name": "mastereo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "build:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css",
+    "watch:a": "postcss src/forum-a.css -o dist/forum-a.bundle.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "postcss": "^8.5.33",
+    "postcss-cli": "^12.0.0",
+    "postcss-import": "^17.0.1"
+  }
+}
