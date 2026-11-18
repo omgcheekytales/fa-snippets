@@ -1,0 +1,28 @@
+.arete_tirada {
+    --mastereo-accent: var(--groups, --group);
+    --mastereo-display: "Playfair Display", serif;
+
+    max-width: 80%;
+
+    font-family: var(--mastereo-display);
+    color: var(--mastereo-accent);
+
+    font-style: italic;
+    text-align: center;
+
+    background-color: color-mix(in srgb, var(--mastereo-accent) 10%, transparent);
+    
+    padding: .7em 1em;
+
+    margin: 1em auto 1.5em;
+}
+
+.arete_resaltado {
+  --mastereo-accent: var(--groups, --group);
+  
+  background-color: color-mix(in srgb, var(--mastereo-accent) 10%, transparent);
+    
+  padding: .7em 1em;
+
+  margin: 1em auto 1.5em;
+}
