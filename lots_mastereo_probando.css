@@ -13,7 +13,7 @@ mastereo {
 
     margin: 0 auto;
 
-    & br:not(ol br, ul br, num br) {
+    & br:not(texto br, ol br, ul br, num br) {
         display: none;
     }
 
