@@ -317,8 +317,8 @@ mastereo {
         & ol, ul {
             max-width: 80%;
 
-            margin: auto;
-
+            margin: 1em auto 1.5em;
+            
             & ::marker {
             color: var(--groups);
             }
