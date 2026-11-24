@@ -148,6 +148,10 @@ mastereo {
             & b, strong {                
                 color: var(--accent2);
             }
+
+            & u {
+                border-color: var(--accent2);
+            }
         }
 
         & formula {
