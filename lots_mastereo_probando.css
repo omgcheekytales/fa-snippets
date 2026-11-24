@@ -329,7 +329,7 @@ mastereo {
             margin: 1em auto 1.5em;
             
             & ::marker {
-            color: var(--groups);
+                color: var(--groups);
             }
         }
 
@@ -354,6 +354,72 @@ mastereo {
                     background-color: color-mix(in srgb, var(--groups) 50%, transparent);
                     padding: .2em .5em;
                     margin-right: 8px;
+                }
+            }
+        }
+
+        & .npcs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1em;
+            margin: 1em auto 1.5em;
+
+            & npc {
+                display: block;
+                background-color: var(--mastereo-bg-2);
+                border: var(--border2);
+                border-radius: var(--r-md);
+                padding: 14px 16px;
+
+                & nombre {
+                    display: block;
+                    font-family: var(--font1);
+                    font-size: 1.4rem;
+                    color: var(--groups);
+                }
+
+                & rol {
+                    display: block;
+                    font-family: var(--font3);
+                    font-size: .8rem;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: var(--text2);
+                    margin-bottom: .9em;
+                }
+
+                & progress {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    height: 24px;
+                    border: none;
+                    border-radius: var(--r-sm);
+                    overflow: hidden;
+                    background: #00000066;
+
+                    &::-webkit-progress-bar { background: #00000066; }
+                    &::-webkit-progress-value { background: var(--accent2); }
+                    &::-moz-progress-bar { background: var(--accent2); }
+
+                    &::after {
+                        content: attr(value) " / " attr(max);
+                        position: absolute;
+                        inset: 0;
+                        line-height: 24px;
+                        text-align: center;
+                        font-size: .85rem;
+                        font-weight: 600;
+                        color: #fff;
+                        text-shadow: 0 1px 2px #000;
+                    }
+
+                    &[value="0"]::after {
+                        content: "Caído";
+                        color: var(--text2);
+                    }
                 }
             }
         }
