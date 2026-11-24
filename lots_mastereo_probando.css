@@ -13,26 +13,7 @@ mastereo {
 
     margin: 0 auto;
 
-    & :is(.rutas, .cards, ruta, card, table, ol, ul) br {
-        display: none;
-    }
-
-    /* 2. En la raíz: ocultar los br pegados a un bloque */
-    & > :is(h2, h3, h4, .rutas, .cards, table, ol, ul) + br,
-    & > br:has(+ :is(h2, h3, h4, .rutas, .cards, table, ol, ul)),
-    & > br:first-child {
-        display: none;
-    }
-
-    /* 3. Los br "apilados" entre bloques: ocultar el que va justo antes
-          de otro br que a su vez precede a un bloque */
-    & > br:has(+ br + :is(h2, h3, h4, .rutas, .cards, table, ol, ul)) {
-        display: none;
-    }
-
-    /* 4. Los comentarios <!-- --> no cuentan, así que el br tras un
-          bloque y el br siguiente (par típico) también sobran */
-    & > :is(h2, h3, h4, .rutas, .cards, table, ol, ul) + br + br {
+    & br:not(ol br, ul br, num br) {
         display: none;
     }
 
@@ -336,7 +317,7 @@ mastereo {
             max-width: 80%;
 
             margin: 1em auto 1.5em;
-
+            
             & ::marker {
             color: var(--groups);
             }
