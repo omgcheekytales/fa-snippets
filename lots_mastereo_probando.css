@@ -13,7 +13,7 @@ mastereo {
 
     margin: 0 auto;
 
-    & br:not(texto br, ol br, ul br) {
+    & br:not(texto br, ol br, ul br, num br) {
         display: none;
     }
 
@@ -54,9 +54,9 @@ mastereo {
 
     & u {
         text-decoration: none;
-        font-family: playfair display;
+        font-family: var(--font1);
         color: var(--text2);        
-        border-bottom: 2px solid var(--accent2);
+        border-bottom: 2px solid var(--groups);
     }
 
     & .body {
@@ -158,7 +158,7 @@ mastereo {
 
         & .rutas {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1em;
 
             margin: 1em auto 1.5em;
@@ -328,12 +328,21 @@ mastereo {
             counter-reset: section-counter;
             display: block;
             white-space: pre-wrap;
+            margin: 0 auto 1.5em;
 
             & n {
                 counter-increment: section-counter;
 
                 &::before {
                     content: counter(section-counter);
+                    min-width: 30px;
+                    color: var(--bg2);
+                    line-height: 1.2;
+                    font-weight: 600;
+                    text-align: center;
+                    background-color: var(--groups);
+                    padding: .2em .5em;
+                    margin-right: 8px;
                 }
             }
         }
