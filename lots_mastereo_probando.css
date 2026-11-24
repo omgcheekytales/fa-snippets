@@ -52,6 +52,13 @@ mastereo {
         }
     }
 
+    & u {
+        text-decoration: none;
+        font-family: playfair display;
+        color: var(--text2);        
+        border-bottom: 2px solid var(--accent2);
+    }
+
     & .body {
         padding: 4em;
 
@@ -113,6 +120,13 @@ mastereo {
         & nota {
             background-color: color-mix(in srgb, var(--groups) 20%, transparent);
 
+            & b, strong {
+                color: var(--groups);
+            }
+
+            & u {
+                border-color: var(--groups);
+            }
         }
 
         & aviso {
@@ -124,6 +138,10 @@ mastereo {
                 color: var(--accent2);
                 font-weight: 600;
                 margin-bottom: .5em;
+            }
+
+            & b, strong {                
+                color: var(--accent2);
             }
         }
 
@@ -164,8 +182,12 @@ mastereo {
                     background-color: color-mix(in srgb, var(--accent1) 10%, transparent);
                     border-color: color-mix(in srgb, var(--accent1) 25%, transparent);
                     
-                    & titulo {
+                    & titulo, b, strong {
                         color: var(--accent1);
+                    }
+
+                    & u {
+                        border-color: var(--accent1);
                     }
                 }
 
@@ -173,18 +195,26 @@ mastereo {
                     background-color: color-mix(in srgb, var(--accent2) 10%, transparent);
                     border-color: color-mix(in srgb, var(--accent2) 25%, transparent);
                     
-                    & titulo {
+                    & titulo, b, strong {
                         color: var(--accent2);
                     }
+
+                    & u {
+                        border-color: var(--accent2);
+                    }                    
                 }
 
                 &:nth-of-type(3n + 3) {
                     background-color: color-mix(in srgb, var(--accent4) 10%, transparent);
                     border-color: color-mix(in srgb, var(--accent4) 25%, transparent);
                     
-                    & titulo {
+                    & titulo, b, strong {
                         color: var(--accent4);
                     }
+
+                    & u {
+                        border-color: var(--accent4);
+                    }                    
                 }
 
                 & desc {
@@ -247,6 +277,10 @@ mastereo {
                         color: var(--groups);
                     }
                 }
+
+                & u {
+                    border-color: var(--groups);
+                }
             }
         }
 
@@ -304,12 +338,5 @@ mastereo {
             }
         }
 
-    }
-
-    & u {
-        text-decoration: none;
-        font-family: playfair display;
-        color: var(--text2);        
-        border-bottom: 2px solid var(--accent2);
     }
 }
