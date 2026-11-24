@@ -402,7 +402,7 @@ mastereo {
 
                     &::-webkit-progress-bar { background: #00000066; }
                     &::-webkit-progress-value { background: var(--accent2); }
-                    &::-moz-progress-bar { background: linear-gradient(45deg, var(--accent1), transparent); }
+                    &::-moz-progress-bar { background: linear-gradient(225deg, var(--accent1), transparent); }
 
                     &::after {
                         content: attr(value) " / " attr(max);
