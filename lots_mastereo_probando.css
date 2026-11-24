@@ -110,6 +110,12 @@ mastereo {
             border: none;
         }
 
+        & texto {
+            display: block;
+            white-space: pre-wrap;
+            margin-top: 1em;
+        }
+
         & nota, aviso, formula {
             display: block;
             padding: .7em 1em;
