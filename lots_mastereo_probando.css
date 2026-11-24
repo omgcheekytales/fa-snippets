@@ -305,4 +305,11 @@ mastereo {
         }
 
     }
+
+    & u {
+        text-decoration: none;
+        font-family: playfair display;
+        color: var(--text2);        
+        border-bottom: 2px solid var(--accent2);
+    }
 }
