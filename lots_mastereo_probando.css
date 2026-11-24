@@ -328,10 +328,12 @@ mastereo {
             counter-reset: section-counter;
             display: block;
             white-space: pre-wrap;
-            margin: 0 auto 1.5em;
 
             & n {
                 counter-increment: section-counter;
+                display: flow-root;
+                padding: 0 0 1em;
+                border-bottom: 1px solid color-mix(in srgb, var(--groups) 10%, transparent);           
 
                 &::before {
                     content: counter(section-counter);
@@ -340,7 +342,7 @@ mastereo {
                     line-height: 1.2;
                     font-weight: 600;
                     text-align: center;
-                    background-color: var(--groups);
+                    background-color: color-mix(in srgb, var(--groups) 50%, transparent);
                     padding: .2em .5em;
                     margin-right: 8px;
                 }
