@@ -87,7 +87,6 @@
     justify-content:center;
     align-items:stretch;
     overflow:hidden;
-    gap:1px;
     & > button {
             outline: var(--border);
             flex: 1;
@@ -123,15 +122,15 @@
     place-content:flex-start;
     grid-auto-rows:max-content;
     & > i {
-      margin:1rem;
-      display:block;
-      text-align:center;
-      padding:1em;
-      border:var(--skinwalker-border1);
-      background:var(--skinwalker-bckg2);
-      font:700 .8rem monospace;
-      text-transform:uppercase;
-      color:var(--skinwalker-text);
+      margin: var(--space-2);
+      display: block;
+      text-align: center;
+      padding: var(--pad-s);
+      border: var(--border);
+      background-color: var(--bg-principal);
+      font: 400 .7rem var(--font-type-subtitle);
+      text-transform: uppercase;
+      color: var(--clr-text);
     }
     & .skinWalker-skin {
       display:flex;
